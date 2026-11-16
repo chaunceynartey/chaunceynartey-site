@@ -41,6 +41,56 @@ h1,h2,h3{font-weight:400}
 .stat{border-top:2px solid #2c3d6e;padding-top:16px;display:flex;flex-direction:column;gap:6px}
 .stat .n{font-family:'DM Serif Display',Georgia,serif;font-size:44px;line-height:1;color:#ffff33}
 /* phones */
+.s.ck,.s.xk{position:relative;padding-left:44px}
+.s.ck::before,.s.xk::before{position:absolute;left:0;top:.1em;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;font-family:Inter,sans-serif}
+.s.ck::before{content:"✓";background:#ffff33;color:#0b1226}
+.s.xk::before{content:"✕";background:#b23a2e;color:#fff}
+.iphones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.pf{display:flex;flex-direction:column;gap:14px;margin:0}
+.pf figcaption{font-size:15px;line-height:1.45;color:#d6dcef}.pf figcaption b{color:#fff}
+.iph{background:#0a0a0b;border-radius:48px;padding:9px;box-shadow:0 0 0 1.5px #3a3a3e,0 30px 60px rgba(0,0,0,.5)}
+.iscr{position:relative;border-radius:40px;overflow:hidden;aspect-ratio:9/19.5;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter",system-ui,sans-serif;color:#fff;display:flex;flex-direction:column;padding:0 12px 14px;letter-spacing:-.01em}
+.island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:33%;height:22px;background:#000;border-radius:20px}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:12px 12px 0;font-size:12px;font-weight:600;height:22px}
+.sic{display:flex;gap:4px;align-items:center}.sic svg{height:9px;fill:currentColor}
+.lock{background:radial-gradient(120% 80% at 20% 10%,#c96b4a 0%,#5b2b55 45%,#141631 100%)}
+.ldate{text-align:center;font-size:12px;font-weight:600;margin-top:22px;opacity:.9}
+.lclock{text-align:center;font-size:62px;font-weight:700;line-height:1;letter-spacing:-.03em;margin:2px 0 16px}
+.glass{background:rgba(255,255,255,.22);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:18px;padding:10px 11px;display:flex;flex-direction:column;gap:4px}
+.nhead{display:flex;align-items:center;gap:6px;font-size:11px}.nhead span{margin-left:auto;opacity:.7}
+.mico{width:18px;height:18px;border-radius:5px;background:#ffff33;color:#0b1226;font-weight:900;font-size:11px;display:inline-flex;align-items:center;justify-content:center}
+.nt{font-size:12.5px;font-weight:700;line-height:1.25}.nb{font-size:11.5px;line-height:1.35;opacity:.95}
+.src{font-size:9.5px;font-weight:600;opacity:.75;text-transform:uppercase;letter-spacing:.04em}
+.dark{color:#1c1c1e}.src.dark{color:#6b6b70;opacity:1}
+.acts{margin-top:auto;display:flex;flex-direction:column;gap:6px}.acts.row{flex-direction:row}
+.act{flex:1;text-align:center;background:rgba(255,255,255,.2);backdrop-filter:blur(14px);border-radius:14px;padding:9px 6px;font-size:11.5px;font-weight:600}
+.act.pri{background:#fff;color:#111}
+.app{background:#f2f2f7;color:#1c1c1e}.app .sbar{color:#000}
+.apph{font-size:22px;font-weight:800;margin:16px 2px 10px;letter-spacing:-.02em}.apph small{display:block;font-size:11px;font-weight:600;color:#2a55e5;letter-spacing:0}
+.acard{background:#fff;border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:7px;margin-bottom:9px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.acard.alert{border-left:4px solid #ff9f0a}
+.chips2{display:flex;flex-wrap:wrap;gap:5px}.chips2 span{font-size:10.5px;font-weight:600;padding:6px 8px;border-radius:999px;background:#eef0f6;color:#1c1c1e}.chips2 .pri{background:#2a55e5;color:#fff}
+.lrow{display:grid;grid-template-columns:62px 1fr 34px;gap:6px;align-items:center;font-size:10.5px;color:#3a3a3c}
+.lbar{display:flex;height:8px;border-radius:4px;overflow:hidden}.lbar i{background:#2a55e5}.lbar em{background:#c7cbd6}
+.lv{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.leg{font-size:9.5px;color:#6b6b70;display:flex;gap:8px;align-items:center}.leg i,.leg em{display:inline-block;width:8px;height:8px;border-radius:2px;background:#2a55e5;margin-right:-4px}.leg em{background:#c7cbd6}
+.wlist{list-style:none;counter-reset:w;display:flex;flex-direction:column;gap:6px;padding:0;margin:0}
+.wlist li{counter-increment:w;background:#fff;border-radius:12px;padding:7px 8px 7px 30px;position:relative;display:flex;flex-direction:column;gap:1px}
+.wlist li::before{content:counter(w);position:absolute;left:8px;top:8px;width:16px;height:16px;border-radius:50%;background:#2a55e5;color:#fff;font-size:9.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.wlist b{font-size:11.5px}.wlist span{font-size:10px;line-height:1.3;color:#48484a}
+.app .act{background:#e5e5ea;color:#1c1c1e;backdrop-filter:none}.app .act.pri{background:#2a55e5;color:#fff}
+.app .acts{margin-top:10px}
+.msgs{background:#fff;color:#000}.msgs .sbar{color:#000}
+.mhead{text-align:center;font-size:12px;font-weight:600;margin:14px 0 8px;display:flex;flex-direction:column;align-items:center;gap:3px;border-bottom:1px solid #eee;padding-bottom:8px}.mhead small{font-size:9.5px;color:#8e8e93;font-weight:500}
+.gav{width:30px;height:30px;border-radius:50%;background:#e5e5ea;display:flex;align-items:center;justify-content:center;font-size:15px}
+.thread{display:flex;flex-direction:column;gap:6px}
+.in{align-self:flex-start;background:#e9e9eb;border-radius:16px;padding:6px 10px;font-size:11.5px;max-width:85%;display:flex;flex-direction:column}.in b{font-size:9px;color:#8e8e93;font-weight:600}
+.suggest{margin-top:auto;background:#f2f2f7;border-radius:16px;padding:9px;display:flex;flex-direction:column;gap:6px}
+.shead{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:700;color:#2a55e5;text-transform:uppercase;letter-spacing:.04em}
+.helm{width:24px;height:21px}
+.joke{background:#fff;border:1px solid #d9dce5;border-radius:14px;padding:7px 9px;font-size:11px;line-height:1.3;color:#1c1c1e;position:relative}
+.joke::after{content:"Send";position:absolute;right:7px;bottom:-7px;background:#2a55e5;color:#fff;font-size:8.5px;font-weight:700;padding:2px 6px;border-radius:999px}
+@media (max-width:1100px){.iphones{grid-template-columns:repeat(4,minmax(240px,1fr));overflow-x:auto;padding-bottom:12px}}
 .goodlabel{font-size:clamp(40px,4vw,60px);line-height:1;color:#ffff33;margin-bottom:6px}
 .gap-chart{display:flex;flex-direction:column;gap:18px;background:#fff;border-radius:28px;padding:36px}
 .gbar{display:grid;grid-template-columns:160px 1fr 70px;align-items:center;gap:18px}
@@ -155,6 +205,7 @@ h1,h2,h3{font-weight:400}
       <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">Two full-time jobs. <span style="font-style:italic;color:#9fb6ff">One person still running the home.</span></h2>
       <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:52ch">For generations, moms carried most of the work of running the home, because most of them weren't also working full time. Now they are. When both parents work full time, both parents should be running the home. The data says that still isn't happening.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;margin-top:8px">
+        <div class="stat"><p class="n">2 in 3</p><p style="font-size:14px;line-height:1.5;color:#d6dcef">Married couples with kids where both parents work.</p><p style="font-size:12px;color:#6f7ba3">U.S. Bureau of Labor Statistics, 2025</p></div>
         <div class="stat"><p class="n">54% vs 6%</p><p style="font-size:14px;line-height:1.5;color:#d6dcef">Both parents work full time: 54% say Mom manages the kids' schedules. 6% say Dad.</p><p style="font-size:12px;color:#6f7ba3">Pew Research Center, 2015</p></div>
         <div class="stat"><p class="n">4.5 hrs</p><p style="font-size:14px;line-height:1.5;color:#d6dcef">More caregiving and housework a week for wives, even when spouses earn about the same.</p><p style="font-size:12px;color:#6f7ba3">Pew Research Center, 2023</p></div>
         <div class="stat"><p class="n">3x</p><p style="font-size:14px;line-height:1.5;color:#d6dcef">The time dads now spend with their kids, compared with 1965. Dads are closing the gap.</p><p style="font-size:12px;color:#6f7ba3">Pew Research Center, 2013</p></div>
@@ -231,8 +282,8 @@ h1,h2,h3{font-weight:400}
   <div class="wrap" style="padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:44px">
     <h2 class="serif" style="font-size:clamp(52px,7vw,116px);line-height:.88">"I'm good."</h2>
     <div class="goodrow">
-      <div class="goodcard"><p class="goodlabel serif">At work.</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: I answered emails before the kids woke up, and I'll answer more after they're asleep.</p></div>
-      <div class="goodcard"><p class="goodlabel serif">At home.</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: somebody in this house has to be.</p></div>
+      <div class="goodcard"><p class="goodlabel serif">At work.</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: I cleared my inbox before the kids woke up, covered for someone in the 2:00, and I'll be back on after bedtime. If I say that out loud, I look like I can't handle it.</p></div>
+      <div class="goodcard"><p class="goodlabel serif">At home.</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: the field trip form is signed, the dentist is rebooked, and the baby was up at 3. She had a worse day than I did, so somebody in this house has to be good. Tonight it's me.</p></div>
       <div class="goodcard"><p class="goodlabel serif">Online.</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: I'm staying out of this. Anything I say about my side will get me dragged.</p></div>
     </div>
     <div class="split" style="margin-top:40px">
@@ -242,7 +293,9 @@ h1,h2,h3{font-weight:400}
       </div>
       <div style="display:flex;flex-direction:column;gap:20px">
         <h3 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">I was "good" right up until <span style="font-style:italic;color:#9fb6ff">I fell asleep at the wheel.</span></h3>
-        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:50ch">The crash woke me up, and I believe God did too. I'd spent the day pouring into other people's kids and had nothing left for the drive home to my own. I walked away from it.</p>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:50ch">The crash woke me up, and I believe God did too. I'd spent the day pouring into other people's kids and had nothing left for the drive home to my own. I walked away from it. A lot of us won't get that warning.</p>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:50ch">So I stopped running on "good." I'm building the system I wish I'd had: something that carries the mental load before it carries me off the road, and a crew of men I can actually tell the truth to. <b style="color:#fff">That's Run Home.</b></p>
+        <a href="#suite" style="color:#ffff33;font-weight:800;font-size:17px">See what I'm building →</a>
         <p style="font-size:14px;font-weight:800;letter-spacing:.06em;color:#9fb6ff">CHAUNCEY NARTEY · DAD OF THREE GIRLS · LEAD GUIDE AT ALPHA SCHOOL NYC · FORMER VP AT GOLDMAN SACHS</p>
       </div>
     </div>
@@ -256,19 +309,22 @@ h1,h2,h3{font-weight:400}
     <div class="clear">
       <div style="background:#2a55e5;color:#fff;border-radius:32px;padding:40px;display:flex;flex-direction:column;gap:16px">
         <p class="eyebrow" style="color:#dce5ff">This is for you if</p>
-        <p class="s">You already pull your weight, and then some.</p>
-        <p class="s">You might be the reason the kitchen's clean, or dinner is on the table.</p>
-        <p class="s">You're building something on the side and want it to move.</p>
-        <p class="s">You're tired of saying "I'm good."</p>
+        <p class="s ck">You already pull your weight, and then some.</p>
+        <p class="s ck">You might be the reason the kitchen's clean, or dinner is on the table.</p>
+        <p class="s ck">You know the pediatrician's name and the WiFi password.</p>
+        <p class="s ck">You've sat in the driveway for a minute before walking in.</p>
+        <p class="s ck">You're building something on the side and want it to move.</p>
+        <p class="s ck">You want your kids to remember you as present, not just provided.</p>
+        <p class="s ck">You're tired of saying "I'm good."</p>
       </div>
       <div style="background:#fff;border:3px solid #16203a;border-radius:32px;padding:40px;display:flex;flex-direction:column;gap:16px">
         <p class="eyebrow" style="color:#b23a2e">This is not for you if</p>
         <p class="s" style="text-decoration:line-through;text-decoration-color:#b23a2e;text-decoration-thickness:4px">"Babe, where's my shirt?"</p>
-        <p class="s">You call watching your own kids "babysitting."</p>
-        <p class="s">You think "helping out" with your own kids deserves applause.</p>
-        <p class="s">You believe a woman's place is in the kitchen.</p>
-        <p class="s">The manosphere is your homepage.</p>
-        <p class="s">You're fine playing the incompetent loser so someone else picks up the slack.</p>
+        <p class="s xk">You call watching your own kids "babysitting."</p>
+        <p class="s xk">You think "helping out" with your own kids deserves applause.</p>
+        <p class="s xk">You believe a woman's place is in the kitchen.</p>
+        <p class="s xk">The manosphere is your homepage.</p>
+        <p class="s xk">You're fine playing the incompetent loser so someone else picks up the slack.</p>
         <p style="font-size:19px;font-weight:900;color:#b23a2e">Wrong website. Close the tab.</p>
       </div>
     </div>
@@ -289,30 +345,69 @@ h1,h2,h3{font-weight:400}
         <p class="eyebrow" style="color:#9fb6ff">01 · The tool</p>
         <h3 class="serif" style="font-size:clamp(48px,5vw,80px);line-height:.9">Manny</h3>
         <p style="font-size:18px;line-height:1.55;color:#d6dcef">Your AI chief of staff. He knows your whole life, sees what's coming, and handles it before it hits you. Not a chore app. A second brain for a man who's already doing the work.</p>
-        <div class="vignettes" aria-label="Four moments with Manny">
-          <div class="vig"><div class="vscreen">
-            <p class="vtime">6:02<small>Tuesday</small></p>
-            <div class="vcard"><p class="vtag">You're approaching · Valentine's Day</p><p class="vbig">3 weeks out.</p><p>Table for two, Saturday at 7:30. Sitter's on hold.</p></div>
-            <div class="vbtns"><span class="vb on">Book it</span><span class="vb">Swap</span></div>
-          </div><p class="vcap"><b>Partner.</b> You don't remember. Manny does.</p></div>
-          <div class="vig"><div class="vscreen">
-            <p class="vtime">3:10<small>Tuesday</small></p>
-            <div class="vcard"><p class="vtag">You're approaching · Early dismissal</p><p class="vbig">Wednesday, 2:45.</p><p>Aftercare is closed. I moved your 4:30 to Thursday.</p></div>
-            <div class="vbtns"><span class="vb on">Looks good</span></div>
-          </div><p class="vcap"><b>Parent.</b> Caught before it hits.</p></div>
-          <div class="vig"><div class="vscreen">
-            <p class="vtime">6:48<small>Tuesday</small></p>
-            <div class="vcard"><p class="vtag">You're approaching · Home</p><p class="vbig">2 minutes out.</p><p>Ask about the science quiz. Dinner is tacos. Your partner had back-to-back calls.</p></div>
-            <div class="vbtns"><span class="vb on">Walk in ready</span></div>
-          </div><p class="vcap"><b>Present.</b> Walk in already caught up.</p></div>
-          <div class="vig"><div class="vscreen">
-            <p class="vtime">7:55<small>Monday</small></p>
-            <div class="vcard"><svg class="helmet" viewBox="0 0 64 56" aria-hidden="true"><path d="M8 34C8 16 22 4 38 4c14 0 24 10 24 24v6H40l-4 10H22c-8 0-14-4-14-10z" fill="#2a55e5"/><path d="M40 34h22v8H44M50 34v8" stroke="#efe9df" stroke-width="3" fill="none"/><circle cx="26" cy="24" r="4" fill="#efe9df"/><path d="M14 18c6-6 16-9 26-7" stroke="#ffff33" stroke-width="4" fill="none" stroke-linecap="round"/></svg><p class="vtag">You're approaching · Kickoff, 8:15</p><p class="vbig">Drop this in your group chat:</p>
-              <p class="bub">Giants lost another close one to Washington. 24-21.</p>
-              <p class="bub">49ers 46, Cowboys 40. Defense was optional.</p>
-              <p class="bub">Chargers at Ravens tonight. Who you got?</p></div>
-            <div class="vbtns"><span class="vb on">Copy to group chat</span></div>
-          </div><p class="vcap"><b>The crew.</b> Never the guy who missed the game.</p></div>
+        <div class="iphones" aria-label="Four moments with Manny">
+          <figure class="pf"><div class="iph"><div class="iscr lock">
+            <div class="sbar"><span></span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 8.9a3.4 3.4 0 0 1 4.8 0zM3.4 6.7a6.6 6.6 0 0 1 9.2 0l-1.4 1.4a4.6 4.6 0 0 0-6.4 0zM1.1 4.4a9.9 9.9 0 0 1 13.8 0l-1.4 1.4a7.9 7.9 0 0 0-11 0z"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/><rect x="25" y="4" width="1.6" height="4" rx=".8" opacity=".45"/></svg></span></div><div class="island"></div>
+            <p class="ldate">Saturday, January 24</p><p class="lclock">6:02</p>
+            <div class="glass">
+              <div class="nhead"><span class="mico">M</span><b>Manny</b><span>now</span></div>
+              <p class="nt">Valentine's: skip the dinner.</p>
+              <p class="nb">In August she told her sister she wanted to try the pottery wheel. Couples wheel night, Sat Feb 14 at 7. Two spots left.</p>
+              <p class="src">Source · your texts, Aug 12</p>
+            </div>
+            <div class="acts">
+              <span class="act pri">Book 2 spots</span>
+              <span class="act">Hold sitter, 6:30</span>
+              <span class="act">Show 2 more ideas</span>
+            </div>
+          </div></div><figcaption><b>Partner.</b> Not a reservation. Something she actually said.</figcaption></figure>
+
+          <figure class="pf"><div class="iph"><div class="iscr app">
+            <div class="sbar"><span>11:42</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 8.9a3.4 3.4 0 0 1 4.8 0zM3.4 6.7a6.6 6.6 0 0 1 9.2 0l-1.4 1.4a4.6 4.6 0 0 0-6.4 0zM1.1 4.4a9.9 9.9 0 0 1 13.8 0l-1.4 1.4a7.9 7.9 0 0 0-11 0z"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/><rect x="25" y="4" width="1.6" height="4" rx=".8" opacity=".45"/></svg></span></div><div class="island"></div>
+            <p class="apph">Wednesday</p>
+            <div class="acard alert">
+              <p class="src dark">Ms. Rivera's email · 9:14 AM</p>
+              <p class="nt dark">Early dismissal today, 12:30.</p>
+              <div class="chips2"><span class="pri">Move your 1:00</span><span>Ask Dre for pickup</span><span>Book Maya</span></div>
+            </div>
+            <div class="acard">
+              <p class="src dark">This month · who's carrying what</p>
+              <div class="lrow"><span>Pickups</span><span class="lbar"><i style="width:56%"></i><em style="width:44%"></em></span><span class="lv">9 · 7</span></div>
+              <div class="lrow"><span>Appointments</span><span class="lbar"><i style="width:27%"></i><em style="width:73%"></em></span><span class="lv">4 · 11</span></div>
+              <div class="lrow"><span>School forms</span><span class="lbar"><i style="width:40%"></i><em style="width:60%"></em></span><span class="lv">2 · 3</span></div>
+              <p class="leg"><i></i>You <em></em>Her</p>
+              <div class="chips2"><span class="pri">Take the dentist: book it</span></div>
+            </div>
+          </div></div><figcaption><b>Parent.</b> The email gets handled. The load gets seen.</figcaption></figure>
+
+          <figure class="pf"><div class="iph"><div class="iscr app">
+            <div class="sbar"><span>6:41</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 8.9a3.4 3.4 0 0 1 4.8 0zM3.4 6.7a6.6 6.6 0 0 1 9.2 0l-1.4 1.4a4.6 4.6 0 0 0-6.4 0zM1.1 4.4a9.9 9.9 0 0 1 13.8 0l-1.4 1.4a7.9 7.9 0 0 0-11 0z"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/><rect x="25" y="4" width="1.6" height="4" rx=".8" opacity=".45"/></svg></span></div><div class="island"></div>
+            <p class="apph">Walk-in playlist <small>6 min out</small></p>
+            <ol class="wlist">
+              <li><b>Pick up peonies</b><span>Trader Joe's, on your route, +3 min. She said Monday was brutal.</span></li>
+              <li><b>Door: handshakes</b><span>Zoe: two taps, fist, explode. Mia: pinky, elbow, wiggle. Jo: high five, too slow.</span></li>
+              <li><b>Ask Zoe</b><span>"Did Ms. Park read your poem out loud?"</span></li>
+              <li><b>Ask Mia</b><span>"Who won the spelling bee practice round?"</span></li>
+              <li><b>Ask her</b><span>"How did the board deck land?" Not "how was your day."</span></li>
+              <li><b>Phone in the bowl</b><span>Until 8:30.</span></li>
+            </ol>
+            <div class="acts row"><span class="act pri">Start walk-in</span><span class="act">Add stop</span></div>
+          </div></div><figcaption><b>Present.</b> Walk in already caught up, in order.</figcaption></figure>
+
+          <figure class="pf"><div class="iph"><div class="iscr msgs">
+            <div class="sbar"><span>7:55</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 8.9a3.4 3.4 0 0 1 4.8 0zM3.4 6.7a6.6 6.6 0 0 1 9.2 0l-1.4 1.4a4.6 4.6 0 0 0-6.4 0zM1.1 4.4a9.9 9.9 0 0 1 13.8 0l-1.4 1.4a7.9 7.9 0 0 0-11 0z"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/><rect x="25" y="4" width="1.6" height="4" rx=".8" opacity=".45"/></svg></span></div><div class="island"></div>
+            <p class="mhead"><span class="gav">🏈</span>The Fellas <small>6 people</small></p>
+            <div class="thread">
+              <p class="in"><b>Dre</b>who's watching tonight</p>
+              <p class="in"><b>Mike</b>Giants found another way 💀</p>
+            </div>
+            <div class="suggest">
+              <p class="shead"><svg class="helm" viewBox="0 0 64 56" aria-hidden="true"><path d="M8 34C8 16 22 4 38 4c14 0 24 10 24 24v6H40l-4 10H22c-8 0-14-4-14-10z" fill="#2a55e5"/><path d="M40 34h22v8H44M50 34v8" stroke="#fff" stroke-width="3" fill="none"/><circle cx="26" cy="24" r="4" fill="#fff"/><path d="M14 18c6-6 16-9 26-7" stroke="#ffff33" stroke-width="4" fill="none" stroke-linecap="round"/></svg><span>Manny · drop one</span></p>
+              <p class="joke">49ers 46, Cowboys 40. That's not a football game, that's a Big 12 score with a Sunday night slot.</p>
+              <p class="joke">Giants lost by 3 again. At this point they're not a team, they're a heart rate monitor.</p>
+              <p class="joke">Jets lost 31-12 and the fans said "we were in it." That's not optimism, that's a coping mechanism.</p>
+            </div>
+          </div></div><figcaption><b>The crew.</b> Never the guy who missed the game.</figcaption></figure>
         </div>
         <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Manny%20waitlist&amp;body=I%20want%20Manny%20for%20my%20home." style="align-self:flex-start;background:#ffff33;color:#0b1226">Get Manny first</a>
       </div>
