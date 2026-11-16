@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Couples | Air It Out | Chauncey Nartey</title>
+<meta name="description" content="Air It Out: a night for working couples. Air it out. Sort it out. Fold it in.">
+<meta property="og:title" content="Air It Out | For Couples">
+<meta property="og:description" content="Air it out. Sort it out. Fold it in.">
+<meta property="og:image" content="https://chaunceynartey.com/img/headshot.jpg">
+<link rel="icon" href="/img/headshot.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#efe9df;color:#16203a;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:#2a55e5}
+h1,h2,h3,p,figure,blockquote{margin:0}
+h1,h2,h3{font-weight:400}
+.serif{font-family:'DM Serif Display',Georgia,serif}
+.wrap{max-width:1320px;margin:0 auto;padding-left:24px;padding-right:24px}
+.eyebrow{font-size:14px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.btn{display:inline-block;text-decoration:none;padding:16px 28px;border-radius:999px;font-weight:900;font-size:17px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.soft{-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 12%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0%,#000 12%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:#0b1226;color:#efe9df;display:flex;flex-direction:column;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,18,38,.96) 0%,rgba(11,18,38,.86) 38%,rgba(11,18,38,.25) 72%,rgba(11,18,38,.1) 100%),linear-gradient(0deg,rgba(11,18,38,.85) 0%,rgba(11,18,38,0) 30%)}
+.hero nav{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:22px}
+.navlinks{display:flex;flex-wrap:wrap;align-items:center;gap:24px;font-size:15px;font-weight:700}
+.navlinks a{color:#efe9df;text-decoration:none}
+.hero-copy{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px;max-width:680px;padding-top:32px;padding-bottom:40px}
+.hero h1{font-size:clamp(44px,5.2vw,84px);line-height:.98;letter-spacing:-.02em}
+/* ticker */
+.ticker{background:#ffff33;color:#0b1226;overflow:hidden;white-space:nowrap;border-top:3px solid #0b1226;border-bottom:3px solid #0b1226}
+.ticker-track{display:inline-flex;gap:56px;padding:18px 0;animation:tick 38s linear infinite;font-family:'DM Serif Display',Georgia,serif;font-size:clamp(24px,2.6vw,36px)}
+.ticker-track span b{font-family:'Inter',sans-serif;font-weight:900;font-size:.62em;letter-spacing:.06em;color:#2a55e5;padding:0 6px;vertical-align:middle}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+/* stats */
+.stat{border-top:2px solid #2c3d6e;padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.stat .n{font-family:'DM Serif Display',Georgia,serif;font-size:44px;line-height:1;color:#ffff33}
+/* phones */
+.s.ck,.s.xk{position:relative;padding-left:44px}
+.s.ck::before,.s.xk::before{position:absolute;left:0;top:.1em;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;font-family:Inter,sans-serif}
+.s.ck::before{content:"✓";background:#ffff33;color:#0b1226}
+.s.xk::before{content:"✕";background:#b23a2e;color:#fff}
+.iphones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.pf{display:flex;flex-direction:column;gap:14px;margin:0}
+.pf figcaption{font-size:15px;line-height:1.45;color:#d6dcef}.pf figcaption b{color:#fff}
+.iph{background:#0a0a0b;border-radius:48px;padding:9px;box-shadow:0 0 0 1.5px #3a3a3e,0 30px 60px rgba(0,0,0,.5)}
+.iscr{position:relative;border-radius:40px;overflow:hidden;aspect-ratio:9/19.5;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter",system-ui,sans-serif;color:#fff;display:flex;flex-direction:column;padding:0 12px 14px;letter-spacing:-.01em}
+.island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:33%;height:22px;background:#000;border-radius:20px}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:12px 12px 0;font-size:12px;font-weight:600;height:22px}
+.sic{display:flex;gap:4px;align-items:center}.sic svg{height:9px;fill:currentColor}
+.lock{background:radial-gradient(120% 80% at 20% 10%,#c96b4a 0%,#5b2b55 45%,#141631 100%)}
+.ldate{text-align:center;font-size:12px;font-weight:600;margin-top:22px;opacity:.9}
+.lclock{text-align:center;font-size:62px;font-weight:700;line-height:1;letter-spacing:-.03em;margin:2px 0 16px}
+.glass{background:rgba(255,255,255,.22);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:18px;padding:10px 11px;display:flex;flex-direction:column;gap:4px}
+.nhead{display:flex;align-items:center;gap:6px;font-size:11px}.nhead span{margin-left:auto;opacity:.7}
+.mico{width:18px;height:18px;border-radius:5px;background:#ffff33;color:#0b1226;font-weight:900;font-size:11px;display:inline-flex;align-items:center;justify-content:center}
+.nt{font-size:12.5px;font-weight:700;line-height:1.25}.nb{font-size:11.5px;line-height:1.35;opacity:.95}
+.src{font-size:9.5px;font-weight:600;opacity:.75;text-transform:uppercase;letter-spacing:.04em}
+.dark{color:#1c1c1e}.src.dark{color:#6b6b70;opacity:1}
+.acts{margin-top:auto;display:flex;flex-direction:column;gap:6px}.acts.row{flex-direction:row}
+.act{flex:1;text-align:center;background:rgba(255,255,255,.2);backdrop-filter:blur(14px);border-radius:14px;padding:9px 6px;font-size:11.5px;font-weight:600}
+.act.pri{background:#fff;color:#111}
+.app{background:#f2f2f7;color:#1c1c1e}.app .sbar{color:#000}
+.apph{font-size:22px;font-weight:800;margin:16px 2px 10px;letter-spacing:-.02em}.apph small{display:block;font-size:11px;font-weight:600;color:#2a55e5;letter-spacing:0}
+.acard{background:#fff;border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:7px;margin-bottom:9px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.acard.alert{border-left:4px solid #ff9f0a}
+.chips2{display:flex;flex-wrap:wrap;gap:5px}.chips2 span{font-size:10.5px;font-weight:600;padding:6px 8px;border-radius:999px;background:#eef0f6;color:#1c1c1e}.chips2 .pri{background:#2a55e5;color:#fff}
+.lrow{display:grid;grid-template-columns:62px 1fr 34px;gap:6px;align-items:center;font-size:10.5px;color:#3a3a3c}
+.lbar{display:flex;height:8px;border-radius:4px;overflow:hidden}.lbar i{background:#2a55e5}.lbar em{background:#c7cbd6}
+.lv{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.leg{font-size:9.5px;color:#6b6b70;display:flex;gap:8px;align-items:center}.leg i,.leg em{display:inline-block;width:8px;height:8px;border-radius:2px;background:#2a55e5;margin-right:-4px}.leg em{background:#c7cbd6}
+.wlist{list-style:none;counter-reset:w;display:flex;flex-direction:column;gap:6px;padding:0;margin:0}
+.wlist li{counter-increment:w;background:#fff;border-radius:12px;padding:7px 8px 7px 30px;position:relative;display:flex;flex-direction:column;gap:1px}
+.wlist li::before{content:counter(w);position:absolute;left:8px;top:8px;width:16px;height:16px;border-radius:50%;background:#2a55e5;color:#fff;font-size:9.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.wlist b{font-size:11.5px}.wlist span{font-size:10px;line-height:1.3;color:#48484a}
+.app .act{background:#e5e5ea;color:#1c1c1e;backdrop-filter:none}.app .act.pri{background:#2a55e5;color:#fff}
+.app .acts{margin-top:10px}
+.msgs{background:#fff;color:#000}.msgs .sbar{color:#000}
+.mhead{text-align:center;font-size:12px;font-weight:600;margin:14px 0 8px;display:flex;flex-direction:column;align-items:center;gap:3px;border-bottom:1px solid #eee;padding-bottom:8px}.mhead small{font-size:9.5px;color:#8e8e93;font-weight:500}
+.gav{width:30px;height:30px;border-radius:50%;background:#e5e5ea;display:flex;align-items:center;justify-content:center;font-size:15px}
+.thread{display:flex;flex-direction:column;gap:6px}
+.in{align-self:flex-start;background:#e9e9eb;border-radius:16px;padding:6px 10px;font-size:11.5px;max-width:85%;display:flex;flex-direction:column}.in b{font-size:9px;color:#8e8e93;font-weight:600}
+.suggest{margin-top:auto;background:#f2f2f7;border-radius:16px;padding:9px;display:flex;flex-direction:column;gap:6px}
+.shead{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:700;color:#2a55e5;text-transform:uppercase;letter-spacing:.04em}
+.helm{width:24px;height:21px}
+.joke{background:#fff;border:1px solid #d9dce5;border-radius:14px;padding:7px 9px;font-size:11px;line-height:1.3;color:#1c1c1e;position:relative}
+.joke::after{content:"Send";position:absolute;right:7px;bottom:-7px;background:#2a55e5;color:#fff;font-size:8.5px;font-weight:700;padding:2px 6px;border-radius:999px}
+@media (max-width:1100px){.iphones{grid-template-columns:repeat(4,minmax(240px,1fr));overflow-x:auto;padding-bottom:12px}}
+.goodlabel{font-size:clamp(40px,4vw,60px);line-height:1;color:#ffff33;margin-bottom:6px}
+.gap-chart{display:flex;flex-direction:column;gap:18px;background:#fff;border-radius:28px;padding:36px}
+.gbar{display:grid;grid-template-columns:160px 1fr 70px;align-items:center;gap:18px}
+.glab{font-weight:800;font-size:18px}.glab small{display:block;font-weight:600;font-size:13px;color:#6b675c}
+.gtrack{position:relative;height:38px;background:#efe9df;border-radius:10px}
+.gfill{position:absolute;left:0;top:0;bottom:0;border-radius:10px}
+.gap-mark{position:absolute;left:57.1%;right:0;top:-8px;bottom:-8px;border:3px dashed #ffff33;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#ffff33;font-weight:900;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.gnum{font-size:44px;text-align:right}
+.vignettes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.vig{display:flex;flex-direction:column;gap:12px}
+.vscreen{background:linear-gradient(170deg,#24345f,#0f1730);border:8px solid #000;border-radius:30px;aspect-ratio:9/14;padding:18px 12px 14px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+.vtime{font-family:"DM Serif Display",Georgia,serif;font-size:44px;line-height:1;text-align:center;color:#efe9df}.vtime small{display:block;font-family:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-top:4px;font-family:system-ui,sans-serif}
+.vcard{background:rgba(255,255,255,.96);color:#16203a;border-radius:16px;padding:12px;font-size:13px;line-height:1.35;display:flex;flex-direction:column;gap:6px;position:relative}
+.vtag{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#2a55e5}
+.vbig{font-weight:900;font-size:16px;line-height:1.2}
+.bub{background:#e7edff;border-radius:12px 12px 12px 4px;padding:6px 9px;font-size:12px}
+.helmet{width:40px;height:34px;display:block}
+.vbtns{margin-top:auto;display:flex;gap:6px}
+.vb{flex:1;text-align:center;border-radius:999px;padding:9px 6px;font-size:12px;font-weight:800;background:rgba(255,255,255,.14);color:#efe9df}
+.vb.on{background:#ffff33;color:#0b1226}
+.vcap{font-size:15px;line-height:1.4;color:#d6dcef}.vcap b{color:#fff}
+@media (max-width:980px){.vignettes{grid-template-columns:repeat(4,minmax(210px,1fr));overflow-x:auto;padding-bottom:10px}.gbar{grid-template-columns:100px 1fr 50px}.gnum{font-size:32px}}
+#pullup{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:36px;align-items:start}
+#pullup > .crewgrid{grid-column:1;grid-row:1 / span 6}
+.crewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.crewgrid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;display:block}.crewgrid .big{grid-column:1/-1;aspect-ratio:16/10;object-position:50% 35%;border-radius:22px}
+@media (max-width:860px){#pullup{display:flex}}
+.pv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 50%,rgba(0,0,0,.8) 100%)}
+.screen .top,.post-bg{position:relative}
+.live{background:#ff2d55;color:#fff;border-radius:4px;padding:1px 5px;margin-right:4px;font-size:10px}
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.phone{background:#000;border-radius:34px;padding:10px;box-shadow:0 24px 50px rgba(11,18,38,.28)}
+.screen{border-radius:26px;overflow:hidden;background:#111;color:#fff;aspect-ratio:9/17;position:relative;display:flex;flex-direction:column;font-size:13px}
+.screen .top{display:flex;justify-content:space-between;padding:12px 16px 6px;font-size:11px;font-weight:700;opacity:.85}
+.post-bg{flex:1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.post-cap{font-weight:800;font-size:16px;line-height:1.25}
+.post-meta{margin-top:8px;font-size:12px;opacity:.75}
+.rail{position:absolute;right:10px;bottom:90px;display:flex;flex-direction:column;gap:14px;font-size:11px;font-weight:800;text-align:center}
+.rail i{display:block;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);margin:0 auto 3px}
+.feedpost{background:#fff;color:#0f1419;padding:14px 16px;border-bottom:1px solid #eee}
+.feedpost b{font-size:14px}.feedpost p{font-size:14px;line-height:1.4;margin-top:4px}
+.feedpost .m{font-size:12px;color:#536471;margin-top:8px}
+/* cards */
+.goodrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.goodcard{border:1px solid #2c3d6e;border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.clear{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.clear p.s{font-family:'DM Serif Display',Georgia,serif;font-size:28px;line-height:1.15}
+/* suite */
+.suite{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.suitecard{border-radius:32px;padding:36px;display:flex;flex-direction:column;gap:18px;overflow:hidden}
+.notif{background:rgba(255,255,255,.96);color:#16203a;border-radius:18px;padding:12px 14px;font-size:14px;line-height:1.4;box-shadow:0 6px 18px rgba(11,18,38,.12)}
+.notif .who{display:flex;justify-content:space-between;font-size:12px;font-weight:800;color:#6b675c;margin-bottom:3px}
+.manny-phone{background:#16203a;border-radius:30px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid #2c3d6e;border-radius:999px;padding:9px 14px;font-size:14px;font-weight:700}
+.beats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.beat{background:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:6px}
+@media (max-width:900px){
+ .split,.suite,.clear{grid-template-columns:1fr}
+ .phones{grid-template-columns:repeat(3,minmax(220px,1fr));overflow-x:auto;padding-bottom:12px}
+ .goodrow,.beats{grid-template-columns:1fr}
+ .hero-shade{background:linear-gradient(0deg,rgba(11,18,38,.97) 0%,rgba(11,18,38,.85) 55%,rgba(11,18,38,.35) 100%)}
+ .hero-copy{justify-content:flex-end}
+ .navlinks{gap:14px;font-size:14px}
+}
+
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.stage .num{font-family:'DM Serif Display',Georgia,serif;font-size:120px;line-height:.8;color:#ffff33}
+.timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tl{border-top:3px solid #2a55e5;padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.tl b{font-family:'DM Serif Display',Georgia,serif;font-size:34px;font-weight:400}
+.piles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pile{border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.pile h4{margin:0;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:38px}
+.card{background:#fff;color:#16203a;border-radius:12px;padding:12px 14px;font-weight:700;font-size:15px;box-shadow:0 6px 16px rgba(11,18,38,.15);display:flex;justify-content:space-between;gap:10px}
+.card small{font-weight:600;color:#6b675c;font-size:12px}
+.pile .card:nth-child(odd){transform:rotate(-1.2deg)}.pile .card:nth-child(even){transform:rotate(1deg)}
+.kidsband{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.kid{background:#fff;border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.kid b{font-family:'DM Serif Display',Georgia,serif;font-size:30px;font-weight:400;color:#2a55e5}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:28px;justify-content:center}
+@media (max-width:860px){.stage,.timeline,.piles,.kidsband{grid-template-columns:1fr}.stage .num{font-size:80px}.duo{grid-template-columns:minmax(0,300px)}}
+</style>
+</head>
+<body>
+
+<section class="hero" id="top">
+  <img class="hero-bg" src="/img/air-it-out-lawn.jpg" alt="Couples laughing on a lawn during a party game, men wearing toilet-paper aprons" style="object-position:55% 35%">
+  <div class="hero-shade"></div>
+  <div class="wrap" style="position:relative;display:flex;flex-direction:column;flex:1;width:100%;box-sizing:border-box">
+    <nav aria-label="Main">
+      <a href="/" class="serif" style="font-size:30px;color:#efe9df;text-decoration:none">Air It Out</a>
+      <div class="navlinks">
+        <a href="#night" style="color:#efe9df;text-decoration:none">The night</a>
+        <a href="#kids" style="color:#efe9df;text-decoration:none">The kids</a>
+        <a href="#manny" style="color:#efe9df;text-decoration:none">After</a>
+        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Air%20It%20Out&amp;body=Save%20us%20two%20spots%20for%20the%20first%20Air%20It%20Out%20night." style="background:#ffff33;color:#0b1226;padding:11px 20px;font-size:15px">Save two spots</a>
+      </div>
+    </nav>
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:#9fb6ff">For couples who both work</p>
+      <h1 class="serif">Air it out. Sort it out. <span style="font-style:italic;color:#ffff33">Fold it in.</span></h1>
+      <p style="font-size:clamp(18px,1.5vw,21px);line-height:1.55;color:#d6dcef;max-width:48ch">One night, a room full of couples, and the conversation you keep putting off. You leave with the load split, the kids happy, and a basket of laundry folded together.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Air%20It%20Out&amp;body=Save%20us%20two%20spots%20for%20the%20first%20Air%20It%20Out%20night." style="background:#2a55e5;color:#fff">Save two spots</a>
+        <a class="btn" href="#night" style="border:2px solid #efe9df;color:#efe9df;padding:14px 26px">See how the night goes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="night">
+  <div class="wrap" style="padding-top:110px;padding-bottom:60px;display:flex;flex-direction:column;gap:36px">
+    <p class="eyebrow" style="color:#2a55e5">How the night goes</p>
+    <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">Three hours. <span style="font-style:italic;color:#2a55e5">One load lighter.</span></h2>
+    <div class="timeline">
+      <div class="tl"><b>6:30</b><p>Drop the kids down the hall. Grab a plate. Find your table.</p></div>
+      <div class="tl"><b>7:00</b><p><strong>Air it out.</strong> Say the thing you've been carrying.</p></div>
+      <div class="tl"><b>7:45</b><p><strong>Sort it out.</strong> Every task gets an owner. Some go to Manny.</p></div>
+      <div class="tl"><b>8:45</b><p><strong>Fold it in.</strong> Fold a real basket together and set the nightly check-in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#0b1226;color:#efe9df">
+  <div class="wrap" style="padding-top:110px;padding-bottom:110px;display:flex;flex-direction:column;gap:110px">
+    <div class="stage">
+      <img class="soft" src="https://images.unsplash.com/photo-1584473457493-17c4c24290c9?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="A couple laughing together on a couch" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <p class="num">01</p>
+        <h3 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Air it out.</h3>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">Five minutes each, no interrupting. One of you says what you're carrying that nobody sees. The other one says it back until it's right. Then you switch.</p>
+        <p style="font-size:19px;line-height:1.6;color:#fff;font-weight:700">Not a fight. A download.</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:760px">
+        <p class="num" style="font-family:'DM Serif Display',Georgia,serif;font-size:120px;line-height:.8;color:#ffff33">02</p>
+        <h3 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Sort it out. <span style="font-style:italic;color:#9fb6ff">The Load Out deck.</span></h3>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef">Every card is a job your house actually runs on, down to the invisible ones. Each card lands in one of three piles. The third pile is the one nobody else has.</p>
+      </div>
+      <div class="piles">
+        <div class="pile" style="background:#2a55e5"><h4>Mine.</h4>
+          <p class="card">Dentist + doctor appointments <small>all 3 kids</small></p>
+          <p class="card">Trash + recycling nights</p>
+          <p class="card">Saturday breakfast</p>
+          <p class="card">Car stuff <small>registration, oil</small></p>
+        </div>
+        <div class="pile" style="background:#9fb6ff;color:#0b1226"><h4>Yours.</h4>
+          <p class="card">School pickup <small>Tue + Thu</small></p>
+          <p class="card">Bath + bedtime routine</p>
+          <p class="card">Holiday plans with family</p>
+          <p class="card">Weeknight dinners</p>
+        </div>
+        <div class="pile" style="background:#ffff33;color:#0b1226"><h4>Manny's.</h4>
+          <p class="card">Permission slips + school emails</p>
+          <p class="card">Birthday gifts for classmates</p>
+          <p class="card">Grocery list from what's running low</p>
+          <p class="card">Remembering what she said she wanted</p>
+        </div>
+      </div>
+    </div>
+    <div class="stage">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <p class="num">03</p>
+        <h3 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Fold it in.</h3>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">You fold a real basket of laundry together, side by side, hands busy, eyes forward. It's the easiest place to keep talking. Before the last towel, you pick your nightly check-in: same time, ten minutes, same three questions.</p>
+        <p style="font-size:19px;line-height:1.6;color:#fff;font-weight:700">What landed on you today? What can I take? What's tomorrow?</p>
+      </div>
+      <img class="soft" src="https://images.unsplash.com/photo-1760939064986-3c375dab7b49?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="A couple folding and hanging laundry together" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover">
+    </div>
+  </div>
+</section>
+
+<section id="kids">
+  <div class="wrap" style="padding-top:110px;padding-bottom:110px;display:flex;flex-direction:column;gap:36px">
+    <div class="split" style="align-items:end">
+      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">The kids aren't parked. <span style="font-style:italic;color:#2a55e5">They're in a lab.</span></h2>
+      <p style="font-size:19px;line-height:1.6;max-width:48ch">Down the hall, LifeSkills Lab runs a session of its own. Real expert, real hands-on challenge, and a star for every kid to take home. You get a quiet room. They get the best part of their week.</p>
+    </div>
+    <div class="kidsband">
+      <div class="kid"><b>Launch.</b><p>A fast challenge to open the night. Tallest paper tower wins.</p></div>
+      <div class="kid"><b>Figure it out.</b><p>A real skill, kid-sized. Measure, build, try again.</p></div>
+      <div class="kid"><b>Teach back.</b><p>At pickup, they teach you what they learned. Bring questions.</p></div>
+    </div>
+    <a href="http://lifeskillslab.ai" style="font-weight:800;font-size:17px">More about LifeSkills Lab →</a>
+  </div>
+</section>
+
+<section id="manny" style="background:#e4dccd">
+  <div class="wrap" style="padding-top:110px;padding-bottom:110px;display:flex;flex-direction:column;gap:44px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:760px">
+      <p class="eyebrow" style="color:#2a55e5">After the night</p>
+      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">Manny keeps the sort. <span style="font-style:italic;color:#2a55e5">For both of you.</span></h2>
+      <p style="font-size:19px;line-height:1.6">The piles don't live on a napkin. They live in Manny, on both phones. He nudges whoever owns the card, handles his own pile, and tells you both how the split is holding.</p>
+    </div>
+    <div class="duo">
+      <figure class="pf"><div class="iph"><div class="iscr app">
+        <div class="sbar"><span>8:02</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
+        <p class="apph">Your sort <small>Week 3</small></p>
+        <div class="acard">
+          <p class="src dark">Who's carrying what</p>
+          <div class="lrow"><span>You</span><span class="lbar"><i style="width:52%"></i><em style="width:48%"></em></span><span class="lv">52%</span></div>
+          <div class="lrow"><span>Week 1</span><span class="lbar"><i style="width:31%"></i><em style="width:69%"></em></span><span class="lv">31%</span></div>
+          <p class="leg"><i></i>You <em></em>Her</p>
+        </div>
+        <div class="acard alert">
+          <p class="src dark">Your card · due Thursday</p>
+          <p class="nt dark">Dentist for all three.</p>
+          <div class="chips2"><span class="pri">Book Thu 4:00</span><span>Pick another day</span></div>
+        </div>
+        <div class="acard"><p class="src dark">Manny's pile</p><p class="nt dark">2 permission slips signed. Gift for Leo's party ordered.</p></div>
+      </div></div><figcaption><b>His phone.</b> His cards, his nudges, the split moving.</figcaption></figure>
+      <figure class="pf"><div class="iph"><div class="iscr lock">
+        <div class="sbar"><span></span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
+        <p class="ldate">Thursday, December 4</p><p class="lclock">9:15</p>
+        <div class="glass">
+          <div class="nhead"><span class="mico">M</span><b>Manny</b><span>now</span></div>
+          <p class="nt">Check-in in 15 minutes.</p>
+          <p class="nb">He booked the dentist and did pickup twice this week. One card is open: holiday plans. Want it on tonight's list?</p>
+        </div>
+        <div class="acts"><span class="act pri">Add to check-in</span><span class="act">Not tonight</span></div>
+      </div></div><figcaption><b>Her phone.</b> She sees it moving without having to ask.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section style="background:#ffff33;color:#0b1226">
+  <div class="wrap" style="padding-top:96px;padding-bottom:96px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px">
+    <h2 class="serif" style="font-size:clamp(48px,6.4vw,104px);line-height:.88">Bring the basket. <span style="font-style:italic;color:#2a55e5;white-space:nowrap">Leave lighter.</span></h2>
+    <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Air%20It%20Out&amp;body=Save%20us%20two%20spots%20for%20the%20first%20Air%20It%20Out%20night." style="background:#0b1226;color:#fff">Save two spots</a>
+  </div>
+</section>
+
+<footer style="background:#2a55e5;color:#fff">
+  <div class="wrap" style="padding-top:48px;padding-bottom:48px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:15px">
+    <p class="serif" style="font-size:36px">Air It Out</p>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;font-weight:700">
+      <a href="/run-home/" style="color:#fff">For Dads</a>
+      <a href="http://lifeskillslab.ai" style="color:#fff">LifeSkills Lab</a>
+      <a href="/" style="color:#fff">chaunceynartey.com</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
