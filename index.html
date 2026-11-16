@@ -22,6 +22,15 @@ p{margin:0}
 @keyframes fade{0%{opacity:0}4%{opacity:1}33%{opacity:1}37%{opacity:0}100%{opacity:0}}
 .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:fade 15s infinite}
 .hl{background:#ffff33;color:#0b1226;padding:0 10px;border-radius:10px;font-style:italic;display:inline-block;transform:rotate(-2deg)}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 47vw;min-height:640px;margin-top:28px}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;gap:28px;padding:40px 56px 96px max(24px,calc((100vw - 1368px)/2 + 24px))}
+.hero-photo{position:relative;overflow:hidden;background:#16203a}
+.hero-h1{font-size:clamp(44px,3.9vw,76px);line-height:1.02;letter-spacing:-0.02em}
+.hero-h1 span:not(.hl){display:block;white-space:nowrap}
+.hero-h1 .hl{margin-top:8px}
+.hero-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.hero-tags li{font-size:18px;font-weight:800;color:#0b1226;background:#9fb6ff;padding:10px 18px;border-radius:999px}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;min-height:0}.hero-photo{order:-1;aspect-ratio:4/5;max-height:70vh}.hero-copy{padding:36px 24px 72px}.hero-h1{font-size:clamp(38px,10vw,56px)}.hero-h1 span:not(.hl){white-space:normal}.hero-tags li{font-size:15px;padding:8px 14px}}
 </style>
 
 <style>html{scroll-behavior:smooth}</style>
@@ -33,34 +42,36 @@ p{margin:0}
   <!-- HERO -->
   <section id="top" style="background: #0b1226; color: #efe9df; position: relative; overflow: hidden;">
     <div style="position: absolute; inset: 0; background-image: radial-gradient(#1d2a4f 1.5px, transparent 1.6px); background-size: 28px 28px;"></div>
-    <div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 22px 24px 96px; display: flex; flex-direction: column; gap: 56px;">
+    <div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 22px 24px 0;">
       <nav aria-label="Main" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
-        <a href="#top" aria-label="Chauncey Nartey, home" class="serif" style="font-size: 30px; color: #efe9df; text-decoration: none; letter-spacing: -0.02em;">CN<span style="color: #ffff33;">.</span></a>
+        <a href="#top" class="serif" style="font-size: 28px; color: #efe9df; text-decoration: none; letter-spacing: -0.01em; white-space: nowrap;">Chauncey Nartey</a>
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px; font-weight: 700;">
           <a href="/speaking/" style="color: #efe9df; text-decoration: none;">For Companies</a>
-          <a href="/show/" style="color: #efe9df; text-decoration: none;">The Show</a>
           <a href="/run-home/" style="color: #efe9df; text-decoration: none;">For Parents</a>
-          <a href="https://calendly.com/adultlearningleaders" style="color: #efe9df; text-decoration: none;">For Schools</a>
+          <a href="https://calendly.com/adultlearningleaders" style="color: #efe9df; text-decoration: none;">For Educators</a>
+          <a href="/show/" style="color: #efe9df; text-decoration: none;">How I With AI</a>
           <a href="https://calendly.com/adultlearningleaders" style="background: #ffff33; color: #0b1226; text-decoration: none; padding: 12px 22px; border-radius: 999px; font-weight: 900;">Book a Call</a>
         </div>
       </nav>
-      <div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: center;">
-        <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 26px;">
-          <p class="eyebrow" style="color: #9fb6ff;">Dad of three girls · Speaker · AI + Airtable builder</p>
-          <h1 class="serif" style="font-size: clamp(54px, 7.4vw, 112px); line-height: 0.96; letter-spacing: -0.02em;">Securing their future shouldn't cost us <span class="hl">their present.</span></h1>
-          <p style="font-size: 21px; line-height: 1.55; color: #d6dcef; max-width: 52ch;">I help parents run the home and help companies let them. The tools are AI, better systems, and managers who get it. I'm figuring it out in public, with a 9-5 leading 4th and 5th grade at Alpha School NYC.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 14px;">
-            <a class="btn" href="https://calendly.com/adultlearningleaders" style="background: #2a55e5; color: #ffffff;">Book a Call</a>
-            <a class="btn" href="#show" style="border: 2px solid #efe9df; color: #efe9df; padding: 16px 28px;">Watch the Show</a>
-          </div>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <ul class="hero-tags">
+          <li>Dad of three girls</li>
+          <li>Speaker</li>
+          <li>AI + Airtable builder</li>
+        </ul>
+        <h1 class="serif hero-h1"><span>Securing their future</span> <span>shouldn't cost us</span> <span class="hl">their present.</span></h1>
+        <p style="font-size: 20px; line-height: 1.55; color: #d6dcef; max-width: 46ch;">I help parents run the home and help companies let them. The tools are AI, better systems, and managers who get it. I'm figuring it out in public, with a 9-5 leading 4th and 5th grade at Alpha School NYC.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+          <a class="btn" href="https://calendly.com/adultlearningleaders" style="background: #2a55e5; color: #ffffff;">Book a Call</a>
+          <a class="btn" href="#show" style="border: 2px solid #efe9df; color: #efe9df; padding: 16px 28px;">Watch the Show</a>
         </div>
-        <div style="flex: 1 1 420px; min-width: 0; position: relative; max-width: 520px; margin: 0 auto;">
-          <div style="position: relative; width: 100%; aspect-ratio: 1 / 1; border-radius: 40px; overflow: hidden; background: #16203a;">
-            <img class="slide" src="/img/headshot.jpg" alt="Chauncey Nartey in a tuxedo, smiling" style="animation-delay: 0s; opacity: 1;">
-            <img class="slide" src="/img/wedding.jpg" alt="Chauncey and Andrea on their wedding day" style="animation-delay: 5s;">
-            <img class="slide" src="/img/panel.jpg" alt="Chauncey speaking on a workforce development panel" style="animation-delay: 10s; object-position: 50% 70%;">
-          </div>
-          </div>
+      </div>
+      <div class="hero-photo">
+        <img class="slide" src="/img/headshot.jpg" alt="Chauncey Nartey in a tuxedo, smiling" style="animation-delay: 0s; opacity: 1; object-position: 50% 25%;">
+        <img class="slide" src="/img/wedding.jpg" alt="Chauncey and Andrea on their wedding day" style="animation-delay: 5s; object-position: 50% 35%;">
+        <img class="slide" src="/img/panel.jpg" alt="Chauncey speaking on a workforce development panel" style="animation-delay: 10s; object-position: 50% 100%;">
       </div>
     </div>
   </section>
@@ -199,9 +210,9 @@ p{margin:0}
       <p style="font-weight: 800; color: #ffffff;">Chauncey Nartey · Modern Operator</p>
       <div style="display: flex; flex-wrap: wrap; gap: 20px;">
         <a href="/speaking/" style="color: #ffffff;">For Companies</a>
-        <a href="/show/" style="color: #ffffff;">The Show</a>
         <a href="/run-home/" style="color: #ffffff;">For Parents</a>
-        <a href="https://calendly.com/adultlearningleaders" style="color: #ffffff;">For Schools</a>
+        <a href="https://calendly.com/adultlearningleaders" style="color: #ffffff;">For Educators</a>
+        <a href="/show/" style="color: #ffffff;">How I With AI</a>
         <a href="https://www.linkedin.com/in/chaunceynartey" style="color: #ffffff;">LinkedIn</a>
         <a href="https://www.youtube.com/@chaunceynartey" style="color: #ffffff;">YouTube</a>
       </div>
