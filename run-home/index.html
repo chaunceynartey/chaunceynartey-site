@@ -3,280 +3,308 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Run Home | Chauncey Nartey</title>
-<meta name="description" content="For the 4P Dad: Protect. Provide. Partner. Parent.">
+<title>For Dads | Run Home | Chauncey Nartey</title>
+<meta name="description" content="Our dads were expected to protect and provide. We signed up for all four. Tools and a crew for dads running the home.">
 <meta property="og:title" content="Run Home | Chauncey Nartey">
-<meta property="og:description" content="For the 4P Dad: Protect. Provide. Partner. Parent.">
+<meta property="og:description" content="Our dads were expected to protect and provide. We signed up for all four.">
 <meta property="og:image" content="https://chaunceynartey.com/img/headshot.jpg">
 <link rel="icon" href="/img/headshot.jpg">
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap">
 <style>
+html{scroll-behavior:smooth}
 body{margin:0;background:#efe9df;color:#16203a;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-a{color:#2a55e5}a:hover{color:#14234f}
-h1,h2,h3{margin:0;font-weight:400}
-p{margin:0}
-sup{font-size:0.3em;vertical-align:super;font-family:"Inter",sans-serif;font-weight:800}
+a{color:#2a55e5}
+h1,h2,h3,p,figure,blockquote{margin:0}
+h1,h2,h3{font-weight:400}
+.serif{font-family:'DM Serif Display',Georgia,serif}
+.wrap{max-width:1320px;margin:0 auto;padding-left:24px;padding-right:24px}
+.eyebrow{font-size:14px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.btn{display:inline-block;text-decoration:none;padding:16px 28px;border-radius:999px;font-weight:900;font-size:17px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.soft{-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 12%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0%,#000 12%,#000 88%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:#0b1226;color:#efe9df;display:flex;flex-direction:column;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,18,38,.96) 0%,rgba(11,18,38,.86) 38%,rgba(11,18,38,.25) 72%,rgba(11,18,38,.1) 100%),linear-gradient(0deg,rgba(11,18,38,.85) 0%,rgba(11,18,38,0) 30%)}
+.hero nav{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:22px}
+.navlinks{display:flex;flex-wrap:wrap;align-items:center;gap:24px;font-size:15px;font-weight:700}
+.navlinks a{color:#efe9df;text-decoration:none}
+.hero-copy{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px;max-width:680px;padding-top:32px;padding-bottom:40px}
+.hero h1{font-size:clamp(44px,5.2vw,84px);line-height:.98;letter-spacing:-.02em}
+/* ticker */
+.ticker{background:#ffff33;color:#0b1226;overflow:hidden;white-space:nowrap;border-top:3px solid #0b1226;border-bottom:3px solid #0b1226}
+.ticker-track{display:inline-flex;gap:56px;padding:18px 0;animation:tick 38s linear infinite;font-family:'DM Serif Display',Georgia,serif;font-size:clamp(24px,2.6vw,36px)}
+.ticker-track span b{font-family:'Inter',sans-serif;font-weight:900;font-size:.62em;letter-spacing:.06em;color:#2a55e5;padding:0 6px;vertical-align:middle}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+/* stats */
+.stat{border-top:2px solid #2c3d6e;padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.stat .n{font-family:'DM Serif Display',Georgia,serif;font-size:44px;line-height:1;color:#ffff33}
+/* phones */
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.phone{background:#000;border-radius:34px;padding:10px;box-shadow:0 24px 50px rgba(11,18,38,.28)}
+.screen{border-radius:26px;overflow:hidden;background:#111;color:#fff;aspect-ratio:9/17;position:relative;display:flex;flex-direction:column;font-size:13px}
+.screen .top{display:flex;justify-content:space-between;padding:12px 16px 6px;font-size:11px;font-weight:700;opacity:.85}
+.post-bg{flex:1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.post-cap{font-weight:800;font-size:16px;line-height:1.25}
+.post-meta{margin-top:8px;font-size:12px;opacity:.75}
+.rail{position:absolute;right:10px;bottom:90px;display:flex;flex-direction:column;gap:14px;font-size:11px;font-weight:800;text-align:center}
+.rail i{display:block;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);margin:0 auto 3px}
+.feedpost{background:#fff;color:#0f1419;padding:14px 16px;border-bottom:1px solid #eee}
+.feedpost b{font-size:14px}.feedpost p{font-size:14px;line-height:1.4;margin-top:4px}
+.feedpost .m{font-size:12px;color:#536471;margin-top:8px}
+/* cards */
+.goodrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.goodcard{border:1px solid #2c3d6e;border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.clear{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.clear p.s{font-family:'DM Serif Display',Georgia,serif;font-size:28px;line-height:1.15}
+/* suite */
+.suite{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.suitecard{border-radius:32px;padding:36px;display:flex;flex-direction:column;gap:18px;overflow:hidden}
+.notif{background:rgba(255,255,255,.96);color:#16203a;border-radius:18px;padding:12px 14px;font-size:14px;line-height:1.4;box-shadow:0 6px 18px rgba(11,18,38,.12)}
+.notif .who{display:flex;justify-content:space-between;font-size:12px;font-weight:800;color:#6b675c;margin-bottom:3px}
+.manny-phone{background:#16203a;border-radius:30px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid #2c3d6e;border-radius:999px;padding:9px 14px;font-size:14px;font-weight:700}
+.beats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.beat{background:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:6px}
+@media (max-width:900px){
+ .split,.suite,.clear{grid-template-columns:1fr}
+ .phones{grid-template-columns:repeat(3,minmax(220px,1fr));overflow-x:auto;padding-bottom:12px}
+ .goodrow,.beats{grid-template-columns:1fr}
+ .hero-shade{background:linear-gradient(0deg,rgba(11,18,38,.97) 0%,rgba(11,18,38,.85) 55%,rgba(11,18,38,.35) 100%)}
+ .hero-copy{justify-content:flex-end}
+ .navlinks{gap:14px;font-size:14px}
+}
 </style>
-
-<style>html{scroll-behavior:smooth}</style>
 </head>
 <body>
 
-<div style="width: 100%; background: #efe9df; color: #16203a; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden;">
-  <div style="background: #7d9bff; color: #0b1226; text-align: center; padding: 12px 24px; font-size: 15px; font-weight: 800;">Run Home opens to the waitlist first. <a href="#pullup" style="color: #0b1226;">Get on it</a>.</div>
-
-  <section id="top" style="position: relative; background: #0b1226; color: #efe9df; overflow: hidden;">
-    <img src="/img/driveway.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.26;">
-    <div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 24px 24px 136px; display: flex; flex-direction: column; gap: 72px;">
-      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
-        <a href="/speaking/" style="font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; color: #efe9df; text-decoration: none;">Run Home<span style="color: #7d9bff;">.</span></a>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 15px; font-weight: 700;">
-          <a href="#scoreboard" style="color: #efe9df; text-decoration: none;">The 4P Dad</a>
-          <a href="#manny" style="color: #efe9df; text-decoration: none;">Meet Manny</a>
-          <a href="#pullup" style="background: #7d9bff; color: #0b1226; text-decoration: none; padding: 13px 24px; border-radius: 999px; font-weight: 900;">Join Pull Up</a>
-        </div>
-      </nav>
-      <div style="display: flex; flex-direction: column; gap: 34px;">
-        <p style="align-self: flex-start; font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #0b1226; background: #7d9bff; padding: 10px 18px; border-radius: 999px; transform: rotate(-2.5deg);">Calling every 4P Dad</p>
-        <h1 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(72px, 13.5vw, 220px); line-height: 0.82; letter-spacing: -0.03em; color: #efe9df;">Protect.<br>Provide.<br><span style="color: #9fb6ff;">Partner.</span><br><span style="font-style: italic; color: #9fb6ff;">Parent.</span></h1>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(36px, 4.4vw, 64px); line-height: 1.02; color: #efe9df; max-width: 22ch;">Doing more than our fathers. <span style="font-style: italic; color: #9fb6ff;">Still not doing enough.</span></p>
-        <p style="font-size: clamp(22px, 2vw, 28px); line-height: 1.45; color: #d6dcef; max-width: 50ch;">Your dad was expected to protect and provide. You signed up for all four. The world around you never updated: the workday still assumes someone is home at 3:00, and the school still calls Mom.</p>
-        <p style="align-self: flex-start; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 3vw, 42px); line-height: 1.05; color: #0b1226; background: #efe9df; padding: 14px 24px; border-radius: 16px; transform: rotate(-1deg);">The solution? Run Home.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 14px;">
-          <a href="#pullup" style="background: #2a55e5; color: #ffffff; text-decoration: none; padding: 20px 34px; border-radius: 999px; font-weight: 900; font-size: 19px;">Join the waitlist</a>
-          <a href="#manny" style="border: 2px solid #efe9df; color: #efe9df; text-decoration: none; padding: 18px 34px; border-radius: 999px; font-weight: 800; font-size: 19px;">Meet Manny</a>
-        </div>
+<!-- HERO -->
+<section class="hero" id="top">
+  <img class="hero-bg" src="https://images.unsplash.com/photo-1756142007128-f431ede241cc?auto=format&amp;fit=crop&amp;w=2000&amp;q=80" alt="A dad and his daughters taking a selfie by the family car">
+  <div class="hero-shade"></div>
+  <div class="wrap" style="position:relative;display:flex;flex-direction:column;flex:1;width:100%;box-sizing:border-box">
+    <nav aria-label="Main">
+      <a href="#top" class="serif" style="font-size:30px;color:#efe9df;text-decoration:none">Run Home</a>
+      <div class="navlinks">
+        <a href="#manny">Manny</a>
+        <a href="#pullup">Pull Up</a>
+        <a href="/">chaunceynartey.com</a>
+        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Run%20Home%20waitlist&amp;body=Add%20me%20to%20the%20Run%20Home%20waitlist." style="background:#ffff33;color:#0b1226;padding:12px 22px;font-size:15px">Join the waitlist</a>
+      </div>
+    </nav>
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:#9fb6ff">For dads doing all four</p>
+      <h1 class="serif">Our dads were expected to protect and provide. <span style="font-style:italic;color:#ffff33">We signed up for all four.</span></h1>
+      <p style="font-size:clamp(18px,1.5vw,21px);line-height:1.55;color:#d6dcef;max-width:48ch">We're doing more at home than any generation of dads before us, and still trying to make it home on time. Run Home is the tools and the crew so you're not figuring it out alone.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Run%20Home%20waitlist&amp;body=Add%20me%20to%20the%20Run%20Home%20waitlist." style="background:#2a55e5;color:#fff">Join the waitlist</a>
+        <a class="btn" href="#suite" style="border:2px solid #efe9df;color:#efe9df;padding:14px 26px">See what's inside</a>
       </div>
     </div>
-  </section>
-
-  <div aria-hidden="true" style="background: #2a55e5; color: #ffffff; padding: 22px 0; overflow: hidden; white-space: nowrap; font-size: 22px; font-weight: 900; letter-spacing: 0.14em;">
-    <span style="padding-left: 24px;">PROTECT ◆ PROVIDE ◆ PARTNER ◆ PARENT ◆ DOUBLE-BOOKED? RUN HOME ◆ PROTECT ◆ PROVIDE ◆ PARTNER ◆ PARENT ◆ DOUBLE-BOOKED? RUN HOME ◆ PROTECT ◆ PROVIDE</span>
   </div>
+</section>
 
-  <section id="scoreboard" style="max-width: 1320px; margin: 0 auto; padding: 144px 24px; display: flex; flex-direction: column; gap: 56px;">
-    <div style="display: flex; flex-direction: column; gap: 22px;">
-      <span style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #2a55e5;">The 4P Dad</span>
-      <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(56px, 9vw, 148px); line-height: 0.86; letter-spacing: -0.02em;">The job description changed. <span style="font-style: italic; color: #2a55e5;">The world didn't.</span></h2>
-    </div>
-    <div style="background: #0b1226; color: #efe9df; border-radius: 28px; padding: 36px; overflow-x: auto; transform: rotate(-0.6deg);">
-      <div style="display: grid; grid-template-columns: minmax(180px, 1.4fr) repeat(4, minmax(110px, 1fr)) minmax(150px, 1.2fr); gap: 0; min-width: 820px; font-weight: 900;">
-        <p style="padding: 14px 10px; font-size: 13px; letter-spacing: 0.12em; color: #9fb6ff;">THE JOB DESCRIPTION</p>
-        <p style="padding: 14px 10px; font-size: 13px; letter-spacing: 0.12em; color: #9fb6ff; text-align: center;">PROTECT</p>
-        <p style="padding: 14px 10px; font-size: 13px; letter-spacing: 0.12em; color: #9fb6ff; text-align: center;">PROVIDE</p>
-        <p style="padding: 14px 10px; font-size: 13px; letter-spacing: 0.12em; color: #9fb6ff; text-align: center;">PARTNER</p>
-        <p style="padding: 14px 10px; font-size: 13px; letter-spacing: 0.12em; color: #9fb6ff; text-align: center;">PARENT</p>
-        <p style="padding: 14px 10px; font-size: 13px; letter-spacing: 0.12em; color: #9fb6ff; text-align: center;">A WORLD BUILT FOR IT</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 22px;">Your dad</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 30px; text-align: center; color: #9fb6ff;">✓</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 30px; text-align: center; color: #9fb6ff;">✓</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 30px; text-align: center; color: #4a5680;">·</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 30px; text-align: center; color: #4a5680;">·</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 20px; text-align: center;">Yes</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 22px; color: #ffffff;">You</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 30px; text-align: center; color: #7d9bff;">✓</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 30px; text-align: center; color: #7d9bff;">✓</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 30px; text-align: center; color: #7d9bff;">✓</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 30px; text-align: center; color: #7d9bff;">✓</p>
-        <p style="padding: 22px 10px; border-top: 1px solid #2c3d6e; font-size: 20px; text-align: center; color: #ff8a7a;">Not yet</p>
-      </div>
-    </div>
-    <p style="font-size: 24px; line-height: 1.5; color: #2c2c28; max-width: 54ch;">Twice the job, in a world still built for the old one. <b>That's the 4P Dad.</b> Author Jason Wilson calls him the comprehensive man. Work, school and the pediatrician's office haven't caught up to him yet.</p>
-  </section>
-
-  <section id="relic-at-home" style="background: #0b1226; color: #efe9df;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 144px 24px; display: flex; flex-direction: column; gap: 52px;">
-      <div style="display: flex; flex-direction: column; gap: 22px; max-width: 1040px;">
-        <span style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #9fb6ff;">The relic at home</span>
-        <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(54px, 8.6vw, 140px); line-height: 0.86; letter-spacing: -0.02em; color: #efe9df;">Two full-time jobs. <span style="font-style: italic; color: #ff8a7a;">One person still running the home.</span></h2>
-        <p style="font-size: 23px; line-height: 1.5; color: #d6dcef; max-width: 60ch;">For generations, moms carried most of the work of running the home, because most of them weren't also working full time. Now they are. When both parents work full time, both parents should be running the home. The data says that still isn't happening, and that gap is a relic, just like the 3:00 school bell and the unpaid leave.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-        <div style="background: #16203a; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 14px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 72px; line-height: 0.85; color: #ff8a7a;">54% vs 6%</p><p style="font-size: 18px; line-height: 1.5; color: #d6dcef;">In homes where both parents work full time, 54% say Mom does more of managing the kids' schedules. Only 6% say Dad does.</p><p style="margin-top: auto; font-size: 12px; color: #6f7ba3;">Pew Research Center, 2015</p></div>
-        <div style="background: #16203a; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 14px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 72px; line-height: 0.85; color: #ff8a7a;">4.5 hrs</p><p style="font-size: 18px; line-height: 1.5; color: #d6dcef;">Even when husbands and wives earn about the same, wives spend about 4.5 more hours a week on caregiving and housework, while husbands work only about 3 more paid hours. Husbands also get about 3.5 more hours of leisure.</p><p style="margin-top: auto; font-size: 12px; color: #6f7ba3;">Pew Research Center, 2023 (American Time Use Survey)</p></div>
-        <div style="background: #2a55e5; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 14px; transform: rotate(-1.5deg);"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 72px; line-height: 0.85; color: #ffffff;">3x</p><p style="font-size: 18px; line-height: 1.5; color: #eef2ff;">Dads now spend nearly three times as much time with their kids as dads did in 1965. The gap is closing, and dads are the ones closing it.</p><p style="margin-top: auto; font-size: 12px; color: #dce5ff;">Pew Research Center, 2013</p></div>
-      </div>
-      <div style="background: #efe9df; color: #16203a; border-radius: 32px; padding: 44px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center;">
-        <p style="flex: 1 1 360px; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(56px, 7vw, 110px); line-height: 0.85;">Further than our fathers. <span style="font-style: italic; color: #2a55e5;">Still not far enough.</span></p>
-        <div style="flex: 999 1 460px; display: flex; flex-direction: column; gap: 12px; font-size: 20px; line-height: 1.5;">
-          <p>If you're doing more at home than your dad ever did, keep going.</p>
-          <p>If your partner is still carrying more than you, you're not done.</p>
-          <p><b>And if you want more of the load, ask for more of the say:</b> how things get done at home, not just that they get done. That goes for the doctor's office, the school nurse and the class group chat, too. They all still call Mom first.</p>
-        </div>
-      </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between; border-top: 1px solid #2c3d6e; padding-top: 40px;">
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(36px, 4.6vw, 68px); line-height: 1; max-width: 22ch;">You're already running the home, too. <span style="font-style: italic; color: #9fb6ff;">Now it's time to run home.</span></p>
-        <a href="/speaking/#relics" style="border: 2px solid #efe9df; color: #efe9df; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 900; font-size: 17px;">See the relics of the workday →</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="stands" style="background: #e4dccd;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 136px 24px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center;">
-      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
-        <div style="background: #ffffff; border-radius: 20px; padding: 20px 22px; transform: rotate(-2.5deg);"><p style="font-size: 12px; font-weight: 900; color: #6b675c;">ON YOUR FEED</p><p style="font-size: 19px; font-weight: 800;">"POV: you asked him to do ONE thing"</p></div>
-        <div style="background: #ffffff; border-radius: 20px; padding: 20px 22px; transform: rotate(2deg); margin-left: 32px;"><p style="font-size: 12px; font-weight: 900; color: #6b675c;">ALSO ON YOUR FEED</p><p style="font-size: 19px; font-weight: 800;">"Real men don't do diapers."</p></div>
-        <div style="background: #ffffff; border-radius: 20px; padding: 20px 22px; transform: rotate(-1deg);"><p style="font-size: 12px; font-weight: 900; color: #6b675c;">STILL YOUR FEED</p><p style="font-size: 19px; font-weight: 800;">"Weaponized incompetence, explained (a thread)"</p></div>
-        <div style="background: #0b1226; color: #efe9df; border-radius: 20px; padding: 20px 22px; transform: rotate(2.5deg); margin-left: 44px;"><p style="font-size: 12px; font-weight: 900; color: #9fb6ff;">YOU · 9:12 PM</p><p style="font-size: 19px; font-weight: 800;">*closes app, packs tomorrow's lunches*</p></div>
-      </div>
-      <div style="flex: 999 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 26px;">
-        <span style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #2a55e5;">Meanwhile, on your feed</span>
-        <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(54px, 8vw, 128px); line-height: 0.86;">The internet is fighting about men who won't do the dishes. <span style="font-style: italic; color: #2a55e5;">You're doing the dishes.</span></h2>
-        <p style="font-size: 22px; line-height: 1.55; color: #2c2c28; max-width: 50ch;">One side says men are useless. The other says real men shouldn't have to. Neither one is talking about you. So you keep your head down and keep going.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="hurt" style="background: #0b1226; color: #efe9df;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 152px 24px; display: flex; flex-direction: column; gap: 48px;">
-      <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(64px, 11vw, 184px); line-height: 0.82; letter-spacing: -0.02em; color: #efe9df;">So you say <span style="font-style: italic; color: #9fb6ff;">"I'm good."</span></h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-        <div style="border-top: 3px solid #7d9bff; padding-top: 22px; display: flex; flex-direction: column; gap: 10px;"><p style="font-size: 14px; font-weight: 900; letter-spacing: 0.12em; color: #9fb6ff;">AT WORK</p><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; line-height: 1.1;">"I'm good."</p><p style="font-size: 19px; line-height: 1.5; color: #9fb6ff;">Translation: I answered emails before the kids woke up and I'll answer more after they're asleep.</p></div>
-        <div style="border-top: 3px solid #7d9bff; padding-top: 22px; display: flex; flex-direction: column; gap: 10px;"><p style="font-size: 14px; font-weight: 900; letter-spacing: 0.12em; color: #9fb6ff;">AT HOME</p><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; line-height: 1.1;">"I'm good."</p><p style="font-size: 19px; line-height: 1.5; color: #9fb6ff;">Translation: somebody in this house has to be.</p></div>
-        <div style="border-top: 3px solid #7d9bff; padding-top: 22px; display: flex; flex-direction: column; gap: 10px;"><p style="font-size: 14px; font-weight: 900; letter-spacing: 0.12em; color: #9fb6ff;">ONLINE</p><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; line-height: 1.1;">"I'm good."</p><p style="font-size: 19px; line-height: 1.5; color: #9fb6ff;">Translation: I'm staying out of this. Anything I say about my side will get me dragged.</p></div>
-      </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center; border-top: 1px solid #2c3d6e; padding-top: 56px;">
-        <img src="/img/dad-hug.jpg" alt="A father hugging his laughing daughter" style="flex: 1 1 320px; min-width: 0; width: 100%; aspect-ratio: 4 / 5; max-height: 520px; object-fit: cover; object-position: center 30%; border-radius: 28px; transform: rotate(-2deg);">
-        <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
-          <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(42px, 5.6vw, 88px); line-height: 0.92;">I was "good" right up until I fell asleep at the wheel.</p>
-          <p style="font-size: 21px; line-height: 1.6; color: #d6dcef; max-width: 52ch;">The crash woke me up, and I believe God did too. I'd spent the day pouring into other people's kids and had nothing left for the drive home to my own. I walked away from it.</p>
-          <p style="font-size: 17px; color: #d6dcef;">Chauncey Nartey · 4P Dad of three girls · Lead Guide at Alpha School NYC · former VP at Goldman Sachs</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="clear" style="max-width: 1320px; margin: 0 auto; padding: 144px 24px; display: flex; flex-direction: column; gap: 48px;">
-    <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(60px, 9vw, 150px); line-height: 0.84;">Let's be <span style="font-style: italic; color: #2a55e5;">very</span> clear.</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-      <div style="flex: 1 1 460px; min-width: 0; background: #2a55e5; color: #ffffff; border-radius: 32px; padding: 44px; display: flex; flex-direction: column; gap: 18px; transform: rotate(-1.5deg);">
-        <p style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #dce5ff;">This is for you if</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12;">You already pull your weight, and then some.</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12;">You might be the reason the kitchen's clean. (No comment.)</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12;">You run a team at work and run the home, too.</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12;">You're building something on the side and want it to move.</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12;">You're tired of saying "I'm good."</p>
-      </div>
-      <div style="flex: 1 1 460px; min-width: 0; background: #ffffff; border: 3px solid #16203a; border-radius: 32px; padding: 44px; display: flex; flex-direction: column; gap: 18px; transform: rotate(1.5deg);">
-        <p style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #b23a2e;">This is not for you if</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12; text-decoration: line-through; text-decoration-color: #b23a2e; text-decoration-thickness: 4px;">"Babe, where's my shirt?"</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12;">You call watching your own kids "babysitting."</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12;">You think "helping out" with your own kids deserves applause.</p>
-        <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.12;">You believe a woman's place is in the kitchen.</p>
-        <p style="font-size: 19px; font-weight: 900; color: #b23a2e;">Wrong website. Close the tab.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="suite" style="max-width: 1320px; margin: 0 auto; padding: 24px 24px 120px; display: flex; flex-direction: column; gap: 22px;">
-    <p style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #2a55e5;">The Run Home Suite · how Modern Operator dads run home</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 14px;">
-      <a href="#manny" style="flex: 1 1 300px; min-width: 0; text-decoration: none; color: #16203a; background: #ffffff; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">01 · THE TOOL</p><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 34px; line-height: 1;">Manny</p><p style="font-size: 16px; line-height: 1.5; color: #4a4a44;">Your AI chief of staff. Carries the mental load so you don't have to.</p></a>
-      <a href="#pullup" style="flex: 1 1 300px; min-width: 0; text-decoration: none; color: #16203a; background: #ffffff; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">02 · THE COMMUNITY</p><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 34px; line-height: 1;">Pull Up</p><p style="font-size: 16px; line-height: 1.5; color: #4a4a44;">A community of dads doing all four. You don't have to pull yourself together alone.</p></a>
-      <a href="#pullup" style="flex: 1 1 300px; min-width: 0; text-decoration: none; color: #16203a; background: #ffffff; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">03 · THE MEETUPS</p><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 34px; line-height: 1;">Folding with the homies</p><p style="font-size: 16px; line-height: 1.5; color: #4a4a44;">Small in-person meetups where you knock out chores together.</p></a>
-    </div>
-  </section>
-
-  <section id="manny" style="background: #e4dccd;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 144px 24px; display: flex; flex-direction: column; gap: 64px;">
-      <div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center;">
-        <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
-          <span style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #2a55e5;">Nobody applied for the job, so I built one.</span>
-          <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(80px, 12vw, 200px); line-height: 0.8; letter-spacing: -0.02em;">Meet <span style="font-style: italic; color: #2a55e5;">Manny.</span></h2>
-          <p style="font-size: 24px; line-height: 1.5; color: #2c2c28; max-width: 46ch;">Your AI chief of staff. He knows your whole life, sees what's coming, and handles it <b>before it hits you.</b> Not a chore app. A second brain for a man who's already doing the work.</p>
-        </div>
-        <div style="flex: 1 1 380px; min-width: 0; position: relative;">
-          <div style="background: #ffffff; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 14px; transform: rotate(-3deg);">
-            <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;"><p style="font-size: 12px; font-weight: 900; letter-spacing: 0.12em; color: #6b675c;">POSITION VACANT</p><p style="font-size: 12px; font-weight: 900; color: #b23a2e;">0 APPLICANTS</p></div>
-            <h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 34px; line-height: 1.02;">Chief of Staff to a 4P Dad</h3>
-            <div style="border-top: 1px solid #e6dfd2; padding-top: 12px; display: flex; flex-direction: column; gap: 7px; font-size: 15px; line-height: 1.45;">
-              <p>Book Valentine's by November.</p>
-              <p>Launch the side business. Finally.</p>
-              <p>Slip a note in every lunchbox.</p>
-              <p>Brief him on the whole NFL week in 90 seconds.</p>
-            </div>
-            <p style="font-size: 15px; border-top: 1px solid #e6dfd2; padding-top: 12px;"><b>Pay:</b> $0 · <b>Hours:</b> all of them</p>
-          </div>
-          <p aria-hidden="true" style="position: absolute; top: 42%; right: -12px; font-weight: 900; font-size: 48px; letter-spacing: 0.08em; color: #2a55e5; border: 6px solid #2a55e5; padding: 4px 20px; border-radius: 12px; transform: rotate(-14deg); background: rgba(228,220,205,0.94);">FILLED</p>
-        </div>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px;">
-        <div style="background: #0b1226; color: #efe9df; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #9fb6ff;">PARTNER</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02; color: #efe9df;">Valentine's, booked in November.</h3><p style="font-size: 16px; line-height: 1.55; color: #d6dcef;">You were always the planner. Now you're months ahead: anniversary, birthday, the sitter, the table by the window.</p></div>
-        <div style="background: #ffffff; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">PROVIDE</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02;">Launched. Not just "almost."</h3><p style="font-size: 16px; line-height: 1.55; color: #4a4a44;">No more 3:00 AM fights with ChatGPT and no dollars to show for it. Manny gets the side business live, then follows up on every lead while you're at practice.</p></div>
-        <div style="background: #2a55e5; color: #ffffff; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px; transform: rotate(1.5deg);"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #dce5ff;">PROVIDE</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02; color: #ffffff;">Finally get your money's worth from that course you bought at 1:00 AM.</h3><p style="font-size: 16px; line-height: 1.55; color: #e7edff;">Manny pulls the five ideas worth having out of the course you never had time to finish, and puts them to work.</p></div>
-        <div style="background: #ffffff; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">PROTECT YOUR TIME</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02;">Your team's whole week in 90 seconds.</h3><p style="font-size: 16px; line-height: 1.55; color: #4a4a44;">Scores, trades, the take for the group chat. Keep up at the barbershop without burning a Sunday on something that doesn't pay you or your family.</p></div>
-        <div style="background: #ffffff; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">PARENT</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02;">You know the schedule. Now it doesn't have to live in your head.</h3><p style="font-size: 16px; line-height: 1.55; color: #4a4a44;">School emails read, forms flagged, pickup changes caught, without any of it rattling around your head at 2:00 AM.</p></div>
-        <div style="background: #0b1226; color: #efe9df; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #9fb6ff;">PROTECT</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02; color: #efe9df;">Your kids, off the open web.</h3><p style="font-size: 16px; line-height: 1.55; color: #d6dcef;">Their photos, your address, anything that shouldn't be one search away: found and locked down.</p></div>
-        <div style="background: #2a55e5; color: #ffffff; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px; transform: rotate(-1.5deg);"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #dce5ff;">PARENT</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02; color: #ffffff;">The annual trip, already planned.</h3><p style="font-size: 16px; line-height: 1.55; color: #e7edff;">Dates held, budget set, the kids voting on where. Every year, without you starting from zero.</p></div>
-        <div style="background: #ffffff; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">PARENT</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02;">A secret handshake for every kid.</h3><p style="font-size: 16px; line-height: 1.55; color: #4a4a44;">Manny helps you invent one for each of them, then reminds you to use it until it's second nature.</p></div>
-        <div style="background: #0b1226; color: #efe9df; border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 12px;"><p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #9fb6ff;">PARENT</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; line-height: 1.02; color: #efe9df;">The lunchbox note, without the remembering.</h3><p style="font-size: 16px; line-height: 1.55; color: #d6dcef;">Manny tees it up the night before. It's still your handwriting. They just never find out about the system.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="moms" style="max-width: 1320px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-    <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px;">
-      <span style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #2a55e5;">Moms run the home too</span>
-      <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(48px, 6.6vw, 104px); line-height: 0.88;">Built by a dad. <span style="font-style: italic; color: #2a55e5;">Made for whoever is running the home.</span></h2>
-      <p style="font-size: 21px; line-height: 1.55; color: #2c2c28; max-width: 56ch;">Pull Up is for dads. Manny is for any parent. Keeping your kids off the open web, getting through the school-email pile, holding the family schedule so it doesn't live in your head: none of that is a dad problem or a mom problem. It's a running-the-home problem. Set Manny up for both of you.</p>
-      <figure style="margin: 12px 0 0; max-width: 560px;"><img src="/img/couple.jpg" alt="Chauncey and his wife, Andrea, laughing inside a picture frame" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 28px; transform: rotate(-1.5deg);"><figcaption style="margin-top: 14px; font-size: 15px; color: #6b675c;">Me and Andrea. Running the home is a two-person job.</figcaption></figure>
-    </div>
-    <div style="flex: 1 1 340px; min-width: 0; background: #ffffff; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 12px; transform: rotate(1.5deg);">
-      <p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">FOR BOTH PARENTS</p>
-      <p style="font-size: 18px; line-height: 1.5;">Your kids, off the open web</p>
-      <p style="font-size: 18px; line-height: 1.5; border-top: 1px solid #e6dfd2; padding-top: 12px;">School emails read and forms flagged</p>
-      <p style="font-size: 18px; line-height: 1.5; border-top: 1px solid #e6dfd2; padding-top: 12px;">One shared family schedule</p>
-      <a href="#pullup" style="margin-top: 8px; align-self: flex-start; background: #2a55e5; color: #ffffff; text-decoration: none; padding: 14px 24px; border-radius: 999px; font-weight: 900; font-size: 16px;">Get Manny for your home</a>
-    </div>
-  </section>
-
-  <section id="pullup" style="background: #0b1226; color: #efe9df;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 152px 24px; display: flex; flex-direction: column; gap: 56px;">
-      <div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-end;">
-        <div style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
-          <span style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #9fb6ff;">The dad community</span>
-          <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(76px, 12vw, 200px); line-height: 0.8; letter-spacing: -0.02em; color: #efe9df;">Pull <span style="font-style: italic; color: #9fb6ff;">Up.</span></h2>
-          <p style="font-size: 24px; line-height: 1.5; color: #d6dcef; max-width: 46ch;">Pull-ups at the gym. Pull-Ups in the diaper bag. "Pull yourself up by your bootstraps" from every man who raised you. Every version says do it alone. <b style="color: #ffffff;">This one doesn't.</b> You know the minute. Some guys take it in the driveway. Some on the side of the street a block away. The 7-Eleven parking lot. The bathroom, door locked. Pulling yourself together so you can walk in and be "good." <b style="color: #ffffff;">Stop taking that minute alone.</b> Join men who get it, and get the AI setups that actually lighten the load.</p>
-        </div>
-        <div style="flex: 1 1 340px; min-width: 0; background: #efe9df; color: #16203a; border-radius: 32px; padding: 36px; display: flex; flex-direction: column; gap: 16px; transform: rotate(2deg);">
-          <p style="font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: #2a55e5;">NOT LAUNCHED YET</p>
-          <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 64px; line-height: 0.9;">The waitlist</p>
-          <p style="font-size: 16px; line-height: 1.5; color: #4a4a44;">Pull Up opens to the waitlist first. Add your email and you'll hear before anyone else.</p>
-          <form style="display: flex; flex-direction: column; gap: 10px;">
-            <label for="demail" style="font-size: 14px; font-weight: 800;">Your email</label>
-            <input id="demail" type="email" placeholder="you@email.com" style="font: inherit; font-size: 17px; padding: 16px 20px; border: 2px solid #16203a; border-radius: 999px; color: #16203a; background: #ffffff;">
-            <button type="button" style="font: inherit; font-size: 18px; font-weight: 900; background: #2a55e5; color: #ffffff; border: 0; padding: 17px 28px; border-radius: 999px; cursor: pointer;">Join the waitlist</button>
-          </form>
-        </div>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-        <div style="border: 1px solid #2c3d6e; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; color: #efe9df;">The Minute</p><p style="font-size: 15px; line-height: 1.55; color: #d6dcef;">A monthly live call with other dads. Real talk, no comment section.</p></div>
-        <div style="border: 1px solid #2c3d6e; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; color: #efe9df;">The Toolbox</p><p style="font-size: 15px; line-height: 1.55; color: #d6dcef;">Copy-and-paste AI setups from Manny, new every month.</p></div>
-        <div style="border: 1px solid #2c3d6e; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; color: #efe9df;">First Listen</p><p style="font-size: 15px; line-height: 1.55; color: #d6dcef;">My How I Run Home interviews with other dads, before anyone else sees them.</p></div>
-        <div style="border: 1px solid #2c3d6e; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; color: #efe9df;">The Group Chat</p><p style="font-size: 15px; line-height: 1.55; color: #d6dcef;">A group chat of 4P Dads who get it. No explaining yourself.</p></div>
-        <div style="background: #2a55e5; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 10px; transform: rotate(-1.5deg);"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; color: #ffffff;">Folding with the homies</p><p style="font-size: 15px; line-height: 1.55; color: #e7edff;">Small meetups built around chores you'd be doing anyway, so you get them done and get time with other dads.</p></div>
-      </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #2c3d6e; padding-top: 40px;">
-        <p style="font-size: 20px; line-height: 1.5; color: #d6dcef; max-width: 56ch;">Want Manny built for you, done with you? Members get first access to <b style="color: #ffffff;">Manny Installs.</b></p>
-        <a href="#pullup" style="border: 2px solid #efe9df; color: #efe9df; text-decoration: none; padding: 15px 28px; border-radius: 999px; font-weight: 900; font-size: 16px;">Get it built</a>
-      </div>
-    </div>
-  </section>
-
-  <footer style="background: #2a55e5; color: #ffffff;">
-    <div style="max-width: 1320px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 15px;">
-      <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 38px;">Run Home<span style="color: #0b1226;">.</span></p>
-      <div style="display: flex; flex-wrap: wrap; gap: 22px; font-weight: 700;">
-        <a href="#scoreboard" style="color: #ffffff;">The 4P Dad</a>
-        <a href="#pullup" style="color: #ffffff;">Pull Up</a>
-        <a href="/" style="color: #ffffff;">chaunceynartey.com</a>
-      </div>
-      <p style="width: 100%; color: #dce5ff;">A Modern Operator initiative.</p>
-    </div>
-  </footer>
-
+<!-- 4P EQUATION -->
+<div class="ticker" aria-label="Protect plus Provide plus Partner plus Parent equals the 4P Dad">
+  <div class="ticker-track" aria-hidden="true">
+    <span>Protect <b>+</b> Provide <b>+</b> Partner <b>+</b> Parent <b>=</b> <i>the 4P Dad</i></span>
+    <span>Protect <b>+</b> Provide <b>+</b> Partner <b>+</b> Parent <b>=</b> <i>the 4P Dad</i></span>
+    <span>Protect <b>+</b> Provide <b>+</b> Partner <b>+</b> Parent <b>=</b> <i>the 4P Dad</i></span>
+    <span>Protect <b>+</b> Provide <b>+</b> Partner <b>+</b> Parent <b>=</b> <i>the 4P Dad</i></span>
+    <span>Protect <b>+</b> Provide <b>+</b> Partner <b>+</b> Parent <b>=</b> <i>the 4P Dad</i></span>
+    <span>Protect <b>+</b> Provide <b>+</b> Partner <b>+</b> Parent <b>=</b> <i>the 4P Dad</i></span>
+  </div>
 </div>
+
+<!-- TWO JOBS -->
+<section style="background:#0b1226;color:#efe9df">
+  <div class="wrap split" style="padding-top:120px;padding-bottom:120px">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <p class="eyebrow" style="color:#9fb6ff">The relic at home</p>
+      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">Two full-time jobs. <span style="font-style:italic;color:#9fb6ff">One person still running the home.</span></h2>
+      <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:52ch">For generations, moms carried most of the work of running the home, because most of them weren't also working full time. Now they are. When both parents work full time, both parents should be running the home. The data says that still isn't happening.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;margin-top:8px">
+        <div class="stat"><p class="n">54% vs 6%</p><p style="font-size:14px;line-height:1.5;color:#d6dcef">Both parents work full time: 54% say Mom manages the kids' schedules. 6% say Dad.</p><p style="font-size:12px;color:#6f7ba3">Pew Research Center, 2015</p></div>
+        <div class="stat"><p class="n">4.5 hrs</p><p style="font-size:14px;line-height:1.5;color:#d6dcef">More caregiving and housework a week for wives, even when spouses earn about the same.</p><p style="font-size:12px;color:#6f7ba3">Pew Research Center, 2023</p></div>
+        <div class="stat"><p class="n">3x</p><p style="font-size:14px;line-height:1.5;color:#d6dcef">The time dads now spend with their kids, compared with 1965. Dads are closing the gap.</p><p style="font-size:12px;color:#6f7ba3">Pew Research Center, 2013</p></div>
+      </div>
+    </div>
+    <figure>
+      <img class="soft" src="https://images.unsplash.com/photo-1761839258568-fd466a93f68b?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Two parents in a busy kitchen, one holding a child while the other cooks with another child" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover">
+    </figure>
+  </div>
+</section>
+
+<!-- FURTHER THAN OUR FATHERS -->
+<section>
+  <div class="wrap split" style="padding-top:120px;padding-bottom:120px;align-items:end">
+    <h2 class="serif" style="font-size:clamp(52px,7vw,116px);line-height:.88;letter-spacing:-.02em">Further than our fathers. <span style="font-style:italic;color:#2a55e5">Still not far enough.</span></h2>
+    <div style="display:flex;flex-direction:column;gap:18px;max-width:46ch">
+      <p style="font-size:22px;line-height:1.5">We're doing more than any dads before us. That's worth saying out loud.</p>
+      <p style="font-size:22px;line-height:1.5">And we know we're not done, because we can see what's still landing on her plate.</p>
+      <p style="font-size:22px;line-height:1.5;font-weight:800">That's not a scold. It's the next level.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE FEED -->
+<section style="background:#e4dccd">
+  <div class="wrap" style="padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:48px">
+    <div class="split" style="align-items:end">
+      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">The internet is fighting about men who won't do the dishes.</h2>
+      <p class="serif" style="font-size:clamp(34px,3.6vw,56px);line-height:1;font-style:italic;color:#2a55e5">Meanwhile, you're doing the dishes.</p>
+    </div>
+    <div class="phones" aria-label="Three social media posts arguing about dads">
+      <div class="phone"><div class="screen">
+        <div class="top"><span>9:12</span><span>Reels</span></div>
+        <div class="post-bg" style="background:linear-gradient(160deg,#5b3a8c,#c2447a)">
+          <div class="rail"><span><i></i>412K</span><span><i></i>18K</span><span><i></i>Share</span></div>
+          <p class="post-cap">POV: you asked him to do ONE thing 🙄</p>
+          <p class="post-meta">@momlifeunfiltered · original audio</p>
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen">
+        <div class="top"><span>9:12</span><span>For You</span></div>
+        <div class="post-bg" style="background:linear-gradient(160deg,#1d1d1d,#3a3a3a)">
+          <div class="rail"><span><i></i>1.2M</span><span><i></i>44K</span><span><i></i>Share</span></div>
+          <p class="post-cap">"Real men don't do diapers." Stitch this if you agree 💪</p>
+          <p class="post-meta">@alpha.grindset · 3 days ago</p>
+        </div>
+      </div></div>
+      <div class="phone"><div class="screen" style="background:#fff">
+        <div class="top" style="color:#0f1419"><span>9:12</span><span>Home</span></div>
+        <div class="feedpost"><b>Thread Queen</b><p>Weaponized incompetence, explained (a thread) 🧵 1/27</p><p class="m">8.4K replies · 61K likes</p></div>
+        <div class="feedpost"><b>Dave</b><p>Every dad I know does more than his father did. Nobody wants to hear it.</p><p class="m">212 replies · ratioed</p></div>
+        <div class="feedpost" style="background:#e7edff"><b>You</b><p>*closes app, packs tomorrow's lunches*</p><p class="m">Not posted</p></div>
+      </div></div>
+    </div>
+    <p style="font-size:19px;line-height:1.6;max-width:62ch">One side says men are useless. The other says real men shouldn't have to. Neither one is talking about you. So you keep your head down, keep going, and when anyone asks, you say the same two words.</p>
+  </div>
+</section>
+
+<!-- I'M GOOD -->
+<section style="background:#0b1226;color:#efe9df">
+  <div class="wrap" style="padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:44px">
+    <h2 class="serif" style="font-size:clamp(52px,7vw,116px);line-height:.88">"I'm good."</h2>
+    <div class="goodrow">
+      <div class="goodcard"><p class="eyebrow" style="font-size:12px;color:#9fb6ff">At work</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: I answered emails before the kids woke up, and I'll answer more after they're asleep.</p></div>
+      <div class="goodcard"><p class="eyebrow" style="font-size:12px;color:#9fb6ff">At home</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: somebody in this house has to be.</p></div>
+      <div class="goodcard"><p class="eyebrow" style="font-size:12px;color:#9fb6ff">Online</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: I'm staying out of this. Anything I say about my side will get me dragged.</p></div>
+    </div>
+    <div class="split" style="margin-top:40px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start">
+        <figure><img class="soft" src="/img/drive-home.jpg" alt="Chauncey's car after he fell asleep driving home and crashed" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover"><figcaption style="margin-top:10px;font-size:14px;color:#9fb6ff">The drive home. I walked away from it.</figcaption></figure>
+        <figure style="margin-top:48px"><img class="soft" src="/img/four-reasons.jpg" alt="Chauncey with his wife and three daughters, faces of the girls blurred and numbered" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 40%"><figcaption style="margin-top:10px;font-size:14px;color:#9fb6ff">Four reasons to run home.</figcaption></figure>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <h3 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">I was "good" right up until <span style="font-style:italic;color:#9fb6ff">I fell asleep at the wheel.</span></h3>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:50ch">The crash woke me up, and I believe God did too. I'd spent the day pouring into other people's kids and had nothing left for the drive home to my own. I walked away from it.</p>
+        <p style="font-size:14px;font-weight:800;letter-spacing:.06em;color:#9fb6ff">CHAUNCEY NARTEY · DAD OF THREE GIRLS · LEAD GUIDE AT ALPHA SCHOOL NYC · FORMER VP AT GOLDMAN SACHS</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLEAR -->
+<section>
+  <div class="wrap" style="padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:40px">
+    <h2 class="serif" style="font-size:clamp(52px,7vw,116px);line-height:.88">Let's be <span style="font-style:italic;color:#2a55e5">very</span> clear.</h2>
+    <div class="clear">
+      <div style="background:#2a55e5;color:#fff;border-radius:32px;padding:40px;display:flex;flex-direction:column;gap:16px">
+        <p class="eyebrow" style="color:#dce5ff">This is for you if</p>
+        <p class="s">You already pull your weight, and then some.</p>
+        <p class="s">You might be the reason the kitchen's clean. (No comment.)</p>
+        <p class="s">You run a team at work and run the home, too.</p>
+        <p class="s">You're building something on the side and want it to move.</p>
+        <p class="s">You're tired of saying "I'm good."</p>
+      </div>
+      <div style="background:#fff;border:3px solid #16203a;border-radius:32px;padding:40px;display:flex;flex-direction:column;gap:16px">
+        <p class="eyebrow" style="color:#b23a2e">This is not for you if</p>
+        <p class="s" style="text-decoration:line-through;text-decoration-color:#b23a2e;text-decoration-thickness:4px">"Babe, where's my shirt?"</p>
+        <p class="s">You call watching your own kids "babysitting."</p>
+        <p class="s">You think "helping out" with your own kids deserves applause.</p>
+        <p class="s">You believe a woman's place is in the kitchen.</p>
+        <p class="s">You're fine playing the incompetent loser so someone else picks up the slack.</p>
+        <p style="font-size:19px;font-weight:900;color:#b23a2e">Wrong website. Close the tab.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUITE -->
+<section id="suite" style="background:#e4dccd">
+  <div class="wrap" style="padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:760px">
+      <p class="eyebrow" style="color:#2a55e5">What's inside Run Home</p>
+      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">One tool. <span style="font-style:italic;color:#2a55e5">One crew.</span></h2>
+      <p style="font-size:19px;line-height:1.6;max-width:56ch">Manny carries the mental load. Pull Up means you stop carrying the rest alone.</p>
+    </div>
+    <div class="suite">
+      <!-- MANNY -->
+      <div id="manny" class="suitecard" style="background:#0b1226;color:#efe9df">
+        <p class="eyebrow" style="color:#9fb6ff">01 · The tool</p>
+        <h3 class="serif" style="font-size:clamp(48px,5vw,80px);line-height:.9">Manny</h3>
+        <p style="font-size:18px;line-height:1.55;color:#d6dcef">Your AI chief of staff. He knows your whole life, sees what's coming, and handles it before it hits you. Not a chore app. A second brain for a man who's already doing the work.</p>
+        <div class="manny-phone" aria-label="Example Manny notifications">
+          <div class="notif"><div class="who"><span>MANNY · PARTNER</span><span>6:02 AM</span></div>Valentine's is handled. Table for two at 7:30, sitter confirmed. You booked it in November.</div>
+          <div class="notif"><div class="who"><span>MANNY · YOUR WEEK IN 90 SECONDS</span><span>7:15 AM</span></div>Giants dropped a close one to Washington, 24-21. Jets fell to Buffalo, 31-12. Group-chat take: 49ers 46, Cowboys 40, defense optional. Tonight: Chargers at Ravens, 8:15.</div>
+          <div class="notif"><div class="who"><span>MANNY · PARENT</span><span>3:10 PM</span></div>Aftercare closes early Wednesday. I moved your 4:30 and put pickup on the shared calendar.</div>
+          <div class="notif"><div class="who"><span>MANNY · PROVIDE</span><span>8:45 PM</span></div>2 new leads for the side business. Follow-ups sent. Lunchbox note for tomorrow is drafted, still in your handwriting.</div>
+        </div>
+        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Manny%20waitlist&amp;body=I%20want%20Manny%20for%20my%20home." style="align-self:flex-start;background:#ffff33;color:#0b1226">Get Manny first</a>
+      </div>
+      <!-- PULL UP -->
+      <div id="pullup" class="suitecard" style="background:#fff">
+        <p class="eyebrow" style="color:#2a55e5">02 · The crew</p>
+        <h3 class="serif" style="font-size:clamp(48px,5vw,80px);line-height:.9">Pull Up</h3>
+        <img src="https://images.unsplash.com/photo-1484712401471-05c7215830eb?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Three friends jumping together on a snowy path" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:22px">
+        <p style="font-size:18px;line-height:1.55;color:#2c2c28">You know the minute. The driveway. The side of the street a block away. The 7-Eleven parking lot. Pulling yourself together alone so you can walk in and be "good." <b>Pull Up is where you stop taking that minute alone.</b></p>
+        <div class="chips" style="color:#16203a">
+          <span>The group chat</span><span>Monthly live call</span><span>AI setups from Manny</span><span>Folding with the homies meetups</span>
+        </div>
+        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Pull%20Up%20waitlist&amp;body=Add%20me%20to%20the%20Pull%20Up%20waitlist." style="align-self:flex-start;background:#2a55e5;color:#fff">Join the Pull Up waitlist</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AIR IT OUT -->
+<section style="background:#0b1226;color:#efe9df">
+  <div class="wrap split" style="padding-top:120px;padding-bottom:120px">
+    <figure><img class="soft" src="https://images.unsplash.com/photo-1760939064986-3c375dab7b49?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="A couple hanging laundry together" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover"></figure>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <p class="eyebrow" style="color:#9fb6ff">For couples</p>
+      <h2 class="serif" style="font-size:clamp(52px,6.4vw,104px);line-height:.88">Air It <span style="font-style:italic;color:#ffff33">Out.</span></h2>
+      <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:50ch">A night for couples. Bring the laundry basket. Say the thing you've been trying to say, decide who owns what, and leave with a nightly check-in you'll actually keep, done while folding the laundry.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;font-family:'DM Serif Display',Georgia,serif;font-size:24px">
+        <span>Air it out.</span><span style="color:#9fb6ff">Sort it out.</span><span style="color:#ffff33;font-style:italic">Fold it in.</span>
+      </div>
+      <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Air%20It%20Out&amp;body=Tell%20us%20when%20the%20first%20Air%20It%20Out%20night%20is%20scheduled." style="align-self:flex-start;background:#ffff33;color:#0b1226">Tell us when it's on</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section style="background:#ffff33;color:#0b1226">
+  <div class="wrap" style="padding-top:96px;padding-bottom:96px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px">
+    <h2 class="serif" style="font-size:clamp(48px,6.4vw,104px);line-height:.88">You're running the home. <span style="font-style:italic;color:#2a55e5">Now run home.</span></h2>
+    <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Run%20Home%20waitlist&amp;body=Add%20me%20to%20the%20Run%20Home%20waitlist." style="background:#0b1226;color:#fff">Join the waitlist</a>
+  </div>
+</section>
+
+<footer style="background:#2a55e5;color:#fff">
+  <div class="wrap" style="padding-top:48px;padding-bottom:48px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:15px">
+    <p class="serif" style="font-size:36px">Run Home</p>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;font-weight:700">
+      <a href="#manny" style="color:#fff">Manny</a>
+      <a href="#pullup" style="color:#fff">Pull Up</a>
+            <a href="/" style="color:#fff">chaunceynartey.com</a>
+    </div>
+    <p style="width:100%;color:#dce5ff">A Modern Operator initiative.</p>
+  </div>
+</footer>
 
 </body>
 </html>
