@@ -114,7 +114,8 @@ h1,h2,h3{font-weight:400}
 .vcap{font-size:15px;line-height:1.4;color:#d6dcef}.vcap b{color:#fff}
 @media (max-width:980px){.vignettes{grid-template-columns:repeat(4,minmax(210px,1fr));overflow-x:auto;padding-bottom:10px}.gbar{grid-template-columns:100px 1fr 50px}.gnum{font-size:32px}}
 #pullup{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:36px;align-items:start}
-#pullup > img{grid-column:1;grid-row:1 / span 6}
+#pullup > .crewgrid{grid-column:1;grid-row:1 / span 6}
+.crewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.crewgrid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;display:block}.crewgrid .big{grid-column:1/-1;aspect-ratio:16/10;object-position:50% 35%;border-radius:22px}
 @media (max-width:860px){#pullup{display:flex}}
 .pv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 50%,rgba(0,0,0,.8) 100%)}
@@ -415,7 +416,12 @@ h1,h2,h3{font-weight:400}
       <div id="pullup" class="suitecard" style="background:#fff;grid-column:1/-1">
         <p class="eyebrow" style="color:#2a55e5">02 · The crew</p>
         <h3 class="serif" style="font-size:clamp(48px,5vw,80px);line-height:.9">Pull Up</h3>
-        <img src="/img/pullup-crew.jpg" alt="Chauncey and his crew of men with their luggage, heading out on a trip together" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:22px">
+        <div class="crewgrid">
+          <img class="big" src="/img/pullup-suits.jpg" alt="Chauncey's crew in suits, grinning and throwing up hand signs">
+          <img src="/img/crew-street.jpg" alt="Five friends standing arm in arm on a New York street">
+          <img src="/img/crew-toast.jpg" alt="A crew of men raising a toast together">
+          <img src="/img/pullup-crew.jpg" alt="The crew with their luggage, heading out on a trip together">
+        </div>
         <p style="font-size:18px;line-height:1.55;color:#2c2c28">You know the minute. The driveway. The side of the street a block away. The 7-Eleven parking lot. Pulling yourself together alone so you can walk in and be "good." <b>Pull Up is where you stop taking that minute alone.</b></p>
         <div class="chips" style="color:#16203a">
           <span>The group chat</span><span>Monthly live call</span><span>AI setups from Manny</span><span>Folding with the homies meetups</span>
@@ -429,7 +435,7 @@ h1,h2,h3{font-weight:400}
 <!-- AIR IT OUT -->
 <section style="background:#0b1226;color:#efe9df">
   <div class="wrap split" style="padding-top:120px;padding-bottom:120px">
-    <figure><img class="soft" src="https://images.unsplash.com/photo-1760939064986-3c375dab7b49?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="A couple hanging laundry together" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover"></figure>
+    <figure><img class="soft" src="/img/air-it-out-lawn.jpg" alt="Couples laughing on a lawn during a party game, men wearing toilet-paper aprons" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 40%"></figure>
     <div style="display:flex;flex-direction:column;gap:22px">
       <p class="eyebrow" style="color:#9fb6ff">For couples</p>
       <h2 class="serif" style="font-size:clamp(52px,6.4vw,104px);line-height:.88">Air It <span style="font-style:italic;color:#ffff33">Out.</span></h2>
