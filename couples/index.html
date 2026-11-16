@@ -41,6 +41,22 @@ h1,h2,h3{font-weight:400}
 .stat{border-top:2px solid #2c3d6e;padding-top:16px;display:flex;flex-direction:column;gap:6px}
 .stat .n{font-family:'DM Serif Display',Georgia,serif;font-size:44px;line-height:1;color:#ffff33}
 /* phones */
+.kv{display:grid;grid-template-columns:38px 1fr;gap:3px 6px;margin:4px 0 2px;font-size:11px;line-height:1.3}.kv dt{opacity:.7;font-weight:600}.kv dd{margin:0;font-weight:600}
+.timer{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;font-variant-numeric:tabular-nums}.timer b{font-weight:800}
+.timer.warn{background:rgba(255,159,10,.25);border-radius:999px;padding:4px 9px;margin-top:4px;align-self:flex-start}
+.timer .dot{width:6px;height:6px;border-radius:50%;background:#ff9f0a;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.2}}
+.timer.sm{background:#fff4e5;color:#b25e00;border-radius:999px;padding:3px 8px}
+.timer.big{flex-direction:column;align-items:flex-end;gap:0;color:#2a55e5}.timer.big small{font-size:9px;font-weight:700}.timer.big b{font-size:24px;letter-spacing:-.02em}
+.actrow{display:flex;gap:6px}
+.rowsb{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.rings{display:flex;justify-content:space-around}
+.ring{display:flex;flex-direction:column;align-items:center;gap:1px}.ring svg{width:72px;height:72px}.ring b{font-size:11px}.ring small{font-size:9.5px;color:#6b6b70}
+.note{font-size:10.5px;line-height:1.35;color:#48484a}.note.dark2{color:#1c1c1e;font-weight:600}
+.wlist li.done{opacity:.5}.wlist li.done::before{content:"✓";background:#34c759}
+.wlist li.now{outline:2px solid #2a55e5}
+.joke.draft::after{display:none}
+.vcard2{gap:5px}
 .s.ck,.s.xk{position:relative;padding-left:44px}
 .s.ck::before,.s.xk::before{position:absolute;left:0;top:.1em;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;font-family:Inter,sans-serif}
 .s.ck::before{content:"✓";background:#ffff33;color:#0b1226}
@@ -97,6 +113,8 @@ h1,h2,h3{font-weight:400}
 .glab{font-weight:800;font-size:18px}.glab small{display:block;font-weight:600;font-size:13px;color:#6b675c}
 .gtrack{position:relative;height:38px;background:#efe9df;border-radius:10px}
 .gfill{position:absolute;left:0;top:0;bottom:0;border-radius:10px}
+.gseg{position:absolute;top:0;bottom:0}.gtrack{overflow:visible}.gtrack .gseg:first-child{border-radius:10px 0 0 10px}
+.gkey{font-size:13px;font-weight:700;display:flex;gap:6px;align-items:center}.gkey i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-left:8px}
 .gap-mark{position:absolute;left:57.1%;right:0;top:-8px;bottom:-8px;border:3px dashed #ffff33;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#ffff33;font-weight:900;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
 .gnum{font-size:44px;text-align:right}
 .vignettes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
@@ -114,7 +132,7 @@ h1,h2,h3{font-weight:400}
 .vcap{font-size:15px;line-height:1.4;color:#d6dcef}.vcap b{color:#fff}
 @media (max-width:980px){.vignettes{grid-template-columns:repeat(4,minmax(210px,1fr));overflow-x:auto;padding-bottom:10px}.gbar{grid-template-columns:100px 1fr 50px}.gnum{font-size:32px}}
 #pullup{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:36px;align-items:start}
-#pullup > .crewgrid{grid-column:1;grid-row:1 / span 6}
+#pullup > .pupimg{grid-column:1;grid-row:1 / span 6;width:100%;aspect-ratio:16/11;object-fit:cover;border-radius:22px;display:block}
 .crewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.crewgrid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;display:block}.crewgrid .big{grid-column:1/-1;aspect-ratio:16/10;object-position:50% 35%;border-radius:22px}
 @media (max-width:860px){#pullup{display:flex}}
 .pv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -174,147 +192,177 @@ h1,h2,h3{font-weight:400}
 #manny .pf figcaption{color:#16203a}#manny .pf figcaption b{color:#0b1226}
 .duo{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:28px;justify-content:center}
 @media (max-width:860px){.stage,.timeline,.piles,.kidsband{grid-template-columns:1fr}.stage .num{font-size:80px}.duo{grid-template-columns:minmax(0,300px)}}
+
+#sort .pf figcaption{color:#16203a}#sort .pf figcaption b{color:#0b1226}
+.chero{background:#141a33;color:#efe9df}
+.chero nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:22px}
+.scene{display:block;width:100%;height:auto;border-radius:28px}
+.ws{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.wcol{background:#1d2547;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.wcol h4{margin:0;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:30px;color:#ffff33}
+.wcol .def{font-size:13px;color:#9fb6ff;font-weight:700}
+.ex{background:#141a33;border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.4;color:#d6dcef}.ex i{display:block;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#6f7ba3;margin-bottom:3px}
+.qs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;counter-reset:q}
+.q{counter-increment:q;background:#efe9df;color:#0b1226;border-radius:18px;padding:18px;font-family:'DM Serif Display',Georgia,serif;font-size:22px;line-height:1.2;position:relative;padding-top:44px}
+.q::before{content:counter(q);position:absolute;top:14px;left:18px;font-family:Inter,sans-serif;font-weight:900;font-size:12px;color:#2a55e5;letter-spacing:.1em}
+.rules{display:flex;flex-wrap:wrap;gap:10px}.rules span{border:1px solid #2c3d6e;border-radius:999px;padding:9px 14px;font-weight:700;font-size:15px}
+.scard{background:#fff;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 20px rgba(0,0,0,.12);transform:rotate(-1.5deg)}
+.scard .big{font-size:17px;font-weight:800;line-height:1.2}
+.sortbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.sortbtns span{text-align:center;border-radius:12px;padding:10px 4px;font-size:11.5px;font-weight:800}
+.prog{height:6px;background:#e5e5ea;border-radius:3px;overflow:hidden}.prog i{display:block;height:100%;background:#2a55e5}
+.dis{display:flex;flex-direction:column;gap:6px}.dis p{background:#fff;border-radius:12px;padding:8px 10px;font-size:11px;line-height:1.3}.dis b{display:block;font-size:12px}
+.tag{display:inline-block;font-size:9.5px;font-weight:800;padding:2px 6px;border-radius:999px;margin-right:3px}
+@media (max-width:980px){.ws{grid-template-columns:1fr 1fr}}@media (max-width:620px){.ws{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<section class="hero" id="top">
-  <img class="hero-bg" src="/img/air-it-out-lawn.jpg" alt="Couples laughing on a lawn during a party game, men wearing toilet-paper aprons" style="object-position:55% 35%">
-  <div class="hero-shade"></div>
-  <div class="wrap" style="position:relative;display:flex;flex-direction:column;flex:1;width:100%;box-sizing:border-box">
+<section class="chero" id="top">
+  <div class="wrap">
     <nav aria-label="Main">
       <a href="/" class="serif" style="font-size:30px;color:#efe9df;text-decoration:none">Air It Out</a>
       <div class="navlinks">
-        <a href="#night" style="color:#efe9df;text-decoration:none">The night</a>
+        <a href="#air" style="color:#efe9df;text-decoration:none">The night</a>
         <a href="#kids" style="color:#efe9df;text-decoration:none">The kids</a>
-        <a href="#manny" style="color:#efe9df;text-decoration:none">After</a>
+        <a href="#fold" style="color:#efe9df;text-decoration:none">After</a>
         <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Air%20It%20Out&amp;body=Save%20us%20two%20spots%20for%20the%20first%20Air%20It%20Out%20night." style="background:#ffff33;color:#0b1226;padding:11px 20px;font-size:15px">Save two spots</a>
       </div>
     </nav>
-    <div class="hero-copy">
-      <p class="eyebrow" style="color:#9fb6ff">For couples who both work</p>
-      <h1 class="serif">Air it out. Sort it out. <span style="font-style:italic;color:#ffff33">Fold it in.</span></h1>
-      <p style="font-size:clamp(18px,1.5vw,21px);line-height:1.55;color:#d6dcef;max-width:48ch">One night, a room full of couples, and the conversation you keep putting off. You leave with the load split, the kids happy, and a basket of laundry folded together.</p>
+    <div style="display:flex;flex-direction:column;gap:22px;padding:72px 0 48px;max-width:900px">
+      <p class="eyebrow" style="color:#9fb6ff">An evening for couples who both work</p>
+      <h1 class="serif" style="font-size:clamp(52px,7vw,110px);line-height:.92">Air it out. Sort it out. <span style="font-style:italic;color:#ffff33">Fold it in.</span></h1>
+      <p style="font-size:clamp(18px,1.5vw,21px);line-height:1.55;color:#d6dcef;max-width:56ch">One night, a room full of couples, and the conversation you keep putting off. You leave with the load re-split, the kids lit up from their own lab down the hall, and a basket of laundry folded together.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px">
         <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Air%20It%20Out&amp;body=Save%20us%20two%20spots%20for%20the%20first%20Air%20It%20Out%20night." style="background:#2a55e5;color:#fff">Save two spots</a>
-        <a class="btn" href="#night" style="border:2px solid #efe9df;color:#efe9df;padding:14px 26px">See how the night goes</a>
+        <a class="btn" href="#air" style="border:2px solid #efe9df;color:#efe9df;padding:14px 26px">See how the night goes</a>
       </div>
     </div>
+    <img class="scene" src="scene-hero.svg" alt="Illustration: an evening room under string lights, three couples at tables with laundry baskets" style="margin-bottom:64px">
   </div>
 </section>
 
-<section id="night">
-  <div class="wrap" style="padding-top:110px;padding-bottom:60px;display:flex;flex-direction:column;gap:36px">
+<section>
+  <div class="wrap" style="padding-top:90px;padding-bottom:40px;display:flex;flex-direction:column;gap:30px">
     <p class="eyebrow" style="color:#2a55e5">How the night goes</p>
-    <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">Three hours. <span style="font-style:italic;color:#2a55e5">One load lighter.</span></h2>
     <div class="timeline">
-      <div class="tl"><b>6:30</b><p>Drop the kids down the hall. Grab a plate. Find your table.</p></div>
+      <div class="tl"><b>6:30</b><p>Kids head down the hall to their lab. You grab a plate and find your table.</p></div>
       <div class="tl"><b>7:00</b><p><strong>Air it out.</strong> Say the thing you've been carrying.</p></div>
-      <div class="tl"><b>7:45</b><p><strong>Sort it out.</strong> Every task gets an owner. Some go to Manny.</p></div>
-      <div class="tl"><b>8:45</b><p><strong>Fold it in.</strong> Fold a real basket together and set the nightly check-in.</p></div>
+      <div class="tl"><b>7:45</b><p><strong>Sort it out.</strong> Every job in your house gets an owner, in Manny.</p></div>
+      <div class="tl"><b>8:45</b><p><strong>Fold it in.</strong> Fold a real basket together. Set the nightly check-in.</p></div>
     </div>
   </div>
 </section>
 
-<section style="background:#0b1226;color:#efe9df">
-  <div class="wrap" style="padding-top:110px;padding-bottom:110px;display:flex;flex-direction:column;gap:110px">
+<section id="air" style="background:#141a33;color:#efe9df">
+  <div class="wrap" style="padding-top:100px;padding-bottom:100px;display:flex;flex-direction:column;gap:56px">
     <div class="stage">
-      <img class="soft" src="https://images.unsplash.com/photo-1584473457493-17c4c24290c9?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="A couple laughing together on a couch" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover">
+      <img class="scene" src="scene-air.svg" alt="Illustration: a couple at a table with a five-minute timer, she talks while he listens">
       <div style="display:flex;flex-direction:column;gap:18px">
         <p class="num">01</p>
-        <h3 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Air it out.</h3>
-        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">Five minutes each, no interrupting. One of you says what you're carrying that nobody sees. The other one says it back until it's right. Then you switch.</p>
-        <p style="font-size:19px;line-height:1.6;color:#fff;font-weight:700">Not a fight. A download.</p>
+        <h2 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Air it out.</h2>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">Five minutes each. One talks. The other plays it back until the speaker says "That's it." Then you switch.</p>
+        <div class="rules"><span>No fixing</span><span>No defending</span><span>No "but I also"</span><span>Play it back</span></div>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:28px">
-      <div style="display:flex;flex-direction:column;gap:14px;max-width:760px">
-        <p class="num" style="font-family:'DM Serif Display',Georgia,serif;font-size:120px;line-height:.8;color:#ffff33">02</p>
-        <h3 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Sort it out. <span style="font-style:italic;color:#9fb6ff">The Load Out deck.</span></h3>
-        <p style="font-size:19px;line-height:1.6;color:#d6dcef">Every card is a job your house actually runs on, down to the invisible ones. Each card lands in one of three piles. The third pile is the one nobody else has.</p>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <h3 class="serif" style="font-size:clamp(32px,3.4vw,52px);line-height:1">The work nobody sees has four steps.</h3>
+      <p style="font-size:17px;line-height:1.6;color:#d6dcef;max-width:70ch">Sociologist Allison Daminger found that the hardest household work is mental: anticipating what's needed, finding options, deciding, then checking it actually happened. Most of it is invisible to the person who isn't doing it. Both of you carry some. Here's what usually goes unseen, on each side.</p>
+      <div class="ws">
+        <div class="wcol"><h4>Anticipate</h4><p class="def">Seeing it coming</p><p class="ex"><i>Often missed on her side</i>The shoes are getting tight before anyone complains.</p><p class="ex"><i>Often missed on his side</i>The car needs tires before the first snow.</p></div>
+        <div class="wcol"><h4>Identify</h4><p class="def">Finding the options</p><p class="ex"><i>Often missed on her side</i>Three summer camps, every sign-up date, which ones fill in a day.</p><p class="ex"><i>Often missed on his side</i>Pricing the refinance at 11 PM so the numbers don't scare anyone at dinner.</p></div>
+        <div class="wcol"><h4>Decide</h4><p class="def">Making the call</p><p class="ex"><i>Often missed on her side</i>Which birthday parties are worth a whole Saturday.</p><p class="ex"><i>Often missed on his side</i>Which work fire to absorb so he can make bedtime.</p></div>
+        <div class="wcol"><h4>Monitor</h4><p class="def">Making sure it happened</p><p class="ex"><i>Often missed on her side</i>Checking the camp form actually went through.</p><p class="ex"><i>Often missed on his side</i>Watching how your kid is handling the new coach.</p></div>
       </div>
-      <div class="piles">
-        <div class="pile" style="background:#2a55e5"><h4>Mine.</h4>
-          <p class="card">Dentist + doctor appointments <small>all 3 kids</small></p>
-          <p class="card">Trash + recycling nights</p>
-          <p class="card">Saturday breakfast</p>
-          <p class="card">Car stuff <small>registration, oil</small></p>
-        </div>
-        <div class="pile" style="background:#9fb6ff;color:#0b1226"><h4>Yours.</h4>
-          <p class="card">School pickup <small>Tue + Thu</small></p>
-          <p class="card">Bath + bedtime routine</p>
-          <p class="card">Holiday plans with family</p>
-          <p class="card">Weeknight dinners</p>
-        </div>
-        <div class="pile" style="background:#ffff33;color:#0b1226"><h4>Manny's.</h4>
-          <p class="card">Permission slips + school emails</p>
-          <p class="card">Birthday gifts for classmates</p>
-          <p class="card">Grocery list from what's running low</p>
-          <p class="card">Remembering what she said she wanted</p>
-        </div>
+      <p style="font-size:13px;color:#6f7ba3">Framework: Allison Daminger, "The Cognitive Dimension of Household Labor," American Sociological Review, 2019. Examples are ours.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <h3 class="serif" style="font-size:clamp(32px,3.4vw,52px);line-height:1">Five questions on the table.</h3>
+      <div class="qs">
+        <p class="q">What do you track that I've never once asked about?</p>
+        <p class="q">What do I think I do that you actually finish?</p>
+        <p class="q">When this week did you feel alone in this house?</p>
+        <p class="q">What would you drop tomorrow if you knew I really had it?</p>
+        <p class="q">What do you carry for me that you've never said out loud?</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="sort" style="background:#e4dccd">
+  <div class="wrap" style="padding-top:100px;padding-bottom:100px;display:flex;flex-direction:column;gap:44px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:780px">
+      <p class="num" style="font-family:'DM Serif Display',Georgia,serif;font-size:120px;line-height:.8;color:#2a55e5">02</p>
+      <h2 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Sort it out. <span style="font-style:italic;color:#2a55e5">Inside Manny.</span></h2>
+      <p style="font-size:19px;line-height:1.6">Manny already knows the jobs your house runs on, because he's been reading the school emails and the calendar. Tonight you each sort the same cards on your own phone: Mine, Yours, or Manny's. Then Manny shows you exactly where you disagree.</p>
+    </div>
+    <div class="duo">
+      <figure class="pf"><div class="iph"><div class="iscr app">
+        <div class="sbar"><span>7:51</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
+        <div class="rowsb" style="margin:14px 2px 8px"><p class="apph" style="margin:0">Sort <small>His phone</small></p><p class="timer big"><small>LEFT</small><b data-countdown="702">11:42</b></p></div>
+        <div class="prog"><i style="width:58%"></i></div><p class="note" style="margin:4px 0 10px">18 of 31 sorted</p>
+        <div class="scard"><p class="src dark">From the school newsletter</p><p class="big">Summer camp sign-ups</p><p class="note">Opens Feb 1. Three camps shortlisted. Two fill in a day.</p></div>
+        <div class="sortbtns" style="margin-top:12px"><span style="background:#2a55e5;color:#fff">Mine</span><span style="background:#ff9f0a;color:#fff">Yours</span><span style="background:#ffff33;color:#0b1226">Manny's</span></div>
+        <p class="note" style="margin-top:10px">Up next: pediatrician follow-ups, holiday travel, gift for Leo's party</p>
+      </div></div><figcaption><b>His phone.</b> One card at a time. He claims it, hands it over, or gives it to Manny.</figcaption></figure>
+      <figure class="pf"><div class="iph"><div class="iscr app">
+        <div class="sbar"><span>7:51</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
+        <div class="rowsb" style="margin:14px 2px 8px"><p class="apph" style="margin:0">Where you differ <small>Her phone</small></p><p class="timer big"><small>LEFT</small><b data-countdown="702">11:42</b></p></div>
+        <div class="dis">
+          <p><b>Holiday travel plans</b><span class="tag" style="background:#e7edff;color:#2a55e5">He: Mine</span><span class="tag" style="background:#fff4e5;color:#b25e00">You: Mine</span><br>You both want it. Talk about who leads.</p>
+          <p><b>Pediatrician follow-ups</b><span class="tag" style="background:#fff4e5;color:#b25e00">He: Yours</span><span class="tag" style="background:#e7edff;color:#2a55e5">You: Yours</span><br>Nobody claimed it. Pick one now.</p>
+          <p><b>Gift for Leo's party</b><span class="tag" style="background:#ffffcc;color:#6b5e00">Both: Manny's</span><br>Agreed. Manny orders by Friday.</p>
+        </div>
+        <div class="acts row" style="margin-top:10px"><span class="act pri">Settle these 2</span></div>
+      </div></div><figcaption><b>Her phone.</b> Same session, different view: only the cards you two need to talk about.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="fold" style="background:#141a33;color:#efe9df">
+  <div class="wrap" style="padding-top:100px;padding-bottom:100px;display:flex;flex-direction:column;gap:56px">
     <div class="stage">
       <div style="display:flex;flex-direction:column;gap:18px">
         <p class="num">03</p>
-        <h3 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Fold it in.</h3>
-        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">You fold a real basket of laundry together, side by side, hands busy, eyes forward. It's the easiest place to keep talking. Before the last towel, you pick your nightly check-in: same time, ten minutes, same three questions.</p>
+        <h2 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Fold it in.</h2>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">You fold a real basket together, side by side, hands busy, eyes forward. It's the easiest place to keep talking. Before the last towel, you set your nightly check-in: same time, ten minutes, three questions.</p>
         <p style="font-size:19px;line-height:1.6;color:#fff;font-weight:700">What landed on you today? What can I take? What's tomorrow?</p>
       </div>
-      <img class="soft" src="https://images.unsplash.com/photo-1760939064986-3c375dab7b49?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="A couple folding and hanging laundry together" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover">
+      <img class="scene" src="scene-fold.svg" alt="Illustration: a couple folding laundry side by side at a table under string lights">
+    </div>
+    <div class="duo">
+      <figure class="pf"><div class="iph"><div class="iscr app">
+        <div class="sbar"><span>9:31</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
+        <div class="rowsb" style="margin:14px 2px 8px"><p class="apph" style="margin:0">Check-in <small>His phone · Q2 of 3</small></p><p class="timer big"><small>LEFT</small><b data-countdown="582">9:42</b></p></div>
+        <div class="acard"><p class="src dark">What can I take?</p><p class="nt dark">From her week, Manny suggests:</p>
+          <div class="chips2"><span class="pri">Thursday pickup</span><span>Call the plumber</span><span>Camp form</span></div></div>
+        <div class="acard"><p class="src dark">What landed on her today</p><p class="note">"Back-to-back calls, and the school called about the field trip."</p></div>
+        <div class="acts row"><span class="act pri">Take 2</span><span class="act">Next question</span></div>
+      </div></div><figcaption><b>His phone.</b> Ten minutes on the clock. Real things to take, pulled from her week.</figcaption></figure>
+      <figure class="pf"><div class="iph"><div class="iscr app">
+        <div class="sbar"><span>9:31</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
+        <div class="rowsb" style="margin:14px 2px 8px"><p class="apph" style="margin:0">Week 3 <small>Her phone</small></p><p class="timer big"><small>LEFT</small><b data-countdown="582">9:42</b></p></div>
+        <div class="acard"><p class="src dark">Fair, not equal</p>
+          <div class="rings"><div class="ring"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="30" fill="none" stroke="#e5e7ee" stroke-width="8"/><circle cx="36" cy="36" r="30" fill="none" stroke="#ff9f0a" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="60.3" transform="rotate(-90 36 36)"/><text x="36" y="40" text-anchor="middle" font-size="15" font-weight="800" fill="#1c1c1e">68%</text></svg><b>You</b><small>12 jobs</small></div><div class="ring"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="30" fill="none" stroke="#e5e7ee" stroke-width="8"/><circle cx="36" cy="36" r="30" fill="none" stroke="#2a55e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="56.5" transform="rotate(-90 36 36)"/><text x="36" y="40" text-anchor="middle" font-size="15" font-weight="800" fill="#1c1c1e">70%</text></svg><b>Him</b><small>19 jobs</small></div></div>
+          <p class="note">You're traveling Wed to Fri, so he's carrying more jobs. Same strain on both of you. That's fair.</p></div>
+        <div class="acard"><p class="src dark">Since Air It Out</p><p class="nt dark">He took 3 of your cards.</p><p class="note">Dentist, Thursday pickup, camp form.</p></div>
+      </div></div><figcaption><b>Her phone.</b> The same check-in, a different view: how the split is holding.</figcaption></figure>
     </div>
   </div>
 </section>
 
 <section id="kids">
-  <div class="wrap" style="padding-top:110px;padding-bottom:110px;display:flex;flex-direction:column;gap:36px">
-    <div class="split" style="align-items:end">
-      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">The kids aren't parked. <span style="font-style:italic;color:#2a55e5">They're in a lab.</span></h2>
-      <p style="font-size:19px;line-height:1.6;max-width:48ch">Down the hall, LifeSkills Lab runs a session of its own. Real expert, real hands-on challenge, and a star for every kid to take home. You get a quiet room. They get the best part of their week.</p>
-    </div>
-    <div class="kidsband">
-      <div class="kid"><b>Launch.</b><p>A fast challenge to open the night. Tallest paper tower wins.</p></div>
-      <div class="kid"><b>Figure it out.</b><p>A real skill, kid-sized. Measure, build, try again.</p></div>
-      <div class="kid"><b>Teach back.</b><p>At pickup, they teach you what they learned. Bring questions.</p></div>
-    </div>
-    <a href="http://lifeskillslab.ai" style="font-weight:800;font-size:17px">More about LifeSkills Lab →</a>
-  </div>
-</section>
-
-<section id="manny" style="background:#e4dccd">
-  <div class="wrap" style="padding-top:110px;padding-bottom:110px;display:flex;flex-direction:column;gap:44px">
-    <div style="display:flex;flex-direction:column;gap:14px;max-width:760px">
-      <p class="eyebrow" style="color:#2a55e5">After the night</p>
-      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">Manny keeps the sort. <span style="font-style:italic;color:#2a55e5">For both of you.</span></h2>
-      <p style="font-size:19px;line-height:1.6">The piles don't live on a napkin. They live in Manny, on both phones. He nudges whoever owns the card, handles his own pile, and tells you both how the split is holding.</p>
-    </div>
-    <div class="duo">
-      <figure class="pf"><div class="iph"><div class="iscr app">
-        <div class="sbar"><span>8:02</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
-        <p class="apph">Your sort <small>Week 3</small></p>
-        <div class="acard">
-          <p class="src dark">Who's carrying what</p>
-          <div class="lrow"><span>You</span><span class="lbar"><i style="width:52%"></i><em style="width:48%"></em></span><span class="lv">52%</span></div>
-          <div class="lrow"><span>Week 1</span><span class="lbar"><i style="width:31%"></i><em style="width:69%"></em></span><span class="lv">31%</span></div>
-          <p class="leg"><i></i>You <em></em>Her</p>
+  <div class="wrap" style="padding-top:100px;padding-bottom:100px;display:flex;flex-direction:column;gap:36px">
+    <div class="stage">
+      <img class="scene" src="scene-kids.svg" alt="Illustration: kids building paper towers at a long table with an expert guide">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h2 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">The kids aren't parked. <span style="font-style:italic;color:#2a55e5">They're in a lab.</span></h2>
+        <p style="font-size:19px;line-height:1.6;max-width:48ch">Down the hall, LifeSkills Lab runs a session of its own: a real expert, a hands-on challenge, and a star for every kid to take home. You get a quiet room. They get the best part of their week.</p>
+        <div class="kidsband" style="grid-template-columns:1fr">
+          <div class="kid"><b>Launch.</b><p>A fast challenge. Tallest paper tower wins.</p></div>
+          <div class="kid"><b>Teach back.</b><p>At pickup, they teach you what they learned.</p></div>
         </div>
-        <div class="acard alert">
-          <p class="src dark">Your card · due Thursday</p>
-          <p class="nt dark">Dentist for all three.</p>
-          <div class="chips2"><span class="pri">Book Thu 4:00</span><span>Pick another day</span></div>
-        </div>
-        <div class="acard"><p class="src dark">Manny's pile</p><p class="nt dark">2 permission slips signed. Gift for Leo's party ordered.</p></div>
-      </div></div><figcaption><b>His phone.</b> His cards, his nudges, the split moving.</figcaption></figure>
-      <figure class="pf"><div class="iph"><div class="iscr lock">
-        <div class="sbar"><span></span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
-        <p class="ldate">Thursday, December 4</p><p class="lclock">9:15</p>
-        <div class="glass">
-          <div class="nhead"><span class="mico">M</span><b>Manny</b><span>now</span></div>
-          <p class="nt">Check-in in 15 minutes.</p>
-          <p class="nb">He booked the dentist and did pickup twice this week. One card is open: holiday plans. Want it on tonight's list?</p>
-        </div>
-        <div class="acts"><span class="act pri">Add to check-in</span><span class="act">Not tonight</span></div>
-      </div></div><figcaption><b>Her phone.</b> She sees it moving without having to ask.</figcaption></figure>
+        <a href="http://lifeskillslab.ai" style="font-weight:800;font-size:17px">More about LifeSkills Lab →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -336,5 +384,9 @@ h1,h2,h3{font-weight:400}
     </div>
   </div>
 </footer>
+<script>
+(function(){var els=document.querySelectorAll('[data-countdown]');function fmt(t){var h=Math.floor(t/3600),m=Math.floor(t%3600/60),x=t%60;return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(x).padStart(2,'0');}
+els.forEach(function(e){var t=+e.getAttribute('data-countdown'),start=t;setInterval(function(){t=t>0?t-1:start;e.textContent=fmt(t);},1000);});})();
+</script>
 </body>
 </html>
