@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap">
 <style>
+html,body{overflow-x:clip}
 body{margin:0;background:#efe9df;color:#16203a;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:#2a55e5}a:hover{color:#14234f}
 h1,h2,h3{margin:0;font-weight:400}
@@ -232,6 +233,27 @@ p{margin:0}
     </div>
   </footer>
 </div>
+
+<style>
+.hb{display:none;background:none;border:0;color:inherit;padding:8px;margin:-8px;cursor:pointer;line-height:0}
+@media (max-width:860px){
+ .hbhost{flex-wrap:nowrap!important;position:relative}
+ .hbhost .hbl{display:none!important}
+ .hbhost .hb{display:inline-flex}
+ .hbhost.open .hbl{display:flex!important;flex-direction:column;align-items:stretch!important;gap:2px!important;position:absolute;top:100%;left:0;right:0;margin-top:12px;padding:12px;border-radius:16px;background:var(--hbbg);box-shadow:0 24px 48px rgba(0,0,0,.35);z-index:60}
+ .hbhost.open .hbl a{padding:12px 10px!important;font-size:17px!important;display:flex!important}
+ .hbhost.open .hbl a:last-child{justify-content:center;margin-top:8px;padding:14px!important}
+}
+</style>
+<script data-bg="#0b1226">
+(function(){var nav=document.querySelector('nav[aria-label="Main"]');if(!nav)return;var host,links;
+if(nav.firstElementChild&&nav.firstElementChild.tagName==='A'&&nav.lastElementChild.tagName!=='A'){host=nav;links=nav.lastElementChild}else{host=nav.parentElement;links=nav}
+host.classList.add('hbhost');links.classList.add('hbl');host.style.setProperty('--hbbg',document.currentScript.dataset.bg||'#0b1226');
+var b=document.createElement('button');b.className='hb';b.type='button';b.setAttribute('aria-label','Open menu');b.setAttribute('aria-expanded','false');
+b.innerHTML='<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+host.insertBefore(b,links);b.onclick=function(){var o=host.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')};
+links.addEventListener('click',function(e){if(e.target.closest('a')){host.classList.remove('open');b.setAttribute('aria-expanded','false')}});})();
+</script>
 
 </body>
 </html>
