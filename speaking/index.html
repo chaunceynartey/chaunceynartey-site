@@ -17,6 +17,7 @@ a{color:#2a55e5}a:hover{color:#14234f}
 h1,h2,h3{margin:0;font-weight:400}
 p{margin:0}
 sup{font-size:0.3em;vertical-align:super;font-family:"Inter",sans-serif;font-weight:800}
+.toolkit-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:980px){.toolkit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:620px){.toolkit-grid{grid-template-columns:1fr}}
 </style>
 
 <style>html{scroll-behavior:smooth}</style>
@@ -26,7 +27,7 @@ sup{font-size:0.3em;vertical-align:super;font-family:"Inter",sans-serif;font-wei
 <div style="width: 100%; background: #efe9df; color: #16203a; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden;">
 
   <section id="top" style="position: relative; background: #0b1226; color: #efe9df; overflow: hidden;">
-    <div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 24px 24px 136px; display: flex; flex-direction: column; gap: 72px;">
+    <div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 24px 24px 64px; display: flex; flex-direction: column; gap: 40px;">
       <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
         <a href="/" style="font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; color: #efe9df; text-decoration: none;">Chauncey Nartey <span style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #9fb6ff; vertical-align: middle;">FOR COMPANIES</span></a>
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px; font-weight: 700;">
@@ -40,14 +41,14 @@ sup{font-size:0.3em;vertical-align:super;font-family:"Inter",sans-serif;font-wei
         </div>
       </nav>
       <div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: center;">
-        <div style="flex: 999 1 620px; min-width: 0; display: flex; flex-direction: column; gap: 32px;">
+        <div style="flex: 999 1 620px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
           <p style="align-self: flex-start; font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #0b1226; background: #ff6b5b; padding: 10px 18px; border-radius: 999px; transform: rotate(-2.5deg);">Conflict detected</p>
-          <h1 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(68px, 11.2vw, 184px); line-height: 0.82; letter-spacing: -0.03em; color: #efe9df;">Your best people are <span style="font-style: italic; color: #ff8a7a;">double-booked.</span></h1>
-          <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(44px, 6vw, 96px); line-height: 0.9; font-style: italic; color: #9fb6ff;">Let them run home.</p>
-          <p style="font-size: clamp(22px, 2vw, 28px); line-height: 1.45; color: #d6dcef; max-width: 52ch;">A full-time job at work. Another full-time job at home: kids, aging parents, a spouse's surgery. When the calendar can't hold both, they won't cancel the family. <b style="color: #ffffff;">They'll cancel you.</b> And the exit survey will say "personal reasons."</p>
+          <h1 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(52px, 6.4vw, 104px); line-height: 0.9; letter-spacing: -0.03em; color: #efe9df;">Your best people are <span style="font-style: italic; color: #ff8a7a;">double-booked.</span></h1>
+          <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(34px, 3.6vw, 58px); line-height: 0.95; font-style: italic; color: #9fb6ff;">Let them run home.</p>
+          <p style="font-size: clamp(18px, 1.45vw, 21px); line-height: 1.5; color: #d6dcef; max-width: 54ch;">A full-time job at work. Another full-time job at home: kids, aging parents, a spouse's surgery. When the calendar can't hold both, they won't cancel the family. <b style="color: #ffffff;">They'll cancel you.</b> And the exit survey will say "personal reasons."</p>
           <div style="display: flex; flex-wrap: wrap; gap: 14px;">
-            <a href="#quiz" style="background: #2a55e5; color: #ffffff; text-decoration: none; padding: 20px 34px; border-radius: 999px; font-weight: 900; font-size: 19px;">Are you a Modern Operator? Take the quiz</a>
-            <a href="#standard" style="border: 2px solid #efe9df; color: #efe9df; text-decoration: none; padding: 18px 34px; border-radius: 999px; font-weight: 800; font-size: 19px;">See the fix</a>
+            <a href="#standard" style="background: #2a55e5; color: #ffffff; text-decoration: none; padding: 18px 32px; border-radius: 999px; font-weight: 900; font-size: 18px;">See the fix</a>
+            <a href="#talk" style="border: 2px solid #efe9df; color: #efe9df; text-decoration: none; padding: 16px 32px; border-radius: 999px; font-weight: 800; font-size: 18px;">Let's talk</a>
           </div>
           <p style="font-size: 15px; line-height: 1.5; color: #9fb6ff; max-width: 60ch;">32% of employees have left a job that didn't support their caregiving. Harvard Business School, 2019.</p>
         </div>
@@ -181,6 +182,7 @@ sup{font-size:0.3em;vertical-align:super;font-family:"Inter",sans-serif;font-wei
         <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(60px, 9.6vw, 160px); line-height: 0.82; letter-spacing: -0.02em; color: #efe9df;">Be a Modern <span style="font-style: italic; color: #9fb6ff;">Operator.</span></h2>
         <p style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(30px, 3.4vw, 48px); line-height: 1.1; color: #efe9df; max-width: 30ch;">Double-booked people don't need another training. They need permission to run home.</p>
         <p style="font-size: 21px; line-height: 1.5; color: #d6dcef; max-width: 58ch;">Modern Operators design the systems, write the policies and train the leaders for how people actually live now. Everyone else is running a 1955 playbook on 2026 families, and their double-booked people are paying for it. The Modern Operator Standard is five commitments, each one backed by research.</p>
+        <a href="#quiz" style="align-self: flex-start; margin-top: 8px; background: #ffff33; color: #0b1226; text-decoration: none; padding: 18px 32px; border-radius: 999px; font-weight: 900; font-size: 18px;">Are you a Modern Operator? Take the 2-minute quiz →</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
         <div style="border: 1px solid #2c3d6e; border-radius: 28px; padding: 30px; display: flex; flex-direction: column; gap: 14px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 64px; line-height: 0.8; color: #9fb6ff;">01</p><h3 style="font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; line-height: 1.02; color: #efe9df;">Let people work wherever the work can get done</h3><p style="font-size: 16px; line-height: 1.55; color: #d6dcef;">If the work can be done from the kitchen table while a kid is home sick, let it be done there, without anyone asking permission.</p><p style="margin-top: auto; border-top: 1px solid #2c3d6e; padding-top: 12px; font-size: 14px; line-height: 1.5; color: #9fb6ff;"><b>Why:</b> In a randomized trial of 1,612 employees, working from home two days a week cut quits by about a third, with no drop in performance reviews or promotions. Quits fell most among women.</p></div>
@@ -249,9 +251,9 @@ sup{font-size:0.3em;vertical-align:super;font-family:"Inter",sans-serif;font-wei
           </div>
           <p style="font-size: 16px; line-height: 1.5; color: #d6dcef; max-width: 46ch;">Built on PEER: People Engagement and Emotional Regulation, the framework I've used to coach leaders for years. Not theory. Practiced live, out loud, with real situations.</p>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+        <div class="toolkit-grid" style="display: grid; gap: 14px;">
           <div style="border: 1px solid #2c3d6e; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 8px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 26px; line-height: 1.05; color: #efe9df;">H.O.L.D. Space</p><p style="font-size: 15px; line-height: 1.5; color: #d6dcef;">Halt. Ask an Open question. Listen and Loop back what you heard. Dignify their experience, even when you see it differently.</p></div>
-          <div style="border: 1px solid #2c3d6e; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 8px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 26px; line-height: 1.05; color: #efe9df;">Questions, pauses, playbacks</p><p style="font-size: 15px; line-height: 1.5; color: #d6dcef;">The four habits that make people feel seen, heard and understood, practiced until they're automatic.</p></div>
+          <div style="border: 1px solid #2c3d6e; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 8px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 26px; line-height: 1.05; color: #efe9df;">Questions, pauses, playbacks</p><p style="font-size: 15px; line-height: 1.5; color: #d6dcef;">The three habits that make people feel seen, heard and understood, practiced until they're automatic.</p></div>
           <div style="border: 1px solid #2c3d6e; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 8px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 26px; line-height: 1.05; color: #efe9df;">Deblur your language</p><p style="font-size: 15px; line-height: 1.5; color: #d6dcef;">Turn "whenever you get a chance" into a clear ask with a real deadline, so nobody has to guess what you meant.</p></div>
           <div style="border: 1px solid #2c3d6e; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 8px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 26px; line-height: 1.05; color: #efe9df;">Discern, decide, do</p><p style="font-size: 15px; line-height: 1.5; color: #d6dcef;">When something said in a meeting lands wrong: figure out what's going on, decide whether to respond now or later, then act.</p></div>
           <div style="border: 1px solid #2c3d6e; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 8px;"><p style="font-family: 'DM Serif Display', Georgia, serif; font-size: 26px; line-height: 1.05; color: #efe9df;">Open the circle</p><p style="font-size: 15px; line-height: 1.5; color: #d6dcef;">Notice who is always in the room and who never is, and who quietly carries the admin work. Then change it.</p></div>
