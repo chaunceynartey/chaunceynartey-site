@@ -41,13 +41,29 @@ h1,h2,h3{font-weight:400}
 .stat{border-top:2px solid #2c3d6e;padding-top:16px;display:flex;flex-direction:column;gap:6px}
 .stat .n{font-family:'DM Serif Display',Georgia,serif;font-size:44px;line-height:1;color:#ffff33}
 /* phones */
+.perks{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.perk{border-radius:22px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.perk .pk{font-family:'DM Serif Display',Georgia,serif;font-size:28px;line-height:1}
+.perk .pd{font-size:15px;line-height:1.45}
+.p-chat{background:#e7edff;grid-row:span 2}
+.mini-chat{display:flex;flex-direction:column;gap:6px;margin:6px 0}
+.mini-chat .b{font-size:14px;line-height:1.35;padding:8px 12px;border-radius:16px;max-width:88%}
+.mini-chat .in{background:#fff;align-self:flex-start;border-bottom-left-radius:4px}.mini-chat .out{background:#2a55e5;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.p-call{background:#0b1226;color:#efe9df;flex-direction:row;align-items:center;gap:16px}
+.datebox{background:#ffff33;color:#0b1226;border-radius:14px;padding:10px 14px;display:flex;flex-direction:column;align-items:center;font-weight:800;font-size:11px;letter-spacing:.06em}.datebox b{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:34px;line-height:1;letter-spacing:0}
+.p-ai{background:#ffff33;color:#0b1226;flex-direction:row;align-items:center;gap:16px}
+.mico.big{width:56px;height:56px;border-radius:14px;font-size:30px;background:#0b1226;color:#ffff33;flex:none}
+.p-meet{background:#16203a;color:#efe9df;grid-column:2/4}
+.ticket{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:center;background:#efe9df;color:#0b1226;border-radius:14px;padding:12px 16px;border-left:8px dashed #2a55e5}
+.ticket b{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:22px;line-height:1.05}.ticket span{font-size:14.5px;line-height:1.4}
+@media (max-width:980px){.perks{grid-template-columns:1fr}.p-chat{grid-row:auto}.p-meet{grid-column:auto}.ticket{grid-template-columns:1fr}}
 .plates{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center}
 .vs{font-size:clamp(48px,5vw,80px);font-style:italic;color:#2a55e5;line-height:1}
 .platewrap{display:flex;flex-direction:column;align-items:center;gap:18px}
 .plate{position:relative;width:min(100%,440px);aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle,#fff 0 58%,#f1ece2 59% 63%,#fff 64% 70%,#e6dfd2 71%);box-shadow:0 20px 40px rgba(11,18,38,.15);display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:7px;padding:16%;box-sizing:border-box}
-.plate span{font-weight:800;font-size:14px;padding:7px 11px;border-radius:999px;background:#2a55e5;color:#fff;white-space:nowrap}
-.plate.hers span{background:#0b1226;font-size:12.5px;padding:6px 9px}
-.plate .spill{position:absolute;background:#b23a2e !important}
+.plate span{font-weight:800;font-size:12px;padding:5px 9px;border-radius:999px;background:#2a55e5;color:#fff;white-space:nowrap}
+.plate.hers{padding:7% 5% 14%;gap:4px}.plate.hers span{background:#0b1226;font-size:11.5px;padding:5px 8px}
+.plate .spill{position:absolute;background:#b23a2e !important;font-size:11px !important;box-shadow:0 4px 10px rgba(0,0,0,.18)}
 .s1{right:-4%;top:14%;transform:rotate(8deg)}.s2{left:-6%;bottom:18%;transform:rotate(-10deg)}.s3{right:2%;bottom:6%;transform:rotate(6deg)}
 .pcap{font-size:18px;text-align:center}
 @media (max-width:860px){.plates{grid-template-columns:1fr}.stat4{grid-template-columns:1fr !important}}
@@ -265,14 +281,9 @@ h1,h2,h3{font-weight:400}
   <div class="wrap" style="padding-bottom:72px;display:flex;flex-direction:column;gap:28px">
     <h3 class="serif" style="font-size:clamp(36px,4.2vw,64px);line-height:.95">Same table. <span style="font-style:italic;color:#2a55e5">Different plates.</span></h3>
     <div class="plates">
-      <div class="platewrap"><div class="plate his">
-        <span>Trash nights</span><span>Pay the rent</span><span>Car checks</span><span>Sunday breakfast</span><span>Dinner, 2 nights</span><span>Grocery run</span>
-      </div><p class="pcap"><b>His plate.</b> Real jobs. Scheduled, visible, done.</p></div>
+      <div class="platewrap"><div class="plate his"><span>Trash nights</span><span>Pay the rent</span><span>Car checks</span><span>Sunday breakfast</span><span>Dinner, 2 nights</span><span>Grocery run</span><span>Lawn + snow</span><span>Fix what breaks</span><span>Bath on Tuesdays</span><span>Weekend pickup</span><span>Grill nights</span><span>Assemble the thing</span><span>Gas in the car</span><span>Change the bulbs</span></div><p class="pcap"><b>His plate.</b> Real jobs. Scheduled, visible, done.</p></div>
       <div class="vs serif">vs.</div>
-      <div class="platewrap"><div class="plate hers">
-        <span>Holiday plans</span><span>Birthday gifts</span><span>Kids' clothes</span><span>Shoe sizes</span><span>Doctor + dentist</span><span>School forms</span><span>Teacher gifts</span><span>Picture day</span><span>Camp sign-ups</span><span>Thank-you notes</span><span>Family calendar</span><span>The grocery list</span>
-        <span class="spill s1">Spirit week</span><span class="spill s2">Hand-me-downs</span><span class="spill s3">Playdates</span>
-      </div><p class="pcap"><b>Her plate.</b> The jobs nobody sees until they're missed.</p></div>
+      <div class="platewrap"><div class="plate hers"><span>Holiday plans</span><span>Birthday gifts</span><span>Kids' clothes</span><span>Shoe sizes</span><span>Doctor + dentist</span><span>School forms</span><span>Teacher gifts</span><span>Picture day</span><span>Camp sign-ups</span><span>Thank-you notes</span><span>Family calendar</span><span>The grocery list</span><span>Lunch notes</span><span>Permission slips</span><span>Class parties</span><span>Allergy forms</span><span>Haircuts</span><span>Playdate texts</span><span>Sick-day plan</span><span>Sitter schedule</span><span>Meal plan</span><span>Gifts for in-laws</span><span>Christmas cards</span><span>Spirit week</span><span>Hand-me-downs</span><span>Library books</span><span class="spill" style="left:62%;top:74%;transform:rotate(-8deg)">Recital costume</span><span class="spill" style="left:76%;top:66%;transform:rotate(12deg)">Field trip $</span><span class="spill" style="left:52%;top:86%;transform:rotate(5deg)">Flu shots</span><span class="spill" style="left:80%;top:82%;transform:rotate(-14deg)">Summer plan</span><span class="spill" style="left:36%;top:92%;transform:rotate(-6deg)">Swim lessons</span><span class="spill" style="left:64%;top:94%;transform:rotate(9deg)">Report card</span><span class="spill" style="left:86%;top:98%;transform:rotate(-4deg)">Tooth fairy</span><span class="spill" style="left:20%;top:98%;transform:rotate(11deg)">Lost mitten</span><span class="spill" style="left:72%;top:106%;transform:rotate(6deg)">Room parent</span><span class="spill" style="left:46%;top:104%;transform:rotate(-10deg)">Teacher email</span><span class="spill" style="left:92%;top:76%;transform:rotate(15deg)">Coat size</span><span class="spill" style="left:30%;top:82%;transform:rotate(-3deg)">Book fair</span></div><p class="pcap" style="margin-top:48px"><b>Her plate.</b> The jobs nobody sees until they're missed.</p></div>
     </div>
   </div>
   <div class="wrap" style="padding-bottom:120px">
@@ -465,10 +476,19 @@ h1,h2,h3{font-weight:400}
         <h3 class="serif" style="font-size:clamp(48px,5vw,80px);line-height:.9">Pull Up</h3>
         <img class="pupimg" src="https://images.unsplash.com/photo-1589483232748-515c025575bc?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Four friends laughing together at something on a phone">
         <p style="font-size:18px;line-height:1.55;color:#2c2c28">You know the minute. The driveway. The side of the street a block away. The 7-Eleven parking lot. Pulling yourself together alone so you can walk in and be "good." <b>Pull Up is where you stop taking that minute alone.</b></p>
-        <div class="chips" style="color:#16203a">
-          <span>The group chat</span><span>Monthly live call</span><span>AI setups from Manny</span><span>Folding with the homies meetups</span>
+        <div class="perks">
+          <div class="perk p-chat"><p class="pk">The group chat</p>
+            <div class="mini-chat"><p class="b in">anyone else's kid suddenly need cleats by Saturday?</p><p class="b out">Dick's on 106 has them. Grabbing two, you good?</p><p class="b in">lifesaver 🙏🏾</p><p class="b in">also, real question. how are y'all handling the "I hate my hair" phase</p><p class="b out">bring her to the hair meetup Thursday. Marcus taught me puffs in 20 min</p><p class="b in">bet. I'm there</p></div>
+            <p class="pd">Real dads, real answers, any hour. No posturing.</p></div>
+          <div class="perk p-call"><div class="datebox"><span>1ST TUE</span><b>8:30</b><span>PM</span></div><div><p class="pk">Monthly live call</p><p class="pd">One hour. One topic. Cameras optional, honesty required.</p></div></div>
+          <div class="perk p-ai"><span class="mico big">M</span><div><p class="pk">AI setups from Manny</p><p class="pd">We set up your Manny together, so it knows your house by the end of the night.</p></div></div>
+          <div class="perk p-meet"><p class="pk">In-person meetups</p><p class="pd" style="margin-bottom:6px">Learn it in a room full of dads. Leave able to do it tonight.</p>
+            <div class="ticket"><b>Hair, like a pro</b><span>For dads of Black girls: parts, puffs, braids and edges, with a stylist walking you through it.</span></div>
+            <div class="ticket"><b>Precision folding</b><span>Fitted sheets, drawers that close, and a full basket in under 20 minutes. Timed.</span></div>
+            <div class="ticket"><b>Auto-reminder build, live</b><span>Set up every seasonal kid task once: camp sign-ups, shoe sizes, flu shots, school photos. Never remember them again.</span></div>
+          </div>
         </div>
-        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Pull%20Up%20waitlist&amp;body=Add%20me%20to%20the%20Pull%20Up%20waitlist." style="align-self:flex-start;background:#2a55e5;color:#fff">Join the Pull Up waitlist</a>
+        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Pull%20Up%20waitlist&amp;body=Add%20me%20to%20the%20Pull%20Up%20waitlist." style="grid-column:1/-1;justify-self:start;margin-top:12px;background:#2a55e5;color:#fff">Join the Pull Up waitlist</a>
       </div>
     </div>
   </div>
