@@ -41,6 +41,10 @@ h1,h2,h3{font-weight:400}
 .stat{border-top:2px solid #2c3d6e;padding-top:16px;display:flex;flex-direction:column;gap:6px}
 .stat .n{font-family:'DM Serif Display',Georgia,serif;font-size:44px;line-height:1;color:#ffff33}
 /* phones */
+.pv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 50%,rgba(0,0,0,.8) 100%)}
+.screen .top,.post-bg{position:relative}
+.live{background:#ff2d55;color:#fff;border-radius:4px;padding:1px 5px;margin-right:4px;font-size:10px}
 .phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
 .phone{background:#000;border-radius:34px;padding:10px;box-shadow:0 24px 50px rgba(11,18,38,.28)}
 .screen{border-radius:26px;overflow:hidden;background:#111;color:#fff;aspect-ratio:9/17;position:relative;display:flex;flex-direction:column;font-size:13px}
@@ -153,31 +157,35 @@ h1,h2,h3{font-weight:400}
 <section style="background:#e4dccd">
   <div class="wrap" style="padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:48px">
     <div class="split" style="align-items:end">
-      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">The internet is fighting about men who won't do the dishes.</h2>
-      <p class="serif" style="font-size:clamp(34px,3.6vw,56px);line-height:1;font-style:italic;color:#2a55e5">Meanwhile, you're doing the dishes.</p>
+      <h2 class="serif" style="font-size:clamp(44px,5.4vw,84px);line-height:.95">Online, dads are the punchline.</h2>
+      <p class="serif" style="font-size:clamp(34px,3.6vw,56px);line-height:1;font-style:italic;color:#2a55e5">At home, you're the plan.</p>
     </div>
-    <div class="phones" aria-label="Three social media posts arguing about dads">
+    <div class="phones" aria-label="Three social media videos about dads">
       <div class="phone"><div class="screen">
+        <video class="pv" src="https://videos.pexels.com/video-files/8724219/8724219-sd_506_960_25fps.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="pshade"></div>
         <div class="top"><span>9:12</span><span>Reels</span></div>
-        <div class="post-bg" style="background:linear-gradient(160deg,#5b3a8c,#c2447a)">
+        <div class="post-bg">
           <div class="rail"><span><i></i>412K</span><span><i></i>18K</span><span><i></i>Share</span></div>
           <p class="post-cap">POV: you asked him to do ONE thing 🙄</p>
           <p class="post-meta">@momlifeunfiltered · original audio</p>
         </div>
       </div></div>
       <div class="phone"><div class="screen">
-        <div class="top"><span>9:12</span><span>For You</span></div>
-        <div class="post-bg" style="background:linear-gradient(160deg,#1d1d1d,#3a3a3a)">
+        <video class="pv" src="https://videos.pexels.com/video-files/6892090/6892090-sd_540_960_25fps.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="pshade"></div>
+        <div class="top"><span>9:12</span><span><b class="live">LIVE</b> For You</span></div>
+        <div class="post-bg">
           <div class="rail"><span><i></i>1.2M</span><span><i></i>44K</span><span><i></i>Share</span></div>
           <p class="post-cap">"Real men don't do diapers." Stitch this if you agree 💪</p>
-          <p class="post-meta">@alpha.grindset · 3 days ago</p>
+          <p class="post-meta">@alpha.grindset · 3.1K watching</p>
         </div>
       </div></div>
-      <div class="phone"><div class="screen" style="background:#fff">
-        <div class="top" style="color:#0f1419"><span>9:12</span><span>Home</span></div>
-        <div class="feedpost"><b>Thread Queen</b><p>Weaponized incompetence, explained (a thread) 🧵 1/27</p><p class="m">8.4K replies · 61K likes</p></div>
-        <div class="feedpost"><b>Dave</b><p>Every dad I know does more than his father did. Nobody wants to hear it.</p><p class="m">212 replies · ratioed</p></div>
-        <div class="feedpost" style="background:#e7edff"><b>You</b><p>*closes app, packs tomorrow's lunches*</p><p class="m">Not posted</p></div>
+      <div class="phone"><div class="screen">
+        <video class="pv" src="https://videos.pexels.com/video-files/8747878/8747878-sd_540_960_25fps.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="pshade"></div>
+        <div class="top"><span>9:12</span><span>Drafts</span></div>
+        <div class="post-bg">
+          <p class="post-cap">Dishes done. Lunches packed. Not posting this.</p>
+          <p class="post-meta">You · never posted</p>
+        </div>
       </div></div>
     </div>
     <p style="font-size:19px;line-height:1.6;max-width:62ch">One side says men are useless. The other says real men shouldn't have to. Neither one is talking about you. So you keep your head down, keep going, and when anyone asks, you say the same two words.</p>
@@ -215,8 +223,7 @@ h1,h2,h3{font-weight:400}
       <div style="background:#2a55e5;color:#fff;border-radius:32px;padding:40px;display:flex;flex-direction:column;gap:16px">
         <p class="eyebrow" style="color:#dce5ff">This is for you if</p>
         <p class="s">You already pull your weight, and then some.</p>
-        <p class="s">You might be the reason the kitchen's clean. (No comment.)</p>
-        <p class="s">You run a team at work and run the home, too.</p>
+        <p class="s">You might be the reason the kitchen's clean, or dinner is on the table.</p>
         <p class="s">You're building something on the side and want it to move.</p>
         <p class="s">You're tired of saying "I'm good."</p>
       </div>
