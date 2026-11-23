@@ -45,6 +45,12 @@ sup{font-size:0.3em;vertical-align:super;font-family:"Inter",sans-serif;font-wei
 .wk-still .wk-tag{background:#b23a2e;color:#fff}
 .wk-arrow{align-self:center;color:#b23a2e;display:flex}
 @media (max-width:820px){.wk-rows{gap:30px}.wk-row{grid-template-columns:1fr;gap:8px}.wk-arrow{justify-self:center;transform:rotate(90deg)}.wk-know,.wk-still{padding:18px 20px}.wk-tag{font-size:11px;letter-spacing:.08em}}
+.mla{background:#ffffff;border-radius:28px;padding:28px 30px;display:flex;flex-direction:column;gap:6px;color:#16203a}
+.mla-h{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#2a55e5;padding-bottom:6px}
+.mla ul{list-style:none;margin:0;padding:0}
+.mla li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid #e6dfd2;font-size:18px;line-height:1.4;font-weight:600}
+.mla li:first-child{border-top:0}
+.mla-chk{flex:0 0 26px;height:26px;border-radius:50%;background:#2a55e5;color:#fff;display:flex;align-items:center;justify-content:center;margin-top:1px}
 </style>
 
 <style>html{scroll-behavior:smooth}</style>
@@ -344,12 +350,14 @@ sup{font-size:0.3em;vertical-align:super;font-family:"Inter",sans-serif;font-wei
         <span style="font-size: 15px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #2a55e5;">07 · Work with me</span>
         <h2 style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(56px, 8.6vw, 140px); line-height: 0.84; letter-spacing: -0.02em;">Start with two minutes. <span style="font-style: italic; color: #2a55e5;">Go as deep as your team needs.</span></h2>
       </div>
-      <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 10px; font-size: 18px; line-height: 1.45;">
-        <p style="font-weight: 900;">Managers leave able to:</p>
-        <p>See who's double-booked before it shows up in their work</p>
-        <p>Ask real questions, and hold space for the answers</p>
-        <p>Build systems, with and without AI, so care doesn't depend on heroics</p>
-        <p>Run home first, where the team can see it</p>
+      <div class="mla" style="flex: 1 1 380px; min-width: 0;">
+        <p class="mla-h">Managers leave able to</p>
+        <ul>
+          <li><span class="mla-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>See who's double-booked before it shows up in their work</span></li>
+          <li><span class="mla-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Ask real questions, and hold space for the answers</span></li>
+          <li><span class="mla-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Build systems, with and without AI, so care doesn't depend on heroics</span></li>
+          <li><span class="mla-chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Run home first, where the team can see it</span></li>
+        </ul>
       </div>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; align-items: stretch;">
