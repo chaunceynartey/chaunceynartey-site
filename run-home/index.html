@@ -235,8 +235,11 @@ h1,h2,h3{font-weight:400}
 .ud-bars{display:flex;flex-direction:column;gap:10px}
 .ud-bar{display:grid;grid-template-columns:110px 1fr;align-items:center;gap:10px}
 .ud-bar span{font-size:13px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:#9aa6c4}
-.ud-bar div{height:22px;border-radius:11px;background:#16204a;overflow:hidden}
-.ud-bar i{display:block;height:100%;border-radius:11px}
+.ud-bar div{height:34px;border-radius:17px;background:#16204a;overflow:hidden;display:flex;align-items:center}
+.ud-bar i{display:flex;align-items:center;height:100%;border-radius:17px;flex:none}
+.ud-bar em{font-style:normal;font-size:14px;font-weight:900;white-space:nowrap;padding:0 12px;color:#efe9df}
+.ud-bar i em{color:#0b1226}
+.ud-why b{color:#fff}
 .ud-do{background:#7d9bff}.ud-cheer{background:#ffff33}
 .ud-why{font-size:15px;line-height:1.5;color:#d6dcef}
 .ud-fair{font-size:18px;line-height:1.5;color:#d6dcef}.ud-fair b{color:#fff}
@@ -374,22 +377,22 @@ h1,h2,h3{font-weight:400}
       <div class="ud">
         <p class="tv-k">And the bar is upside down.</p>
         <h3 class="serif tv-h ud-h">He&rsquo;s graded on a curve. <em>We&rsquo;re graded on the whole job.</em></h3>
-        <div class="ud-rows" role="img" aria-label="Illustration. The bare-minimum guy does a little and gets a lot of applause. We do a lot and get a little.">
+        <div class="ud-rows" role="img" aria-label="Illustration. The bare-minimum guy shows up and gets a parade. We run the week and it counts as expected.">
           <div class="ud-row">
             <p class="ud-who">The bare-minimum guy</p>
             <div class="ud-bars">
-              <div class="ud-bar"><span>Does</span><div><i class="ud-do" style="width:22%"></i></div></div>
-              <div class="ud-bar"><span>Gets cheered</span><div><i class="ud-cheer" style="width:92%"></i></div></div>
+              <div class="ud-bar"><span>Does</span><div><i class="ud-do" style="width:22%"></i><em>Shows up</em></div></div>
+              <div class="ud-bar"><span>Gets cheered</span><div><i class="ud-cheer" style="width:96%"><em>A parade</em></i></div></div>
             </div>
-            <p class="ud-why">Graded against 1965. Shows up once and the company he keeps calls it a win.</p>
+            <p class="ud-why"><b>Graded on a curve.</b> Packs one lunch and the company he keeps throws him a parade.</p>
           </div>
           <div class="ud-row">
             <p class="ud-who">Us</p>
             <div class="ud-bars">
-              <div class="ud-bar"><span>Does</span><div><i class="ud-do" style="width:62%"></i></div></div>
-              <div class="ud-bar"><span>Gets cheered</span><div><i class="ud-cheer" style="width:14%"></i></div></div>
+              <div class="ud-bar"><span>Does</span><div><i class="ud-do" style="width:90%"><em>Runs the week</em></i></div></div>
+              <div class="ud-bar"><span>Gets cheered</span><div><i class="ud-cheer" style="width:10%"></i><em>Expected</em></div></div>
             </div>
-            <p class="ud-why">Graded against 30.9, the same bar she carries. The basics are expected, so the wins are quieter.</p>
+            <p class="ud-why"><b>Graded on the whole job.</b> We run the whole week, and it lands as the baseline. Because it is.</p>
           </div>
         </div>
         <p class="ud-fair"><b>Her bar is the right bar.</b> We&rsquo;d rather be measured honestly than cheered for less.</p>
