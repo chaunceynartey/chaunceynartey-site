@@ -242,6 +242,28 @@ h1,h2,h3{font-weight:400}
 .fair b{font-size:30px;line-height:1;color:#1c1c1e}.fair small{font-size:11px;color:#6b6b70;font-weight:700}
 @media (max-width:980px){.rhythms{grid-template-columns:1fr}.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:620px){.why-grid{grid-template-columns:1fr}.rhythm{padding:24px}}
+.wl-wrap{padding-top:90px;padding-bottom:90px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.wl-copy{display:flex;flex-direction:column;gap:18px}
+.wl-h{font-size:clamp(40px,4.4vw,68px);line-height:.95}.wl-h em{color:#2a55e5}
+.wl-lede{font-size:19px;line-height:1.6;color:#4a4a44;max-width:46ch}
+.wl-data{background:#fff;border-radius:22px;padding:22px 24px;display:flex;flex-direction:column;gap:8px}
+.wl-data p:not(.wl-k){font-size:16px;line-height:1.55;color:#2c2c28}
+.wl-k{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#2a55e5}
+.wl-order{font-size:18px;line-height:1.5;font-weight:800;color:#16203a}
+.wl-diagram{display:flex;flex-direction:column;gap:0;border-radius:28px;overflow:hidden;background:#efe9df}
+.wl-surface{padding:16px 22px 10px;background:#fff}
+.wl-surface svg{display:block;width:100%;height:18px}
+.wl-surface p{font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#2a55e5;padding-top:8px}
+.wl-band{display:grid;grid-template-columns:36px minmax(0,1fr) minmax(0,.9fr);gap:14px;align-items:center;padding:20px 22px;color:#fff}
+.wl-0{background:#9fb6ff;color:#0b1226}.wl-1{background:#4f74ee}.wl-2{background:#2a3f9e}.wl-3{background:#0b1226}
+.wl-n{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-weight:900}
+.wl-0 .wl-n{background:#0b1226;color:#ffff33}
+.wl-t b{font-size:19px;display:block}.wl-t p{font-size:15px;line-height:1.45;opacity:.9}
+.wl-fix{font-size:14px;line-height:1.45;font-weight:700}
+.wl-fix span{display:block;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;opacity:.75;margin-bottom:2px}
+.wl-cite{font-size:13px;line-height:1.55;color:#4a4a44;padding:16px 22px;background:#efe9df}
+@media (max-width:980px){.wl-wrap{grid-template-columns:1fr}}
+@media (max-width:560px){.wl-band{grid-template-columns:30px 1fr;}.wl-fix{grid-column:2}}
 </style>
 <script src="/site-bar.js" defer></script>
 </head>
@@ -252,10 +274,10 @@ h1,h2,h3{font-weight:400}
     <nav aria-label="Main">
       <a href="/" class="serif" style="font-size:30px;color:#efe9df;text-decoration:none">Air It Out</a>
       <div class="navlinks">
-        <a href="#air" style="color:#efe9df;text-decoration:none">The night</a>
-        <a href="#kids" style="color:#efe9df;text-decoration:none">The kids</a>
+        <a href="#air" style="color:#efe9df;text-decoration:none">The Night</a>
+        <a href="#kids" style="color:#efe9df;text-decoration:none">The Kids</a>
         <a href="#fold" style="color:#efe9df;text-decoration:none">After</a>
-        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Air%20It%20Out&amp;body=Save%20us%20two%20spots%20for%20the%20first%20Air%20It%20Out%20night." style="background:#ffff33;color:#0b1226;padding:11px 20px;font-size:15px">Save two spots</a>
+        <a class="btn" href="mailto:chauncey@howiwithai.com?subject=Air%20It%20Out&amp;body=Save%20us%20two%20spots%20for%20the%20first%20Air%20It%20Out%20night." style="background:#ffff33;color:#0b1226;padding:11px 20px;font-size:15px">Save Two Spots</a>
       </div>
     </nav>
     <div style="display:flex;flex-direction:column;gap:22px;padding:72px 0 48px;max-width:900px">
@@ -283,6 +305,26 @@ h1,h2,h3{font-weight:400}
   </div>
 </section>
 
+<section id="waterline">
+  <div class="wrap wl-wrap">
+    <div class="wl-copy">
+      <p class="eyebrow" style="color:#2a55e5">The idea behind the night</p>
+      <h2 class="serif wl-h">Most of what feels personal <em>is structural.</em></h2>
+      <p class="wl-lede">A lot of the hurt in a house comes from fuzzy roles, not bad partners. Get clear on who owns what, and much of the emotional weight lifts with it.</p>
+      <div class="wl-data"><p class="wl-k">The research</p><p>UCLA researchers who studied working parents at home found more conflict in couples who hadn't settled a clear division of labor and kept renegotiating who does what day to day. Clear shared expectations meant less checking up on each other.</p></div>
+      <p class="wl-order">So we air it out first, to find where it hurts. Then we fix from the top down.</p>
+    </div>
+    <div class="wl-diagram" aria-label="The Waterline Model, four layers from structure down to individual">
+      <div class="wl-surface"><svg viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14 Q 25 2 50 14 T 100 14 T 150 14 T 200 14 T 250 14 T 300 14 T 350 14 T 400 14 T 450 14 T 500 14 T 550 14 T 600 14" fill="none" stroke="#2a55e5" stroke-width="3"/></svg><p>Start here. Go deeper only if it's still not fixed.</p></div>
+        <div class="wl-band wl-0"><span class="wl-n">1</span><div class="wl-t"><b>Structure</b><p>Who owns what, and what “done” means.</p></div><p class="wl-fix"><span>Where we fix it</span>Sort it out · Whole job, or not your job.</p></div>
+        <div class="wl-band wl-1"><span class="wl-n">2</span><div class="wl-t"><b>Dynamics</b><p>How you decide, hand off, and keep each other posted.</p></div><p class="wl-fix"><span>Where we fix it</span>Fold it in · the nightly Fold and Sunday Re-Sort.</p></div>
+        <div class="wl-band wl-2"><span class="wl-n">3</span><div class="wl-t"><b>Interpersonal</b><p>Resentment, trust, the thing you keep not saying.</p></div><p class="wl-fix"><span>Where we fix it</span>Air it out.</p></div>
+        <div class="wl-band wl-3"><span class="wl-n">4</span><div class="wl-t"><b>Individual</b><p>One of you is running on empty.</p></div><p class="wl-fix"><span>Where we fix it</span>Rest, real help, or a therapist. Check the three above first.</p></div>
+      <p class="wl-cite">The Waterline Model comes from organizational psychologist Roger Harrison. Molly Graham uses it to debug teams: snorkel before you scuba. We use it to debug homes. Research: Klein, Izquierdo &amp; Bradbury, UCLA Center on Everyday Lives of Families.</p>
+    </div>
+  </div>
+</section>
+
 <section id="air" style="background:#141a33;color:#efe9df">
   <div class="wrap" style="padding-top:100px;padding-bottom:100px;display:flex;flex-direction:column;gap:56px">
     <div class="stage">
@@ -292,6 +334,7 @@ h1,h2,h3{font-weight:400}
         <h2 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Air it out.</h2>
         <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">Five minutes each. One talks. The other plays it back until the speaker says "That's it." Then you switch.</p>
         <div class="rules"><span>No fixing</span><span>No defending</span><span>No "but I also"</span><span>Play it back</span></div>
+        <p style="font-size:14px;line-height:1.55;color:#9aa6c4;max-width:52ch">Built on the Speaker-Listener Technique from PREP, the couples program developed and tested by Howard Markman and Scott Stanley at the University of Denver.</p>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:18px">
