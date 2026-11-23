@@ -223,11 +223,23 @@ h1,h2,h3{font-weight:400}
 .tv-back:before{content:"";position:absolute;left:-2px;top:-9px;border:7px solid transparent;border-right:12px solid #7d9bff;border-left:0}
 .tv-back span{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:13px;font-weight:900;letter-spacing:.04em;color:#9fb6ff}
 .tv-ahead{top:62px;border-top:3px dashed #ffff33}
-.tv-ahead:before{content:"";position:absolute;left:-2px;top:-9px;border:7px solid transparent;border-right:12px solid #ffff33;border-left:0}
+.tv-ahead:after{content:"";position:absolute;right:-2px;top:-9px;border:7px solid transparent;border-left:12px solid #ffff33;border-right:0}
 .tv-ahead span{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:13px;font-weight:900;letter-spacing:.04em;color:#ffff33}
-.tv-foot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
-.tv-foot p{border:1px solid #2c3d6e;border-radius:18px;padding:16px 18px;font-size:16px;line-height:1.5;color:#d6dcef}
-.tv-foot b{color:#fff}
+.tv-min{color:#a98bff}.tv-min i{background:#0b1226;border-style:dashed}.tv-min b{color:#a98bff}
+.tv-dad{width:128px}.tv-min{width:170px}
+.ud{border-top:1px solid #2c3d6e;margin-top:22px;padding-top:30px;display:flex;flex-direction:column;gap:14px}
+.ud-h{font-size:clamp(28px,3vw,44px)}
+.ud-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:10px}
+.ud-row{border:1px solid #2c3d6e;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.ud-who{font-size:20px;font-weight:900;color:#fff}
+.ud-bars{display:flex;flex-direction:column;gap:10px}
+.ud-bar{display:grid;grid-template-columns:110px 1fr;align-items:center;gap:10px}
+.ud-bar span{font-size:13px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:#9aa6c4}
+.ud-bar div{height:22px;border-radius:11px;background:#16204a;overflow:hidden}
+.ud-bar i{display:block;height:100%;border-radius:11px}
+.ud-do{background:#7d9bff}.ud-cheer{background:#ffff33}
+.ud-why{font-size:15px;line-height:1.5;color:#d6dcef}
+.ud-fair{font-size:18px;line-height:1.5;color:#d6dcef}.ud-fair b{color:#fff}
 .tv-src{font-size:12px;color:#7f8bb0}
 @media (max-width:720px){
  .tv-stage{height:auto;margin:10px 0;display:flex;flex-direction:column;gap:0;padding-left:50px}
@@ -236,11 +248,11 @@ h1,h2,h3{font-weight:400}
  .tv-pt i{position:absolute;left:-49px;width:26px;height:26px;top:50%;margin-top:-13px}
  .tv-pt b{margin:0;font-size:28px;min-width:58px}.tv-pt p{margin:0}
  .tv-back,.tv-ahead{position:relative;left:auto!important;width:auto!important;top:auto;height:auto;border:0;padding:8px 14px;border-radius:12px;margin:2px 0}
- .tv-back:before,.tv-ahead:before{display:none}
+ .tv-back:before,.tv-ahead:after{display:none}
  .tv-back span,.tv-ahead span{position:static;text-align:left;display:block}
  .tv-back{background:rgba(125,155,255,.14);order:2}.tv-back span:before{content:"↑ "}
- .tv-dad{order:1}.tv-us{order:3}.tv-ahead{background:rgba(255,255,51,.12);order:4}.tv-ahead span:before{content:"↓ "}.tv-her{order:5}
- .tv-foot{grid-template-columns:1fr}
+ .tv-dad{order:1}.tv-min{order:2}.tv-back{order:3}.tv-us{order:4}.tv-ahead{background:rgba(255,255,51,.12);order:5}.tv-ahead span:before{content:"↓ "}.tv-her{order:6}.tv-dad,.tv-min{width:auto}
+ .ud-rows{grid-template-columns:1fr}.ud-bar{grid-template-columns:96px 1fr}
 }
 </style>
 <script src="/site-bar.js" defer></script>
@@ -345,22 +357,44 @@ h1,h2,h3{font-weight:400}
   </div>
 
   <div class="wrap" style="padding-bottom:110px">
-    <div class="tv" role="img" aria-label="Same spot, opposite views. On a line of weekly hours at home, our dads in 1965 sit at 6.5, we sit at 17.3, and she sits at 30.9. We look back and see how far we've come. She looks at the same spot and sees 13.6 hours still to go.">
+    <div class="tv">
       <p class="tv-k">Same spot. Opposite views.</p>
       <h3 class="serif tv-h">We look back. <em>She looks ahead.</em></h3>
-      <div class="tv-stage">
-        <div class="tv-back" style="left:18.6%;width:30.8%"><span>What we see: look how far we've come</span></div>
+      <div class="tv-stage" role="img" aria-label="A line of weekly hours at home. Our dads in 1965 sit at 6.5. The bare-minimum guy today sits a step past them. We sit at 17.3. She sits at 30.9. From our spot, we look back and see how far we've come. From the same spot, she looks ahead and sees 13.6 hours still to go.">
+        <div class="tv-back" style="left:18.6%;width:30.8%"><span>We look back: how far <u style="text-decoration:none;white-space:nowrap">we've come</u></span></div>
+        <div class="tv-ahead" style="left:49.4%;width:38.9%"><span>She looks ahead: 13.6 <u style="text-decoration:none;white-space:nowrap">hours to go</u></span></div>
         <div class="tv-line"></div>
-        <div class="tv-pt tv-dad" style="left:18.6%"><i></i><b>6.5</b><p>Our dads, 1965<small>and the guy who still lives like it's 1965</small></p></div>
+        <div class="tv-pt tv-dad" style="left:18.6%"><i></i><b>6.5</b><p>Our dads, 1965</p></div>
+        <div class="tv-pt tv-min" style="left:31%"><i></i><b>?</b><p>The bare-minimum guy today<small>a step past 1965</small></p></div>
         <div class="tv-pt tv-us" style="left:49.4%"><i></i><b>17.3</b><p>Us</p></div>
         <div class="tv-pt tv-her" style="left:88.3%"><i></i><b>30.9</b><p>Her</p></div>
-        <div class="tv-ahead" style="left:49.4%;width:38.9%"><span>What she sees: 13.6 hours still to go</span></div>
       </div>
-      <div class="tv-foot">
-        <p><b>Both are true.</b> The friction starts when each of us only sees our half.</p>
-        <p><b>And the bar is upside down.</b> The guy doing the least gets applause for showing up. The guy doing more gets measured against her.</p>
+      <p class="tv-src">Hours a week on childcare plus housework. Pew Research Center, 1965 and 2010 time-use data. No survey tracks the bare-minimum guy, so his spot is a sketch, not a stat.</p>
+
+      <div class="ud">
+        <p class="tv-k">And the bar is upside down.</p>
+        <h3 class="serif tv-h ud-h">Less work, more applause. <em>More work, less.</em></h3>
+        <div class="ud-rows" role="img" aria-label="Illustration. The bare-minimum guy does a little and gets a lot of applause. We do a lot and get a little.">
+          <div class="ud-row">
+            <p class="ud-who">The bare-minimum guy</p>
+            <div class="ud-bars">
+              <div class="ud-bar"><span>Does</span><div><i class="ud-do" style="width:22%"></i></div></div>
+              <div class="ud-bar"><span>Gets cheered</span><div><i class="ud-cheer" style="width:92%"></i></div></div>
+            </div>
+            <p class="ud-why">Graded against 1965. Shows up once and the crowd around him calls it a win.</p>
+          </div>
+          <div class="ud-row">
+            <p class="ud-who">Us</p>
+            <div class="ud-bars">
+              <div class="ud-bar"><span>Does</span><div><i class="ud-do" style="width:62%"></i></div></div>
+              <div class="ud-bar"><span>Gets cheered</span><div><i class="ud-cheer" style="width:14%"></i></div></div>
+            </div>
+            <p class="ud-why">Graded against her 30.9. The women we married see the whole job, so the basics are expected, not applauded.</p>
+          </div>
+        </div>
+        <p class="ud-fair"><b>Her bar is the right bar.</b> It's also the hardest room in the world to get credit in.</p>
+        <p class="tv-src">Bars are a sketch, not a measurement. The praise gap is real: fathers get more credit than mothers for the same parenting (Deutsch &amp; Saxon, 1998, <a href="https://doi.org/10.1111/j.1471-6402.1998.tb00184.x" style="color:inherit">Psychology of Women Quarterly</a>).</p>
       </div>
-      <p class="tv-src">Hours a week on childcare plus housework. Pew Research Center analysis of 1965 and 2010 time-use data.</p>
     </div>
   </div>
 </section>
