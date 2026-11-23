@@ -203,6 +203,10 @@ h1,h2,h3{font-weight:400}
  .hero-copy{justify-content:flex-end}
  .navlinks{gap:14px;font-size:14px}
 }
+.goodwhere{align-self:flex-start;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:#9fb6ff;color:#0b1226}
+.goodsay{font-size:clamp(38px,3.6vw,54px);line-height:1;color:#efe9df}
+.goodmeans{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#ffff33;padding-top:12px;border-top:1px solid #2c3d6e;margin-top:4px}
+.goodbody{font-size:18px;line-height:1.5;color:#d6dcef}
 </style>
 <script src="/site-bar.js" defer></script>
 </head>
@@ -351,9 +355,9 @@ h1,h2,h3{font-weight:400}
   <div class="wrap" style="padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:44px">
     <h2 class="serif" style="font-size:clamp(52px,7vw,116px);line-height:.88">"I'm good."</h2>
     <div class="goodrow">
-      <div class="goodcard"><p class="goodlabel serif">At work.</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: I cleared my inbox before the kids woke up, covered for someone in the 2:00, and I'll be back on after bedtime. If I say that out loud, I look like I can't handle it.</p></div>
-      <div class="goodcard"><p class="goodlabel serif">At home.</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: I'm already running on empty, and the field trip form, the dentist rebook and dinner are still on me. The baby was up at 3. My wife had a harder day than I did, or she needs to hear that she did. Somebody in this house has to be good. Tonight it's me.</p></div>
-      <div class="goodcard"><p class="goodlabel serif">Online.</p><p style="font-size:18px;line-height:1.5;color:#d6dcef">Translation: I'm staying out of this. Anything I say about my side will get me dragged.</p></div>
+      <div class="goodcard"><span class="goodwhere">At work</span><p class="goodsay serif">"I'm good."</p><p class="goodmeans"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>What I mean</p><p class="goodbody">I cleared my inbox before the kids woke up, covered for someone in the 2:00, and I'll be back on after bedtime. If I say that out loud, I look like I can't handle it.</p></div>
+      <div class="goodcard"><span class="goodwhere">At home</span><p class="goodsay serif">"I'm good."</p><p class="goodmeans"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>What I mean</p><p class="goodbody">I'm already running on empty, and the field trip form, the dentist rebook and dinner are still on me. The baby was up at 3. But my wife had a harder day than I did, or needs to hear that she did. Somebody in this house has to be good. Tonight it's me.</p></div>
+      <div class="goodcard"><span class="goodwhere">Online</span><p class="goodsay serif">"I'm good."</p><p class="goodmeans"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>What I mean</p><p class="goodbody">I'm staying out of this. Anything I say about my side will get me dragged.</p></div>
     </div>
     <div class="split" style="margin-top:40px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start">
