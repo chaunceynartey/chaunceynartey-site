@@ -53,6 +53,17 @@
         }
         pos = e0;
       }
+      /* Also protect the end of each phrase that runs into a styled span
+         ("Learn to run the home. <span>Then run home.</span>"). */
+      if (/^H[1-4]$/.test(el.tagName)) {
+        for (var q = 0; q < el.childNodes.length; q++) {
+          var c = el.childNodes[q], nx = c.nextSibling;
+          if (c.nodeType !== 3 || !nx || nx.nodeType !== 1) continue;
+          var tv = c.nodeValue, tw = tv.trim().split(/\s+/);
+          if (tw.length < 3 || (tw[tw.length - 2] + tw[tw.length - 1]).length > 21) continue;
+          c.nodeValue = tv.replace(/\s+(\S+\s*)$/, '\u00a0$1');
+        }
+      }
       /* Undo if the joined pair is too wide for the line on this screen. */
       if (el.scrollWidth > Math.max(sw, el.clientWidth) + 1) {
         for (var r = 0; r < nodes.length; r++) nodes[r].nodeValue = before[r];
