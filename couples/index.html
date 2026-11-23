@@ -218,6 +218,30 @@ h1,h2,h3{font-weight:400}
 .dis{display:flex;flex-direction:column;gap:6px}.dis p{background:#fff;border-radius:12px;padding:8px 10px;font-size:11px;line-height:1.3}.dis b{display:block;font-size:12px}
 .tag{display:inline-block;font-size:9.5px;font-weight:800;padding:2px 6px;border-radius:999px;margin-right:3px}
 @media (max-width:980px){.ws{grid-template-columns:1fr 1fr}}@media (max-width:620px){.ws{grid-template-columns:1fr}}
+.rule{background:#1d2547;border:1px solid #2c3d6e;border-radius:22px;padding:22px 24px;display:flex;flex-direction:column;gap:8px}
+.rule-k{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#ffff33}
+.rule-h{font-size:clamp(28px,2.6vw,38px);line-height:1;color:#fff}.rule-h em{color:#9fb6ff}
+.rule-b{font-size:16px;line-height:1.55;color:#d6dcef}
+.rhythms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.rhythm{background:#efe9df;color:#16203a;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:10px}
+.rh-k{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#2a55e5}
+.rh-h{font-size:clamp(36px,3.4vw,52px);line-height:1}
+.rh-r{font-size:16px;line-height:1.5;font-weight:700;color:#4a4a44;padding-bottom:6px}
+.rhythm ol{list-style:none;margin:0;padding:0;counter-reset:rh}
+.rhythm li{counter-increment:rh;display:grid;grid-template-columns:34px 1fr;gap:2px 12px;padding:14px 0;border-top:1px solid #d9cfbd}
+.rhythm li::before{content:counter(rh);grid-row:span 2;width:28px;height:28px;border-radius:50%;background:#16203a;color:#ffff33;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+.rhythm li b{font-size:18px;line-height:1.35}
+.rhythm li span{font-size:15px;line-height:1.5;color:#4a4a44}
+.why{display:flex;flex-direction:column;gap:16px}
+.why-k{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#9fb6ff}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.why-grid div{border:1px solid #2c3d6e;border-radius:20px;padding:20px 22px;display:flex;flex-direction:column;gap:6px}
+.why-grid b{font-size:17px;color:#fff}.why-grid span{font-size:15px;line-height:1.5;color:#d6dcef}
+.why-s{font-size:13px;line-height:1.6;color:#7f8bb0}
+.fair{display:flex;gap:10px;margin:6px 0}.fair div{flex:1;background:#f2f3f7;border-radius:12px;padding:8px 0;display:flex;flex-direction:column;align-items:center}
+.fair b{font-size:30px;line-height:1;color:#1c1c1e}.fair small{font-size:11px;color:#6b6b70;font-weight:700}
+@media (max-width:980px){.rhythms{grid-template-columns:1fr}.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.why-grid{grid-template-columns:1fr}.rhythm{padding:24px}}
 </style>
 <script src="/site-bar.js" defer></script>
 </head>
@@ -325,31 +349,70 @@ h1,h2,h3{font-weight:400}
 </section>
 
 <section id="fold" style="background:#141a33;color:#efe9df">
-  <div class="wrap pside" style="padding-top:100px;padding-bottom:100px">
+  <div class="wrap" style="padding-top:100px;padding-bottom:100px;display:flex;flex-direction:column;gap:56px">
+    <div class="pside">
       <div style="display:flex;flex-direction:column;gap:18px">
         <p class="num">03</p>
         <h2 class="serif" style="font-size:clamp(40px,4.6vw,72px);line-height:.95">Fold it in.</h2>
-        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">You fold a real basket together, side by side, hands busy, eyes forward. It's the easiest place to keep talking. Before the last towel, you set your nightly check-in: same time, ten minutes, three questions.</p>
-        <p style="font-size:19px;line-height:1.6;color:#fff;font-weight:700">What landed on you today? What can I take? What's tomorrow?</p>
+        <p style="font-size:19px;line-height:1.6;color:#d6dcef;max-width:48ch">You fold a real basket together, side by side, hands busy, eyes forward. It's the easiest place to keep talking. Before the last towel, you set two rhythms: a ten-minute Fold every night, and a thirty-minute Re-Sort every Sunday.</p>
+        <div class="rule"><p class="rule-k">The house rule</p><p class="rule-h serif">Whole job, or <em>not your job.</em></p><p class="rule-b">Owning a job means seeing it coming, finding the options, making the call, and checking it happened. Not just doing the part someone handed you.</p></div>
         <img class="scene soft" src="https://images.unsplash.com/photo-1760939064986-3c375dab7b49?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="A couple folding and hanging laundry together" style="aspect-ratio:5/4;object-fit:cover">
       </div>
-    <div class="duo">
-      <figure class="pf"><div class="iph"><div class="iscr app">
-        <div class="sbar"><span>9:31</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
-        <div class="rowsb" style="margin:14px 2px 8px"><p class="apph" style="margin:0">Check-in <small>His phone · Q2 of 3</small></p><p class="timer big"><small>LEFT</small><b data-countdown="582">9:42</b></p></div>
-        <div class="acard"><p class="src dark">What can I take?</p><p class="nt dark">From her week, Manny suggests:</p>
-          <div class="chips2"><span class="pri">Thursday pickup</span><span>Call the plumber</span><span>Camp form</span></div></div>
-        <div class="acard"><p class="src dark">What landed on her today</p><p class="note">"Back-to-back calls, and the school called about the field trip."</p></div>
-        <div class="acts row"><span class="act pri">Take 2</span><span class="act">Next question</span></div>
-      </div></div><figcaption><b>His phone.</b> Ten minutes on the clock. Real things to take, pulled from her week.</figcaption></figure>
-      <figure class="pf"><div class="iph"><div class="iscr app">
-        <div class="sbar"><span>9:31</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
-        <div class="rowsb" style="margin:14px 2px 8px"><p class="apph" style="margin:0">Week 3 <small>Her phone</small></p><p class="timer big"><small>LEFT</small><b data-countdown="582">9:42</b></p></div>
-        <div class="acard"><p class="src dark">Fair, not equal</p>
-          <div class="rings"><div class="ring"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="30" fill="none" stroke="#e5e7ee" stroke-width="8"/><circle cx="36" cy="36" r="30" fill="none" stroke="#ff9f0a" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="60.3" transform="rotate(-90 36 36)"/><text x="36" y="40" text-anchor="middle" font-size="15" font-weight="800" fill="#1c1c1e">68%</text></svg><b>You</b><small>12 jobs</small></div><div class="ring"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="30" fill="none" stroke="#e5e7ee" stroke-width="8"/><circle cx="36" cy="36" r="30" fill="none" stroke="#2a55e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="56.5" transform="rotate(-90 36 36)"/><text x="36" y="40" text-anchor="middle" font-size="15" font-weight="800" fill="#1c1c1e">70%</text></svg><b>Him</b><small>19 jobs</small></div></div>
-          <p class="note">You're traveling Wed to Fri, so he's carrying more jobs. Same strain on both of you. That's fair.</p></div>
-        <div class="acard"><p class="src dark">Since Air It Out</p><p class="nt dark">He took 3 of your cards.</p><p class="note">Dentist, Thursday pickup, camp form.</p></div>
-      </div></div><figcaption><b>Her phone.</b> The same check-in, a different view: how the split is holding.</figcaption></figure>
+      <div class="duo">
+        <figure class="pf"><div class="iph"><div class="iscr app">
+          <div class="sbar"><span>9:31</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
+          <div class="rowsb" style="margin:14px 2px 8px"><p class="apph" style="margin:0">The Fold <small>His phone · Q2 of 3</small></p><p class="timer big"><small>LEFT</small><b data-countdown="582">9:42</b></p></div>
+          <div class="acard"><p class="src dark">Ask her</p><p class="nt dark">"What did you handle today that I didn't see?"</p></div>
+          <div class="acard"><p class="src dark">Manny spotted, from her day</p><div class="chips2"><span>Rebooked the dentist</span><span>Signed the field trip form</span><span>Called the plumber</span></div></div>
+          <div class="acard alert"><p class="src dark">Then thank her</p><p class="note">Name the thing, then what it says about her: "You caught the dentist before it slipped. You always see it coming."</p></div>
+          <div class="acts row"><span class="act pri">Said it</span><span class="act">Next question</span></div>
+        </div></div><figcaption><b>The nightly Fold.</b> Ten minutes. The work nobody saw gets seen, and thanked by name.</figcaption></figure>
+        <figure class="pf"><div class="iph"><div class="iscr app">
+          <div class="sbar"><span>7:04</span><span class="sic"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/></svg></span></div><div class="island"></div>
+          <div class="rowsb" style="margin:14px 2px 8px"><p class="apph" style="margin:0">Sunday Re-Sort <small>Her phone · Week 3</small></p><p class="timer big"><small>LEFT</small><b data-countdown="1740">29:00</b></p></div>
+          <div class="acard"><p class="src dark">How fair did this week feel?</p>
+            <div class="fair"><div><b>6</b><small>You</small></div><div><b>8</b><small>Him</small></div></div>
+            <p class="note">A 2-point gap. Start there, not with the chore list.</p></div>
+          <div class="acard alert"><p class="src dark">Half-owned job</p><p class="nt dark">Dentist: you planned it, he drove.</p><div class="chips2"><span class="pri">Hand him the whole job</span></div></div>
+          <div class="acard"><p class="src dark">Since Air It Out</p><p class="nt dark">He owns 3 of your old cards, start to finish.</p></div>
+        </div></div><figcaption><b>The Sunday Re-Sort.</b> Thirty minutes. Check how fair it felt, then fix the jobs that are only half-owned.</figcaption></figure>
+      </div>
+    </div>
+    <div class="rhythms">
+      <div class="rhythm">
+        <p class="rh-k">Every night · 10 minutes</p>
+        <p class="rh-h serif">The Fold</p>
+        <p class="rh-r">Talk about the day, not about each other. Play back what you heard. No fixing.</p>
+        <ol>
+          <li><b>"What was the heaviest part of your day?"</b><span>Let it out. The other person just listens and plays it back.</span></li>
+          <li><b>"What did you handle today that I didn't see?"</b><span>Then thank them for it by name, and say what it shows about them.</span></li>
+          <li><b>"What's coming that one of us should see first?"</b><span>Catch it before it lands on whoever usually notices.</span></li>
+        </ol>
+      </div>
+      <div class="rhythm">
+        <p class="rh-k">Every Sunday · 30 minutes</p>
+        <p class="rh-h serif">The Re-Sort</p>
+        <p class="rh-r">Thanks first. Fairness second. Chores last.</p>
+        <ol>
+          <li><b>Three thanks.</b><span>For jobs your partner owned start to finish this week.</span></li>
+          <li><b>Rate it.</b><span>Each of you: "How fair did this week feel, 1 to 10?" Talk about the gap.</span></li>
+          <li><b>Find the half-owned jobs.</b><span>One of you planned it, the other just did it. Hand over the whole job.</span></li>
+          <li><b>Define done.</b><span>For any job you keep arguing about, agree what "done" looks like.</span></li>
+          <li><b>One ask.</b><span>One thing that would help you feel supported next week.</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="why">
+      <p class="why-k">Why it's built this way</p>
+      <div class="why-grid">
+        <div><b>Nights stay off the relationship.</b><span>Gottman's daily stress-reducing conversation is about the day's outside pressures, not the marriage. The bigger talk waits for the weekly meeting.</span></div>
+        <div><b>Unseen work gets named.</b><span>Mothers who felt solely responsible for running the household reported lower satisfaction with life and with their partner (Ciciolla &amp; Luthar, 2019).</span></div>
+        <div><b>Thanks, said out loud.</b><span>Algoe's research finds expressed gratitude helps bind partners closer. Naming what it says about them is the part that lands.</span></div>
+        <div><b>Rate how fair it felt.</b><span>How fair the split feels predicts relationship satisfaction better than the actual split does (Max Planck Institute, 2023).</span></div>
+        <div><b>Whole job, or not your job.</b><span>Fair Play's rule: whoever holds a card owns conception, planning and execution. Daminger's research names the steps: anticipate, identify, decide, monitor.</span></div>
+        <div><b>A weekly meeting, thanks first.</b><span>Gottman's State of the Union opens with appreciations and ends with what each partner needs next week.</span></div>
+      </div>
+      <p class="why-s">Sources: Gottman Institute, the stress-reducing conversation and State of the Union meeting · Ciciolla &amp; Luthar, Sex Roles, 2019 · Algoe, find-remind-and-bind theory of gratitude, 2012 · Max Planck Institute for Demographic Research, 2023 · Rodsky, Fair Play, 2019 · Daminger, American Sociological Review, 2019. The Fold and the Re-Sort are ours.</p>
     </div>
   </div>
 </section>
